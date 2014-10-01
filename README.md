@@ -6,13 +6,13 @@ A Ruby gem for conversion between the Gregorian calendar and the Baha'i (or Badi
 Installation
 ------------
 Add this line to your application's Gemfile:
-	gem 'bahai_date'
+`gem 'bahai_date'`
 
 And then execute:
-	$ bundle
+`$ bundle`
 
 Or install it yourself:
-	$ gem install bahai_date
+`$ gem install bahai_date`
 
 Example Usage
 -----
