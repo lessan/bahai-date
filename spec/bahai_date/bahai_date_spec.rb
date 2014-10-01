@@ -48,7 +48,7 @@ module BahaiDate
       expect(weekday.number).to eq(1)
       expect(weekday.title).to eq("Jalal")
       expect(weekday.title_en).to eq("Glory")
-      expect(weekday.gregorian).to eq("Saturday")
+      expect(weekday.english_equivalent).to eq("Saturday")
     end
   end
 
