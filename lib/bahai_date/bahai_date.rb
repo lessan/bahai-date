@@ -9,6 +9,8 @@ module BahaiDate
 
   class BahaiDate
 
+    AYYAM_I_HA = -1
+
     attr_reader :weekday, :day, :month, :year, :gregorian_date
 
     def initialize(params)
@@ -40,7 +42,12 @@ module BahaiDate
     end
 
     def self.to_gregorian(year, month, day)
-      Date.new(1844,3,21)
+      days = self.days_from_nawruz(year, month, day)
+      
+      year_gregorian = year + 1844 - 1
+      nawruz = YearData.nawruz_for(year_gregorian)
+
+      nawruz + days
     end
 
     def self.from_gregorian(date)
@@ -56,13 +63,13 @@ module BahaiDate
  
       # determine day and month, taking into account ayyam-i-ha
       if days >= 342
-        ayyam_i_ha = YearData.is_leap?(year) ? 5 : 4
-        if days < (342 + ayyam_i_ha)
-          month = -1
+        ayyam_i_ha_days = YearData.is_leap?(year) ? 5 : 4
+        if days < (342 + ayyam_i_ha_days)
+          month = AYYAM_I_HA
           day = days - 342
         else
           month = 19
-          day = days - (342 + ayyam_i_ha)
+          day = days - (342 + ayyam_i_ha_days)
         end
       else
         month, day = (days).divmod(19)
@@ -75,6 +82,23 @@ module BahaiDate
     def self.weekday_from_gregorian(date)
       # saturday (6 in ruby) is the first day of the week
       date.wday == 6 ? 1 : date.wday + 2
+    end
+
+    def self.days_from_nawruz(year, month, day)
+      days = day - 1
+
+      full_months = month - 1
+      if month == AYYAM_I_HA
+        full_months = 18
+      end
+      days += full_months * 19
+    
+      if month == 19
+        ayyam_i_ha_days = YearData.is_leap?(year) ? 5 : 4
+        days += ayyam_i_ha_days
+      end
+
+      days
     end
 
   end
