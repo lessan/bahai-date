@@ -107,15 +107,7 @@ module BahaiDate
       weekday = BahaiDate.weekday_from_gregorian(Date.new(1844,3,28))
       expect(weekday).to eq(6)
    end
-  end
-
-  describe YearData do
-
-    it "determines whether a year is leap or not" do
-      expect(YearData.is_leap?(1)).to eq(false)
-      expect(YearData.is_leap?(4)).to eq(true)
-      expect(YearData.is_leap?(168)).to eq(true)
-    end
 
   end
+
 end
