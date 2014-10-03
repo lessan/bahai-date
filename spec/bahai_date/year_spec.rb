@@ -16,41 +16,75 @@ module BahaiDate
         ArgumentError, "'0' is not a valid year. Please use a number greater than or equal to 1.")
     end
 
-    it "provides access to various attributes" do
-      year = Year.new(1)
+    subject(:year) { Year.new(1) }
 
-      expect(year.bahai_era).to eq(1)
-      expect(year.number).to eq(1)
-      expect(year.title).to eq("Alif")
-      expect(year.title_en).to eq("A")
-      expect(year.vahid).to eq(1)
-      expect(year.kull_i_shay).to eq(1)
+    it "can be converted to string showing the B.E. number" do
+      expect(year.to_s).to eq "1"
     end
 
-    it "calculates the number, vahid, and kull-i-shay properly" do
+    it "provides access to the title" do
+      expect(year.title).to eq "Alif"
+    end
+
+    it "provides access to the year number" do
+      expect(year.number).to be 1
+    end
+
+    it "provides access to the translated title" do
+      expect(year.translation).to eq "A"
+    end
+
+    it "provides access to the title in HTML" do
+      expect(year.html).to eq "Alif"
+    end
+
+    it "provides access to the vahid" do
+      expect(year.vahid).to be 1
+    end
+
+    it "provides access to the kull-i-shay" do
+      expect(year.kull_i_shay).to be 1
+    end
+
+    it "calculates the number properly" do
       year = Year.new(1)
       expect(year.number).to eq(1)
-      expect(year.vahid).to eq(1)
-      expect(year.kull_i_shay).to eq(1)
 
       year = Year.new(19)
       expect(year.number).to eq(19)
-      expect(year.vahid).to eq(1)
-      expect(year.kull_i_shay).to eq(1)
 
       year = Year.new(20)
       expect(year.number).to eq(1)
-      expect(year.vahid).to eq(2)
-      expect(year.kull_i_shay).to eq(1)
 
       year = Year.new(361)
       expect(year.number).to eq(19)
-      expect(year.vahid).to eq(19)
-      expect(year.kull_i_shay).to eq(1)
 
       year = Year.new(362)
       expect(year.number).to eq(1)
+    end
+
+    it "calculates the vahid properly" do
+      year = Year.new(1)
       expect(year.vahid).to eq(1)
+
+      year = Year.new(20)
+      expect(year.vahid).to eq(2)
+
+      year = Year.new(361)
+      expect(year.vahid).to eq(19)
+
+      year = Year.new(362)
+      expect(year.vahid).to eq(1)
+    end
+
+    it "calculates the kull-i-shay properly" do
+      year = Year.new(1)
+      expect(year.kull_i_shay).to eq(1)
+
+      year = Year.new(361)
+      expect(year.kull_i_shay).to eq(1)
+
+      year = Year.new(362)
       expect(year.kull_i_shay).to eq(2)
     end
   end

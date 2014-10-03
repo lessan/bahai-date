@@ -19,12 +19,22 @@ module BahaiDate
         ArgumentError, "'0' is not a valid day. Please use 1 to 19.")
     end
 
-    it "provides access to various attributes" do
-      day = Day.new(1)
+    subject(:day) { Day.new(1) }
 
-      expect(day.number).to eq(1)
-      expect(day.title).to eq("Baha")
-      expect(day.title_en).to eq("Splendour")
+    it "can be converted to string" do
+      expect(day.to_s).to eq "Baha"
+    end
+
+    it "provides access to the day number" do
+      expect(day.number).to be 1
+    end
+
+    it "provides access to the translated title" do
+      expect(day.translation).to eq "Splendour"
+    end
+
+    it "provides access to the title in HTML" do
+      expect(day.html).to eq "Bahá"
     end
   end
 
