@@ -40,7 +40,7 @@ module BahaiDate
 
     def validate(number_arg)
       number = number_arg.to_i
-      if (number < -2 || number == 0 || number > 19 )
+      if (number < -1 || number == 0 || number > 19 )
         raise ArgumentError, "'#{number}' is not a valid month. Please use 1 to 19 or -1 for Ayyam-i-Ha."
       end
      end

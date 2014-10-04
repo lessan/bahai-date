@@ -1,4 +1,5 @@
 expose public methods on the BahaiDate class, and update README
+  to_s
   long_format
 
 upload first version to rubygems

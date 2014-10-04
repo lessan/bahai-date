@@ -6,12 +6,14 @@ A Ruby gem for conversion between the Gregorian calendar and the Baha'i (or Badi
 Installation
 ------------
 Add this line to your application's Gemfile:
+
 `gem 'bahai_date'`
 
 And then execute:
-`$ bundle`
 
-Or install it yourself:
+`$ bundle install`
+
+Or, install it yourself:
 `$ gem install bahai_date`
 
 Example Usage
@@ -19,8 +21,8 @@ Example Usage
 ```ruby
 require "bahai_date"
 
-today = BahaiDate.new
-puts "to_string: " + today
+today = BahaiDate.new(date: Date.today)
+puts "to_s: " + today
 puts "long_format: " + today.long_format
 puts "to_gregorian: " + today.to_gregorian
 ```

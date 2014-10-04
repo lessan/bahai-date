@@ -13,6 +13,9 @@ module BahaiDate
       expect { Month.new(0) }.to raise_error(
         ArgumentError, "'0' is not a valid month. Please use 1 to 19 or -1 for Ayyam-i-Ha.")
 
+      expect { Month.new(-2) }.to raise_error(
+        ArgumentError, "'-2' is not a valid month. Please use 1 to 19 or -1 for Ayyam-i-Ha.")
+
       expect { Month.new(20) }.to raise_error(
         ArgumentError, "'20' is not a valid month. Please use 1 to 19 or -1 for Ayyam-i-Ha.")
 

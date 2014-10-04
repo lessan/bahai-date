@@ -15,61 +15,60 @@ module BahaiDate
 
     def initialize(params)
       if params[:date]
-        parse_Date params[:date]
+        @gregorian_date = params[:date]
+        year, month, day = from_gregorian
+        @year = Year.new(year)
+        @month = Month.new(month)
+        @day = Day.new(day)
       elsif params[:year] and params[:month] and params[:day]
-        parse_YMD params[:year], params[:month], params[:day]
+        @year = Year.new(params[:year])
+        @month = Month.new(params[:month])
+        @day = Day.new(params[:day])
+        validate_ayyam_i_ha
+        @gregorian_date = to_gregorian
       else
         raise ArgumentError, "Invalid arguments. Use a hash with :date or with :year, :month, and :day."
       end
+      @weekday = Weekday.new(weekday_from_gregorian)
     end
 
-    def parse_YMD(year, month, day)
-      gregorian_date = self.class.to_gregorian(year, month, day)
-      set_attributes(year, month, day, gregorian_date)
+  private
+
+    def validate_ayyam_i_ha
+      if @month.number == AYYAM_I_HA && @day.number > ayyam_i_ha_days
+        raise ArgumentError, "'#{@day.number}' is not a valid day for Ayyam-i-Ha in the year #{@year.bahai_era}"
+      end
     end
 
-    def parse_Date(date)
-      year, month, day = self.class.from_gregorian(date)
-      set_attributes(year, month, day, date)
+    def ayyam_i_ha_days(year = @year.bahai_era)
+        YearData.is_leap?(year) ? 5 : 4
     end
 
-    def set_attributes(year, month, day, gregorian_date)
-      @gregorian_date = gregorian_date
-      @year = Year.new(year)
-      @month = Month.new(month)
-      @day = Day.new(day)
-      @weekday = Weekday.new(self.class.weekday_from_gregorian(@gregorian_date))
-    end
-
-    def self.to_gregorian(year, month, day)
-      days = self.days_from_nawruz(year, month, day)
-      
-      year_gregorian = year + 1844 - 1
+    def to_gregorian
+      year_gregorian = @year.bahai_era + 1844 - 1
       nawruz = YearData.nawruz_for(year_gregorian)
-
-      nawruz + days
+      nawruz + days_from_nawruz
     end
 
-    def self.from_gregorian(date)
-      nawruz = YearData.nawruz_for(date.year)
+    def from_gregorian
+      nawruz = YearData.nawruz_for(@gregorian_date.year)
 
-      year = date.year - 1844
-      if date >= nawruz then
+      year = @gregorian_date.year - 1844
+      if @gregorian_date >= nawruz then
         year += 1
-        days = (date - nawruz).to_i
+        days = (@gregorian_date - nawruz).to_i
       else
-        days = (date - YearData.nawruz_for(date.year - 1)).to_i
+        days = (@gregorian_date - YearData.nawruz_for(@gregorian_date.year - 1)).to_i
       end
  
       # determine day and month, taking into account ayyam-i-ha
       if days >= 342
-        ayyam_i_ha_days = YearData.is_leap?(year) ? 5 : 4
-        if days < (342 + ayyam_i_ha_days)
+        if days < (342 + ayyam_i_ha_days(year))
           month = AYYAM_I_HA
           day = days - 342
         else
           month = 19
-          day = days - (342 + ayyam_i_ha_days)
+          day = days - (342 + ayyam_i_ha_days(year))
         end
       else
         month, day = (days).divmod(19)
@@ -79,22 +78,21 @@ module BahaiDate
       [year, month, day]
     end
 
-    def self.weekday_from_gregorian(date)
+    def weekday_from_gregorian
       # saturday (6 in ruby) is the first day of the week
-      date.wday == 6 ? 1 : date.wday + 2
+      @gregorian_date.wday == 6 ? 1 : @gregorian_date.wday + 2
     end
 
-    def self.days_from_nawruz(year, month, day)
-      days = day - 1
+    def days_from_nawruz
+      days = @day.number - 1
 
-      full_months = month - 1
-      if month == AYYAM_I_HA
+      full_months = @month.number - 1
+      if @month.number == AYYAM_I_HA
         full_months = 18
       end
       days += full_months * 19
     
-      if month == 19
-        ayyam_i_ha_days = YearData.is_leap?(year) ? 5 : 4
+      if @month.number == 19
         days += ayyam_i_ha_days
       end
 
