@@ -22,9 +22,9 @@ Example Usage
 require "bahai_date"
 
 today = BahaiDate.new(date: Date.today)
-puts "to_s: " + today
+puts "to_s: " + today.to_s
 puts "long_format: " + today.long_format
-puts "to_gregorian: " + today.to_gregorian
+puts "gregorian_date: " + today.gregorian_date.to_s
 ```
 
 License

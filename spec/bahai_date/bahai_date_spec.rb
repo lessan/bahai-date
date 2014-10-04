@@ -220,7 +220,17 @@ module BahaiDate
 
       bahai_date = BahaiDate.new(date: Date.new(1844,3,28))
       expect(bahai_date.weekday.number).to be 6
-   end
+    end
+
+    it "can be converted to string" do
+      bahai_date = BahaiDate.new(date: Date.new(1844,3,21))
+      expect(bahai_date.to_s).to eq "1.1.1"
+    end
+
+    it "can provide the date in long format" do
+      bahai_date = BahaiDate.new(date: Date.new(1844,3,21))
+      expect(bahai_date.long_format).to eq "Istijlal 1 Baha 1 B.E."
+    end
 
   end
 

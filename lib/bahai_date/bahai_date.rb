@@ -32,6 +32,14 @@ module BahaiDate
       @weekday = Weekday.new(weekday_from_gregorian)
     end
 
+    def to_s
+      "#{@year.bahai_era}.#{@month.number}.#{@day.number}"
+    end
+
+    def long_format
+      "#{@weekday} #{@day.number} #{@month} #{@year.bahai_era} B.E."
+    end
+
   private
 
     def validate_ayyam_i_ha
