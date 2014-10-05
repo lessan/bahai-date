@@ -16,8 +16,9 @@ And then execute:
 Or, install it yourself:
 `$ gem install bahai_date`
 
+
 Example Usage
------
+-------------
 ```ruby
 require "bahai_date"
 
@@ -26,6 +27,13 @@ puts "to_s: " + today.to_s
 puts "long_format: " + today.long_format
 puts "gregorian_date: " + today.gregorian_date.to_s
 ```
+Outputs:
+```
+to_s: 171.11.8
+long_format: Jalal 8 Mashiyyat 171 B.E.
+gregorian_date: 2014-10-04
+```
+
 
 License
 -------
