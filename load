@@ -1,0 +1,167 @@
+2.0.0-p481 :001 > module BahaiDate
+2.0.0-p481 :002?>   
+2.0.0-p481 :003 >       class OccasionFactory
+2.0.0-p481 :004?>     
+2.0.0-p481 :005 >           OCCASIONS = {
+2.0.0-p481 :006 >               :ayyam_i_ha_1        => { :type => :ayyam_i_ha, :work_suspended => false, :title => "First day of Ayyam-i-Ha (Intercalery Days)",              :short_title => "1st day of Ayyam-i-Ha",    :title_html => "First day of Ayyám-i-Há (Intercalery Days)",                 :short_title_html => "1<sup>st</sup> day of Ayyám-i-Há" },
+2.0.0-p481 :007 >               :ayyam_i_ha_2        => { :type => :ayyam_i_ha, :work_suspended => false, :title => "Second day of Ayyam-i-Ha (Intercalery Days)",             :short_title => "2nd day of Ayyam-i-Ha",    :title_html => "Second day of Ayyám-i-Há (Intercalery Days)",                :short_title_html => "2<sup>nd</sup> day of Ayyám-i-Há" },
+2.0.0-p481 :008 >               :ayyam_i_ha_3        => { :type => :ayyam_i_ha, :work_suspended => false, :title => "Third day of Ayyam-i-Ha (Intercalery Days)",              :short_title => "3rd day of Ayyam-i-Ha",    :title_html => "Third day of Ayyám-i-Há (Intercalery Days)",                 :short_title_html => "3<sup>rd</sup> day of Ayyám-i-Há" },
+2.0.0-p481 :009 >               :ayyam_i_ha_4        => { :type => :ayyam_i_ha, :work_suspended => false, :title => "Fourth day of Ayyam-i-Ha (Intercalery Days)",             :short_title => "4th day of Ayyam-i-Ha",    :title_html => "Fourth day of Ayyám-i-Há (Intercalery Days)",                :short_title_html => "4<sup>th</sup> day of Ayyám-i-Há" },
+2.0.0-p481 :010 >               :ayyam_i_ha_5        => { :type => :ayyam_i_ha, :work_suspended => false, :title => "Fifth day of Ayyam-i-Ha (Intercalery Days)",              :short_title => "5th day of Ayyam-i-Ha",    :title_html => "Fifth day of Ayyám-i-Há (Intercalery Days)",                 :short_title_html => "5<sup>th</sup> day of Ayyám-i-Há" },
+2.0.0-p481 :011 >               :fasting_1           => { :type => :fasting,    :work_suspended => false, :title => "First day of the period of Fasting",                      :short_title => "1st day of Fasting",       :title_html => "First day of the period of Fasting",                         :short_title_html => "1<sup>st</sup> day of Fasting" },
+2.0.0-p481 :012 >               :fasting_2           => { :type => :fasting,    :work_suspended => false, :title => "Second day of the period of Fasting",                     :short_title => "2nd day of Fasting",       :title_html => "Second day of the period of Fasting",                        :short_title_html => "2<sup>nd</sup> day of Fasting" },
+2.0.0-p481 :013 >               :fasting_3           => { :type => :fasting,    :work_suspended => false, :title => "Third day of the period of Fasting",                      :short_title => "3rd day of Fasting",       :title_html => "Third day of the period of Fasting",                         :short_title_html => "3<sup>rd</sup> day of Fasting" },
+2.0.0-p481 :014 >               :fasting_4           => { :type => :fasting,    :work_suspended => false, :title => "Fourth day of the period of Fasting",                     :short_title => "4th day of Fasting",       :title_html => "Fourth day of the period of Fasting",                        :short_title_html => "4<sup>th</sup> day of Fasting" },
+2.0.0-p481 :015 >               :fasting_5           => { :type => :fasting,    :work_suspended => false, :title => "Fifth day of the period of Fasting",                      :short_title => "5th day of Fasting",       :title_html => "Fifth day of the period of Fasting",                         :short_title_html => "5<sup>th</sup> day of Fasting" },
+2.0.0-p481 :016 >               :fasting_6           => { :type => :fasting,    :work_suspended => false, :title => "Sixth day of the period of Fasting",                      :short_title => "6th day of Fasting",       :title_html => "Sixth day of the period of Fasting",                         :short_title_html => "6<sup>th</sup> day of Fasting" },
+2.0.0-p481 :017 >               :fasting_7           => { :type => :fasting,    :work_suspended => false, :title => "Seventh day of the period of Fasting",                    :short_title => "7th day of Fasting",       :title_html => "Seventh day of the period of Fasting",                       :short_title_html => "7<sup>th</sup> day of Fasting" },
+2.0.0-p481 :018 >               :fasting_8           => { :type => :fasting,    :work_suspended => false, :title => "Eighth day of the period of Fasting",                     :short_title => "8th day of Fasting",       :title_html => "Eighth day of the period of Fasting",                        :short_title_html => "8<sup>th</sup> day of Fasting" },
+2.0.0-p481 :019 >               :fasting_9           => { :type => :fasting,    :work_suspended => false, :title => "Ninth day of the period of Fasting",                      :short_title => "9th day of Fasting",       :title_html => "Ninth day of the period of Fasting",                         :short_title_html => "9<sup>th</sup> day of Fasting" },
+2.0.0-p481 :020 >               :fasting_10          => { :type => :fasting,    :work_suspended => false, :title => "Tenth day of the period of Fasting",                      :short_title => "10th day of Fasting",      :title_html => "Tenth day of the period of Fasting",                         :short_title_html => "10<sup>th</sup> day of Fasting" },
+2.0.0-p481 :021 >               :fasting_11          => { :type => :fasting,    :work_suspended => false, :title => "Eleventh day of the period of Fasting",                   :short_title => "11th day of Fasting",      :title_html => "Eleventh day of the period of Fasting",                      :short_title_html => "11<sup>th</sup> day of Fasting" },
+2.0.0-p481 :022 >               :fasting_12          => { :type => :fasting,    :work_suspended => false, :title => "Twelfth day of the period of Fasting",                    :short_title => "12th day of Fasting",      :title_html => "Twelfth day of the period of Fasting",                       :short_title_html => "12<sup>th</sup> day of Fasting" },
+2.0.0-p481 :023 >               :fasting_13          => { :type => :fasting,    :work_suspended => false, :title => "Thirteenth day of the period of Fasting",                 :short_title => "13th day of Fasting",      :title_html => "Thirteenth day of the period of Fasting",                    :short_title_html => "13<sup>th</sup> day of Fasting" },
+2.0.0-p481 :024 >               :fasting_14          => { :type => :fasting,    :work_suspended => false, :title => "Fourteenth day of the period of Fasting",                 :short_title => "14th day of Fasting",      :title_html => "Fourteenth day of the period of Fasting",                    :short_title_html => "14<sup>th</sup> day of Fasting" },
+2.0.0-p481 :025 >               :fasting_15          => { :type => :fasting,    :work_suspended => false, :title => "Fifteenth day of the period of Fasting",                  :short_title => "15th day of Fasting",      :title_html => "Fifteenth day of the period of Fasting",                     :short_title_html => "15<sup>th</sup> day of Fasting" },
+2.0.0-p481 :026 >               :fasting_16          => { :type => :fasting,    :work_suspended => false, :title => "Sixteenth day of the period of Fasting",                  :short_title => "16th day of Fasting",      :title_html => "Sixteenth day of the period of Fasting",                     :short_title_html => "16<sup>th</sup> day of Fasting" },
+2.0.0-p481 :027 >               :fasting_17          => { :type => :fasting,    :work_suspended => false, :title => "Seventeenth day of the period of Fasting",                :short_title => "17th day of Fasting",      :title_html => "Seventeenth day of the period of Fasting",                   :short_title_html => "17<sup>th</sup> day of Fasting" },
+2.0.0-p481 :028 >               :fasting_18          => { :type => :fasting,    :work_suspended => false, :title => "Eighteenth day of the period of Fasting",                 :short_title => "18th day of Fasting",      :title_html => "Eighteenth day of the period of Fasting",                    :short_title_html => "18<sup>th</sup> day of Fasting" },
+2.0.0-p481 :029 >               :fasting_19          => { :type => :fasting,    :work_suspended => false, :title => "Nineteenth day of the period of Fasting",                 :short_title => "19th day of Fasting",      :title_html => "Nineteenth day of the period of Fasting",                    :short_title_html => "19<sup>th</sup> day of Fasting" },
+2.0.0-p481 :030 >               :feast_1             => { :type => :feast,      :work_suspended => false, :title => "Nineteen Day Feast of the month of Baha (Splendour)",     :short_title => "Feast of Baha",            :title_html => "Nineteen Day Feast of the month of Bahá (Splendour)",        :short_title_html => "Feast of Bahá" },
+2.0.0-p481 :031 >               :feast_2             => { :type => :feast,      :work_suspended => false, :title => "Nineteen Day Feast of the month of Jalal (Glory)",        :short_title => "Feast of Jalal",           :title_html => "Nineteen Day Feast of the month of Jalál (Glory)",           :short_title_html => "Feast of Jalál" },
+2.0.0-p481 :032 >               :feast_3             => { :type => :feast,      :work_suspended => false, :title => "Nineteen Day Feast of the month of Jamal (Beauty)",       :short_title => "Feast of Jamal",           :title_html => "Nineteen Day Feast of the month of Jamál (Beauty)",          :short_title_html => "Feast of Jamál" },
+2.0.0-p481 :033 >               :feast_4             => { :type => :feast,      :work_suspended => false, :title => "Nineteen Day Feast of the month of Azamat (Grandeur)",    :short_title => "Feast of Azamat",          :title_html => "Nineteen Day Feast of the month of ‘Aẓamat (Grandeur)",      :short_title_html => "Feast of ‘Aẓamat" },
+2.0.0-p481 :034 >               :feast_5             => { :type => :feast,      :work_suspended => false, :title => "Nineteen Day Feast of the month of Nur (Light)",          :short_title => "Feast of Nur",             :title_html => "Nineteen Day Feast of the month of Núr (Light)",             :short_title_html => "Feast of Núr" },
+2.0.0-p481 :035 >               :feast_6             => { :type => :feast,      :work_suspended => false, :title => "Nineteen Day Feast of the month of Rahmat (Mercy)",       :short_title => "Feast of Rahmat",          :title_html => "Nineteen Day Feast of the month of Raḥmat (Mercy)",          :short_title_html => "Feast of Raḥmat" },
+2.0.0-p481 :036 >               :feast_7             => { :type => :feast,      :work_suspended => false, :title => "Nineteen Day Feast of the month of Kalimat (Words)",      :short_title => "Feast of Kalimat",         :title_html => "Nineteen Day Feast of the month of Kalimát (Words)",         :short_title_html => "Feast of Kalimát" },
+2.0.0-p481 :037 >               :feast_8             => { :type => :feast,      :work_suspended => false, :title => "Nineteen Day Feast of the month of Kamal (Perfection)",   :short_title => "Feast of Kamal",           :title_html => "Nineteen Day Feast of the month of Kamál (Perfection)",      :short_title_html => "Feast of Kamál" },
+2.0.0-p481 :038 >               :feast_9             => { :type => :feast,      :work_suspended => false, :title => "Nineteen Day Feast of the month of Asma (Names)",         :short_title => "Feast of Asma",            :title_html => "Nineteen Day Feast of the month of Asmá’ (Names)",           :short_title_html => "Feast of Asmá’" },
+2.0.0-p481 :039 >               :feast_10            => { :type => :feast,      :work_suspended => false, :title => "Nineteen Day Feast of the month of Izzat (Might)",        :short_title => "Feast of Izzat",           :title_html => "Nineteen Day Feast of the month of ‘Izzat (Might)",          :short_title_html => "Feast of ‘Izzat" },
+2.0.0-p481 :040 >               :feast_11            => { :type => :feast,      :work_suspended => false, :title => "Nineteen Day Feast of the month of Mashiyyat (Will)",     :short_title => "Feast of Mashiyyat",       :title_html => "Nineteen Day Feast of the month of Ma<u>sh</u>íyyat (Will)", :short_title_html => "Feast of Ma<u>sh</u>íyyat" },
+2.0.0-p481 :041 >               :feast_12            => { :type => :feast,      :work_suspended => false, :title => "Nineteen Day Feast of the month of Ilm (Knowledge)",      :short_title => "Feast of Ilm",             :title_html => "Nineteen Day Feast of the month of ‘Ilm (Knowledge)",        :short_title_html => "Feast of ‘Ilm" },
+2.0.0-p481 :042 >               :feast_13            => { :type => :feast,      :work_suspended => false, :title => "Nineteen Day Feast of the month of Qudrat (Power)",       :short_title => "Feast of Qudrat",          :title_html => "Nineteen Day Feast of the month of Qudrat (Power)",          :short_title_html => "Feast of Qudrat" },
+2.0.0-p481 :043 >               :feast_14            => { :type => :feast,      :work_suspended => false, :title => "Nineteen Day Feast of the month of Qawl (Speech)",        :short_title => "Feast of Qawl",            :title_html => "Nineteen Day Feast of the month of Qawl (Speech)",           :short_title_html => "Feast of Qawl" },
+2.0.0-p481 :044 >               :feast_15            => { :type => :feast,      :work_suspended => false, :title => "Nineteen Day Feast of the month of Masail (Questions)",   :short_title => "Feast of Masail",          :title_html => "Nineteen Day Feast of the month of Masá’il (Questions)",     :short_title_html => "Feast of Masá’il" },
+2.0.0-p481 :045 >               :feast_16            => { :type => :feast,      :work_suspended => false, :title => "Nineteen Day Feast of the month of Sharaf (Honour)",      :short_title => "Feast of Sharaf",          :title_html => "Nineteen Day Feast of the month of <u>Sh</u>araf (Honour)",  :short_title_html => "Feast of <u>Sh</u>araf" },
+2.0.0-p481 :046 >               :feast_17            => { :type => :feast,      :work_suspended => false, :title => "Nineteen Day Feast of the month of Sultan (Sovereignty)", :short_title => "Feast of Sultan",          :title_html => "Nineteen Day Feast of the month of Sulṭán (Sovereignty)",    :short_title_html => "Feast of Sulṭán" },
+2.0.0-p481 :047 >               :feast_18            => { :type => :feast,      :work_suspended => false, :title => "Nineteen Day Feast of the month of Mulk (Dominion)",      :short_title => "Feast of Mulk",            :title_html => "Nineteen Day Feast of the month of Mulk (Dominion)",         :short_title_html => "Feast of Mulk" },
+2.0.0-p481 :048 >               :feast_19            => { :type => :feast,      :work_suspended => false, :title => "Nineteen Day Feast of the month of Ala (Loftiness)",      :short_title => "Feast of Ala",             :title_html => "Nineteen Day Feast of the month of ‘Alá’ (Loftiness)",       :short_title_html => "Feast of ‘Alá’" },
+2.0.0-p481 :049 >               :ridvan_1            => { :type => :holy,       :work_suspended => true,  :title => "First day of the Festival of Ridvan",                     :short_title => "1st day of Ridvan",        :title_html => "First day of the Festival of Riḍván",                        :short_title_html => "1<sup>st</sup> day of Riḍván" },
+2.0.0-p481 :050 >               :ridvan_2            => { :type => :ridvan,     :work_suspended => false, :title => "Second day of the Festival of Ridvan",                    :short_title => "2nd day of Ridvan",        :title_html => "Second day of the Festival of Riḍván",                       :short_title_html => "2<sup>nd</sup> day of Riḍván" },
+2.0.0-p481 :051 >               :ridvan_3            => { :type => :ridvan,     :work_suspended => false, :title => "Third day of the Festival of Ridvan",                     :short_title => "3rd day of Ridvan",        :title_html => "Third day of the Festival of Riḍván",                        :short_title_html => "3<sup>rd</sup> day of Riḍván" },
+2.0.0-p481 :052 >               :ridvan_4            => { :type => :ridvan,     :work_suspended => false, :title => "Fourth day of the Festival of Ridvan",                    :short_title => "4th day of Ridvan",        :title_html => "Fourth day of the Festival of Riḍván",                       :short_title_html => "4<sup>th</sup> day of Riḍván" },
+2.0.0-p481 :053 >               :ridvan_5            => { :type => :ridvan,     :work_suspended => false, :title => "Fifth day of the Festival of Ridvan",                     :short_title => "5th day of Ridvan",        :title_html => "Fifth day of the Festival of Riḍván",                        :short_title_html => "5<sup>th</sup> day of Riḍván" },
+2.0.0-p481 :054 >               :ridvan_6            => { :type => :ridvan,     :work_suspended => false, :title => "Sixth day of the Festival of Ridvan",                     :short_title => "6th day of Ridvan",        :title_html => "Sixth day of the Festival of Riḍván",                        :short_title_html => "6<sup>th</sup> day of Riḍván" },
+2.0.0-p481 :055 >               :ridvan_7            => { :type => :ridvan,     :work_suspended => false, :title => "Seventh day of the Festival of Ridvan",                   :short_title => "7th day of Ridvan",        :title_html => "Seventh day of the Festival of Riḍván",                      :short_title_html => "7<sup>th</sup> day of Riḍván" },
+2.0.0-p481 :056 >               :ridvan_8            => { :type => :ridvan,     :work_suspended => false, :title => "Eighth day of the Festival of Ridvan",                    :short_title => "8th day of Ridvan",        :title_html => "Eighth day of the Festival of Riḍván",                       :short_title_html => "8<sup>th</sup> day of Riḍván" },
+2.0.0-p481 :057 >               :ridvan_9            => { :type => :holy,       :work_suspended => true,  :title => "Ninth day of the Festival of Ridvan",                     :short_title => "9th day of Ridvan",        :title_html => "Ninth day of the Festival of Riḍván",                        :short_title_html => "9<sup>th</sup> day of Riḍván" },
+2.0.0-p481 :058 >               :ridvan_10           => { :type => :ridvan,     :work_suspended => false, :title => "Tenth day of the Festival of Ridvan",                     :short_title => "10th day of Ridvan",       :title_html => "Tenth day of the Festival of Riḍván",                        :short_title_html => "10<sup>th</sup> day of Riḍván" },
+2.0.0-p481 :059 >               :ridvan_11           => { :type => :ridvan,     :work_suspended => false, :title => "Eleventh day of the Festival of Ridvan",                  :short_title => "11th day of Ridvan",       :title_html => "Eleventh day of the Festival of Riḍván",                     :short_title_html => "11<sup>th</sup> day of Riḍván" },
+2.0.0-p481 :060 >               :ridvan_12           => { :type => :holy,       :work_suspended => true,  :title => "Twelfth day of the Festival of Ridvan",                   :short_title => "12th day of Ridvan",       :title_html => "Twelfth day of the Festival of Riḍván",                      :short_title_html => "12<sup>th</sup> day of Riḍván" },
+2.0.0-p481 :061 >               :nawruz              => { :type => :holy,       :work_suspended => true,  :title => "Naw-Ruz (New Year)",                                      :short_title => "Naw-Ruz",                  :title_html => "Naw-Rúz (New Year)",                                         :short_title_html => "Naw-Rúz" },
+2.0.0-p481 :062 >               :declaration_bab     => { :type => :holy,       :work_suspended => true,  :title => "Declaration of the Bab",                                  :short_title => "Declaration of the Bab",   :title_html => "Declaration of the Báb",                                     :short_title_html => "Declaration of the Báb" },
+2.0.0-p481 :063 >               :ascension_bahaullah => { :type => :holy,       :work_suspended => true,  :title => "Ascension of Baha'u'llah",                                :short_title => "Ascension of Baha'u'llah", :title_html => "Ascension of Bahá’u’lláh",                                   :short_title_html => "Ascension of Bahá’u’lláh" },
+2.0.0-p481 :064 >               :martyrdom_bab       => { :type => :holy,       :work_suspended => true,  :title => "Martyrdom of the Bab",                                    :short_title => "Martyrdom of the Bab",     :title_html => "Martyrdom of the Báb",                                       :short_title_html => "Martyrdom of the Báb" },
+2.0.0-p481 :065 >               :birth_bab           => { :type => :holy,       :work_suspended => true,  :title => "Anniversary of the Birth of the Bab",                     :short_title => "Birth of the Bab",         :title_html => "Anniversary of the Birth of the Báb",                        :short_title_html => "Birth of the Báb" },
+2.0.0-p481 :066 >               :birth_bahaullah     => { :type => :holy,       :work_suspended => true,  :title => "Anniversary of the Birth of Baha'u'llah",                 :short_title => "Birth of Baha'u'llah",     :title_html => "Anniversary of the Birth of Bahá’u’lláh",                    :short_title_html => "Birth of Bahá’u’lláh" },
+2.0.0-p481 :067 >               :covenant            => { :type => :holy,       :work_suspended => false, :title => "Day of the Covenant",                                     :short_title => "Day of the Covenant",      :title_html => "Day of the Covenant",                                        :short_title_html => "Day of the Covenant" },
+2.0.0-p481 :068 >               :ascension_abdulbaha => { :type => :holy,       :work_suspended => false, :title => "Ascension of Abdu'l-Baha",                                :short_title => "Ascension of Abdu'l-Baha", :title_html => "Ascension of ‘Abdu’l-Bahá",                                  :short_title_html => "Ascension of ‘Abdu’l-Bahá" }
+2.0.0-p481 :069?>           }
+2.0.0-p481 :070?>     
+2.0.0-p481 :071 >           DATES = {
+2.0.0-p481 :072 >               '1.1'   => [:nawruz, :feast_1],
+2.0.0-p481 :073 >               '2.1'   => [:feast_2],
+2.0.0-p481 :074 >               '2.13'  => [:ridvan_1],
+2.0.0-p481 :075 >               '2.14'  => [:ridvan_2],
+2.0.0-p481 :076 >               '2.15'  => [:ridvan_3],
+2.0.0-p481 :077 >               '2.16'  => [:ridvan_4],
+2.0.0-p481 :078 >               '2.17'  => [:ridvan_5],
+2.0.0-p481 :079 >               '2.18'  => [:ridvan_6],
+2.0.0-p481 :080 >               '2.19'  => [:ridvan_7],
+2.0.0-p481 :081 >               '3.1'   => [:feast_3, :ridvan_8],
+2.0.0-p481 :082 >               '3.2'   => [:ridvan_9],
+2.0.0-p481 :083 >               '3.3'   => [:ridvan_10],
+2.0.0-p481 :084 >               '3.4'   => [:ridvan_11],
+2.0.0-p481 :085 >               '3.5'   => [:ridvan_12],
+2.0.0-p481 :086 >               '4.1'   => [:feast_4],
+2.0.0-p481 :087 >               '4.8'   => [:declaration_bab],
+2.0.0-p481 :088 >               '4.13'  => [:ascension_bahaullah],
+2.0.0-p481 :089 >               '5.1'   => [:feast_5],
+2.0.0-p481 :090 >               '6.1'   => [:feast_6],
+2.0.0-p481 :091 >               '6.17'  => [:martyrdom_bab],
+2.0.0-p481 :092 >               '7.1'   => [:feast_7],
+2.0.0-p481 :093 >               '8.1'   => [:feast_8],
+2.0.0-p481 :094 >               '9.1'   => [:feast_9],
+2.0.0-p481 :095 >               '10.1'  => [:feast_10],
+2.0.0-p481 :096 >               '11.1'  => [:feast_11],
+2.0.0-p481 :097 >               '12.1'  => [:feast_12],
+2.0.0-p481 :098 >               '13.1'  => [:feast_13],
+2.0.0-p481 :099 >               '14.1'  => [:feast_14],
+2.0.0-p481 :100 >               '14.4'  => [:covenant],
+2.0.0-p481 :101 >               '14.6'  => [:ascension_abdulbaha],
+2.0.0-p481 :102 >               '15.1'  => [:feast_15],
+2.0.0-p481 :103 >               '16.1'  => [:feast_16],
+2.0.0-p481 :104 >               '17.1'  => [:feast_17],
+2.0.0-p481 :105 >               '18.1'  => [:feast_18],
+2.0.0-p481 :106 >               '-1.1'  => [:ayyam_i_ha_1],
+2.0.0-p481 :107 >               '-1.2'  => [:ayyam_i_ha_2],
+2.0.0-p481 :108 >               '-1.3'  => [:ayyam_i_ha_3],
+2.0.0-p481 :109 >               '-1.4'  => [:ayyam_i_ha_4],
+2.0.0-p481 :110 >               '-1.5'  => [:ayyam_i_ha_5],
+2.0.0-p481 :111 >               '19.1'  => [:feast_19, :fasting_1],
+2.0.0-p481 :112 >               '19.2'  => [:fasting_2],
+2.0.0-p481 :113 >               '19.3'  => [:fasting_3],
+2.0.0-p481 :114 >               '19.4'  => [:fasting_4],
+2.0.0-p481 :115 >               '19.5'  => [:fasting_5],
+2.0.0-p481 :116 >               '19.6'  => [:fasting_6],
+2.0.0-p481 :117 >               '19.7'  => [:fasting_7],
+2.0.0-p481 :118 >               '19.8'  => [:fasting_8],
+2.0.0-p481 :119 >               '19.9'  => [:fasting_9],
+2.0.0-p481 :120 >               '19.10' => [:fasting_10],
+2.0.0-p481 :121 >               '19.11' => [:fasting_11],
+2.0.0-p481 :122 >               '19.12' => [:fasting_12],
+2.0.0-p481 :123 >               '19.13' => [:fasting_13],
+2.0.0-p481 :124 >               '19.14' => [:fasting_14],
+2.0.0-p481 :125 >               '19.15' => [:fasting_15],
+2.0.0-p481 :126 >               '19.16' => [:fasting_16],
+2.0.0-p481 :127 >               '19.17' => [:fasting_17],
+2.0.0-p481 :128 >               '19.18' => [:fasting_18],
+2.0.0-p481 :129 >               '19.19' => [:fasting_19]
+2.0.0-p481 :130?>           }
+2.0.0-p481 :131?>     
+2.0.0-p481 :132 >           DATES_BEFORE_172 = {
+2.0.0-p481 :133 >               '4.7'  => [:declaration_bab],
+2.0.0-p481 :134 >               '6.16' => [:martyrdom_bab],
+2.0.0-p481 :135 >               '12.5' => [:birth_bab],
+2.0.0-p481 :136 >               '13.9' => [:birth_bahaullah],
+2.0.0-p481 :137 >               '19.19' => [:birth_bab]
+2.0.0-p481 :138?>           }
+2.0.0-p481 :139?>     
+2.0.0-p481 :140 >           def self.create(year, month, day)
+2.0.0-p481 :141?>             id = self.lookup_ids year, month, day
+2.0.0-p481 :142?>             OCCASIONS.values_at(*id)
+2.0.0-p481 :143?>           end
+2.0.0-p481 :144?>     
+2.0.0-p481 :145 >           def self.lookup_ids(year, month, day)
+2.0.0-p481 :146?>             key = "#{month}.#{day}"
+2.0.0-p481 :147?>             ids = []
+2.0.0-p481 :148?>             ids.push(DATES[key])
+2.0.0-p481 :149?>             if year < 172
+2.0.0-p481 :150?>           puts ids
+2.0.0-p481 :151?>                 ids.push(DATES_BEFORE_172[key])
+2.0.0-p481 :152?>         puts ids
+2.0.0-p481 :153?>               else
+2.0.0-p481 :154 >                   ids << self.lunar(year, month, day)
+2.0.0-p481 :155?>               end
+2.0.0-p481 :156?>             ids.flatten!.compact!
+2.0.0-p481 :157?>           end
+2.0.0-p481 :158?>     
+2.0.0-p481 :159 >           def self.lunar(year, month, day)
+2.0.0-p481 :160?>             puts "lunar"
+2.0.0-p481 :161?>             []
+2.0.0-p481 :162?>           end
+2.0.0-p481 :163?>       end
+2.0.0-p481 :164?>   
+2.0.0-p481 :165 >     end
+ => nil 
+2.0.0-p481 :166 > 
