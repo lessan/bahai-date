@@ -2,21 +2,16 @@ Baha'i Date Ruby Gem
 ====================
 A Ruby gem for conversion between the Gregorian calendar and the Baha'i (or Badi) calendar.
 
-You can learn more about this calendar on the [http://en.wikipedia.org/wiki/Bah%C3%A1'%C3%AD_calendar](Wikipedia entry).
 
+The Baha'i calendar
+-------------------
+In the Baha'i (or Badi) calendar there are 19 months each having 19 days, with 4 or 5 days left aside as intercalery days. Each weekday, day of the month and month of the year have a name, named after the attributes of God (such as Glory, Beauty, etc). The names have been transliterated into English from the original Arabic, and a translation is also provided.
 
-Installation
-------------
-Add this line to your application's Gemfile:
+Each year also has a name, as part of a 19 year cycle called a Vahid (meaning "unity"). Every 19 Vahids (i.e. 361 years) constitute a Kull-i-Shay (meaning "all things"). 
 
-`gem 'bahai_date'`
+The calendar begins on the vernal equinox, normally on the 20th or 21st of March. The first year is 1844.
 
-And then execute:
-
-`$ bundle install`
-
-Or, install it yourself:
-`$ gem install bahai_date`
+More information about this calendar is on the [Wikipedia entry](http://en.wikipedia.org/wiki/Bah%C3%A1'%C3%AD_calendar).
 
 
 Functionality
@@ -56,6 +51,20 @@ The instance then exposes:
  - **short_title**: e.g. Naw-Ruz
  - **title_html**: e.g. Naw-Rúz (New Year)
  - **short_title_html**: e.g. Naw-Rúz
+
+
+Installation
+------------
+Add this line to your application's Gemfile:
+
+`gem 'bahai_date'`
+
+And then execute:
+
+`$ bundle install`
+
+Or, install it yourself:
+`$ gem install bahai_date`
 
 
 Example Usage
