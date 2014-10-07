@@ -4,7 +4,7 @@ module BahaiDate
 
   describe BahaiDate do
 
-    it "can be created from a Year, Month and Day" do
+    it "can be created from a year, month and day" do
       bahai_date = BahaiDate.new(year: 1, month: 1, day: 1)
 
       expect(bahai_date).to_not be_nil
@@ -73,7 +73,7 @@ module BahaiDate
 
     end
 
-    it "exposes various attributes" do
+    it "exposes weekday, day, month, year and gregorian_date" do
       bahai_date = BahaiDate.new(year: 1, month: 1, day: 1)
 
       expect(bahai_date.weekday).to be_an_instance_of(Weekday) 
@@ -232,6 +232,13 @@ module BahaiDate
       expect(bahai_date.long_format).to eq "Istijlal 1 Baha 1 B.E."
     end
 
+    it "can provide an array of occasions for a given day" do
+      bahai_date = BahaiDate.new(date: Date.new(1844,3,21))
+      occasions_array = bahai_date.occasions
+      expect(occasions_array.size).to be 2
+      expect(occasions_array.first.short_title).to eq "Naw-Ruz"
+      expect(occasions_array.last.short_title).to eq "Feast of Baha"
+    end
   end
 
 end

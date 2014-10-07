@@ -74,7 +74,7 @@ module BahaiDate
         expect(occasions.first.short_title).to eq "Martyrdom of the Bab"
       end
 
-      #lunar
+      #TODO: implement lunar occasions
     end
 
   end

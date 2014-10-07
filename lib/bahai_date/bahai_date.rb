@@ -4,6 +4,7 @@ require_relative 'month'
 require_relative 'day'
 require_relative 'weekday'
 require_relative 'year_data'
+require_relative 'occasion_factory'
 
 module BahaiDate
 
@@ -11,7 +12,7 @@ module BahaiDate
 
     AYYAM_I_HA = -1
 
-    attr_reader :weekday, :day, :month, :year, :gregorian_date
+    attr_reader :weekday, :day, :month, :year, :gregorian_date, :occasions
 
     def initialize(params)
       if params[:date]
@@ -30,6 +31,7 @@ module BahaiDate
         raise ArgumentError, "Invalid arguments. Use a hash with :date or with :year, :month, and :day."
       end
       @weekday = Weekday.new(weekday_from_gregorian)
+      @occasions = OccasionFactory.new(@year.bahai_era, @month.number, @day.number).occasions
     end
 
     def to_s

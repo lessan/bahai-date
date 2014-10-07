@@ -175,6 +175,7 @@ module BahaiDate
     end
 
     def lunar_occasions
+      #TODO: implement lunar occasions
       []
     end
 
