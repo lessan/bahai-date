@@ -45,6 +45,9 @@ module BahaiDate
       it "provides the Declaration of the Bab on the correct day" do
         occasions = OccasionFactory.new(1, 4, 7).occasions
         expect(occasions.first.short_title).to eq "Declaration of the Bab"
+
+        occasions = OccasionFactory.new(1, 4, 8).occasions
+        expect(occasions.size).to be 0
       end
 
       it "provides the Martyrdom of the Bab on the correct day" do
@@ -65,16 +68,23 @@ module BahaiDate
 
     context "for dates after 172 B.E." do
       it "provides the Declaration of the Bab on the correct day" do
-        occasions = OccasionFactory.new(1, 4, 8).occasions
+        occasions = OccasionFactory.new(172, 4, 7).occasions
+        expect(occasions.size).to be 0
+
+        occasions = OccasionFactory.new(172, 4, 8).occasions
         expect(occasions.first.short_title).to eq "Declaration of the Bab"
       end
 
       it "provides the Martyrdom of the Bab on the correct day" do
-        occasions = OccasionFactory.new(1, 6, 17).occasions
+        occasions = OccasionFactory.new(172, 6, 17).occasions
         expect(occasions.first.short_title).to eq "Martyrdom of the Bab"
       end
 
-      #TODO: implement lunar occasions
+      it "provides the Birth of the Bab on the correct day" do
+        occasions = OccasionFactory.new(172, 13, 10).occasions
+        expect(occasions.first.short_title).to eq "Birth of the Bab"
+      end
+
     end
 
   end
