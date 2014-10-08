@@ -42,6 +42,10 @@ module BahaiDate
       "#{@weekday} #{@day.number} #{@month} #{@year.bahai_era} B.E."
     end
 
+    def next_day!
+      initialize(date: @gregorian_date + 1)
+    end
+
   private
 
     def validate_ayyam_i_ha

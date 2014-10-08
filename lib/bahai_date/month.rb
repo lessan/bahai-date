@@ -5,11 +5,12 @@ module BahaiDate
     TITLES_HTML = %w[Bahá Jalál Jamál ‘Aẓamat Núr Raḥmat Kalimát Kamál Asmá’ ‘Izzat Ma<u>sh</u>íyyat ‘Ilm Qudrat Qawl Masá’il <u>Sh</u>araf Sulṭán Mulk ‘Alá’ Ayyám-i-Há]
     TITLES_EN = %w[Splendour Glory Beauty Grandeur Light Mercy Words Perfection Names Might Will Knowledge Power Speech Questions Honour Sovereignty Dominion Loftiness Ayyam-i-Ha]
 
-    attr_reader :number
+    attr_reader :number, :days
 
     def initialize(number_arg)
       validate number_arg
       @number = number_arg.to_i
+      @days = {}
     end
 
     def to_s
@@ -26,6 +27,12 @@ module BahaiDate
 
     def html
       TITLES_HTML[title_index]
+    end
+
+    def set_day(day_number)
+      unless @days[day_number]
+        @days[day_number] = Day.new(day_number)
+      end
     end
 
   private

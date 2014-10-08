@@ -49,6 +49,27 @@ module BahaiDate
     it "provides access to the title in HTML" do
       expect(month.html).to eq "Bahá"
     end
+
+    context "working with a hash of days" do
+      it "is readable" do
+        month = Month.new(1)
+        expect(month.days).to eq({})
+      end
+
+      it "can be added to" do
+        month = Month.new(1)
+        month.set_day(1)
+        expect(month.days[1].number).to be 1
+      end
+
+      it "doesn't create a new Day object if one exists" do
+        month = Month.new(1)
+        day = month.set_day(1)
+        month.set_day(1)
+        expect(month.days[1]).to be day
+      end
+    end
+
   end
 
 end

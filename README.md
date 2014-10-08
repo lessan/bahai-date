@@ -52,6 +52,8 @@ The instance then exposes:
  - **title_html**: e.g. Naw-Rúz (New Year)
  - **short_title_html**: e.g. Naw-Rúz
 
+A calendar can also be obtained using the YearCalendar class and providing a year. It is then populated with details about that year, each month and each day in it.
+
 
 Installation
 ------------
@@ -69,10 +71,19 @@ Or, install it yourself:
 
 Example Usage
 -------------
+Creating an instance:
 ```ruby
 require "bahai_date"
 
 today = BahaiDate.new(date: Date.today)
+
+#or
+
+nawruz = BahaiDate.new(year: 171, month: 1, day: 1)
+```
+
+Attributes:
+```ruby
 puts "to_s: " + today.to_s
 puts "long_format: " + today.long_format
 puts "gregorian_date: " + today.gregorian_date.to_s
@@ -82,6 +93,26 @@ Outputs:
 to_s: 171.11.8
 long_format: Jalal 8 Mashiyyat 171 B.E.
 gregorian_date: 2014-10-04
+```
+
+Calendar:
+```ruby
+calendar = YearCalendar.new(171)
+puts "Year: " + calendar.bahai_era.to_s
+puts "Month 1:" + calendar.months[1].title
+puts "  Day 1 in Month 1:" + calendar.months[1].days[1].title
+puts "         (weekday):" + calendar.months[1].days[1].weekday.title
+puts "       (occasions):" + calendar.months[1].days[1].occasions[0].title
+puts "                   " + calendar.months[1].days[1].occasions[1].title
+```
+Outputs:
+```
+Year: 171
+Month 1:Baha
+  Day 1 in Month 1:Baha
+         (weekday):Istiqlal
+       (occasions):Naw-Ruz (New Year)
+                   Nineteen Day Feast of the month of Baha (Splendour)
 ```
 
 

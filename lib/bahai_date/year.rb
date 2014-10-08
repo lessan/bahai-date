@@ -1,3 +1,5 @@
+require_relative 'month'
+
 module BahaiDate
 
   class Year 
@@ -5,12 +7,13 @@ module BahaiDate
     TITLES_HTML = %w[Alif Bá’ Ab Dál Báb Váv Abad Jád Bahá Ḥubb Bahháj Javáb Aḥad Vahháb Vidád Badí‘ Bahí Abhá Váḥid]
     TITLES_EN = %w[A B Father D Gate V Eternity Generosity Splendour Love Delightful Answer Single Bountiful Affection Beginning Luminous Most Luminous Unity]
     
-    attr_reader :bahai_era, :number, :vahid, :kull_i_shay
+    attr_reader :bahai_era, :number, :vahid, :kull_i_shay, :months
 
     def initialize(number_arg)
       validate number_arg
       @bahai_era = number_arg.to_i
       calculate_number_vahid_and_kull_i_shay
+      @months = {}
     end
 
     def to_s
@@ -27,6 +30,14 @@ module BahaiDate
 
     def html
       TITLES_HTML[title_index]
+    end
+
+    def set_month(month_number)
+      if @months[month_number]
+        @months[month_number]
+      else
+        @months[month_number] = Month.new(month_number)
+      end
     end
 
   private

@@ -87,6 +87,27 @@ module BahaiDate
       year = Year.new(362)
       expect(year.kull_i_shay).to eq(2)
     end
+
+    context "working with a hash of months" do
+      it "is readable" do
+        year = Year.new(1)
+        expect(year.months).to eq({})
+      end
+
+      it "can be added to" do
+        year = Year.new(1)
+        year.set_month(-1)
+        expect(year.months[-1].number).to be -1
+      end
+
+      it "doesn't create a new Month object if one exists" do
+        year = Year.new(1)
+        month = year.set_month(1)
+        year.set_month(1)
+        expect(year.months[1]).to be month
+      end
+    end
+
   end
 
 end

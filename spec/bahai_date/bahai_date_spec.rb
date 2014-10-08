@@ -239,6 +239,13 @@ module BahaiDate
       expect(occasions_array.first.short_title).to eq "Naw-Ruz"
       expect(occasions_array.last.short_title).to eq "Feast of Baha"
     end
+
+    it "can advance to the next day" do
+      bahai_date = BahaiDate.new(date: Date.new(1844,3,21))
+      bahai_date.next_day!
+      expect(bahai_date.gregorian_date).to eq Date.new(1844,3,22)
+    end
+
   end
 
 end
