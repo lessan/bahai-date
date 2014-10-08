@@ -1,5 +1,6 @@
 Baha'i Date Ruby Gem
 ====================
+[![Gem Version](https://badge.fury.io/rb/bahai_date.png)](http://badge.fury.io/rb/bahai_date)
 A Ruby gem for conversion between the Gregorian calendar and the Baha'i (or Badi) calendar.
 
 
