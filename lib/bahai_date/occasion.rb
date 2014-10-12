@@ -1,8 +1,6 @@
 module BahaiDate
-
   class Occasion
-
-    attr_reader :type, 
+    attr_reader :type,
                 :work_suspended,
                 :title,
                 :short_title,
@@ -18,7 +16,5 @@ module BahaiDate
       @title_html = opts[:title_html]
       @short_title_html = opts[:short_title_html]
     end
-
   end
-
 end

@@ -1,12 +1,11 @@
 require_relative 'month'
 
 module BahaiDate
+  class Year
+    TITLES = %w(Alif Ba Ab Dal Bab Vav Abad Jad Baha Hubb Bahhaj Javab Ahad Vahhab Vidad Badi Bahi Abha Vahid)
+    TITLES_HTML = %w(Alif Bá’ Ab Dál Báb Váv Abad Jád Bahá Ḥubb Bahháj Javáb Aḥad Vahháb Vidád Badí‘ Bahí Abhá Váḥid)
+    TITLES_EN = %w(A B Father D Gate V Eternity Generosity Splendour Love Delightful Answer Single Bountiful Affection Beginning Luminous Most Luminous Unity)
 
-  class Year 
-    TITLES = %w[Alif Ba Ab Dal Bab Vav Abad Jad Baha Hubb Bahhaj Javab Ahad Vahhab Vidad Badi Bahi Abha Vahid]
-    TITLES_HTML = %w[Alif Bá’ Ab Dál Báb Váv Abad Jád Bahá Ḥubb Bahháj Javáb Aḥad Vahháb Vidád Badí‘ Bahí Abhá Váḥid]
-    TITLES_EN = %w[A B Father D Gate V Eternity Generosity Splendour Love Delightful Answer Single Bountiful Affection Beginning Luminous Most Luminous Unity]
-    
     attr_reader :bahai_era, :number, :vahid, :kull_i_shay, :months
 
     def initialize(number_arg)
@@ -17,7 +16,7 @@ module BahaiDate
     end
 
     def to_s
-      @bahai_era.to_s 
+      @bahai_era.to_s
     end
 
     def title
@@ -32,7 +31,7 @@ module BahaiDate
       TITLES_HTML[title_index]
     end
 
-    def set_month(month_number)
+    def add_month(month_number)
       if @months[month_number]
         @months[month_number]
       else
@@ -40,7 +39,7 @@ module BahaiDate
       end
     end
 
-  private
+    private
 
     def title_index
       @number - 1
@@ -48,9 +47,9 @@ module BahaiDate
 
     def validate(number_arg)
       number = number_arg.to_i
-      if (number < 1)
-        raise ArgumentError, "'#{number}' is not a valid year. Please use a number greater than or equal to 1."
-      end
+      return unless number < 1
+
+      fail ArgumentError, "'#{number}' is not a valid year. Please use a number greater than or equal to 1."
     end
 
     def calculate_number_vahid_and_kull_i_shay
@@ -60,7 +59,5 @@ module BahaiDate
       @vahid += 1
       @kull_i_shay += 1
     end
-
   end
-
 end
