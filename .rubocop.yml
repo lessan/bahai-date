@@ -1,0 +1,38 @@
+AllCops:
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - !ruby/regexp /old_and_unused\.rb$/
+
+#Enable these when we want to start heavy refactoring
+Metrics/LineLength:
+  Enabled: false
+  Max: 100
+Style/Documentation:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Metrics/ClassLength: 
+  Max: 250
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+#Enable these once java is gone
+Style/VariableName:
+  Enabled: false
+Style/MethodName:
+  Enabled: false
+Metrics/ParameterLists:
+  Enabled: false
+  Max: 10
+
+#until we are on rspec3
+Lint/Void:
+  Exclude:
+    - 'spec/**/*'
