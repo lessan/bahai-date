@@ -285,6 +285,15 @@ module BahaiDate
       create_occasions_classes_from occasions_hashes
     end
 
+    def self.find(occasion, year)
+      if year < 172
+        all_dates = DATES.merge(DATES_BEFORE_172)
+      else
+        all_dates = DATES.merge(DATES_AFTER_172).merge(DATES_LUNAR[year])
+      end
+      all_dates.find{ |key, array| array.include? occasion }.first
+    end
+
     private
 
     def create_occasions_classes_from(hashes_array)

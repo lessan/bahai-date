@@ -84,5 +84,9 @@ module BahaiDate
 
     end
 
+    it 'can find the month and day for a given occasion on a given year' do
+      month_and_day = OccasionFactory.find(:birth_bab, 173)
+      expect(month_and_day).to eq '12.18'
+    end
   end
 end
