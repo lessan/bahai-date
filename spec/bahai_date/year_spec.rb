@@ -1,5 +1,3 @@
-require 'bahai_date/year'
-
 module BahaiDate
   describe Year do
     it 'can be created given a number greater than or equal to 1' do

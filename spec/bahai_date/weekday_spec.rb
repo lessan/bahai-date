@@ -1,5 +1,3 @@
-require 'bahai_date/weekday'
-
 module BahaiDate
   describe Weekday do
     it 'can be created given a number from 1 to 7' do

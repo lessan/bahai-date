@@ -1,5 +1,3 @@
-require 'bahai_date/occasion_factory'
-
 module BahaiDate
   describe OccasionFactory do
 

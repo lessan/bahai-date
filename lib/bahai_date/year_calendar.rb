@@ -1,6 +1,3 @@
-require_relative 'year'
-require_relative 'bahai_date'
-
 module BahaiDate
   class YearCalendar < Year
     def initialize(number_arg)

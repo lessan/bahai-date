@@ -1,6 +1,10 @@
+lib = File.expand_path("../lib", __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'bahai_date/version'
+
 Gem::Specification.new do |s|
   s.name         = 'bahai_date'
-  s.version      = '1.0.0'
+  s.version      = BahaiDate::VERSION
   s.author       = 'Lessan Vaezi'
   s.email        = 'lessan@gmail.com'
   s.homepage     = 'https://github.com/lessan/bahai-date'

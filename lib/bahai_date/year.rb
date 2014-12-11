@@ -1,5 +1,3 @@
-require_relative 'month'
-
 module BahaiDate
   class Year
     TITLES = %w(Alif Ba Ab Dal Bab Vav Abad Jad Baha Hubb Bahhaj Javab Ahad Vahhab Vidad Badi Bahi Abha Vahid)

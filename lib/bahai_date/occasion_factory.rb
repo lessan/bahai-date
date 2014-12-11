@@ -1,5 +1,3 @@
-require_relative 'occasion'
-
 module BahaiDate
   class OccasionFactory
     OCCASIONS = {

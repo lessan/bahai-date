@@ -1,7 +1,3 @@
-require 'bahai_date/day'
-require 'bahai_date/weekday'
-require 'bahai_date/occasion_factory'
-
 module BahaiDate
   describe Day do
 

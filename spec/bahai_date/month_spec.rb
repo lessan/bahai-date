@@ -1,5 +1,3 @@
-require 'bahai_date/month'
-
 module BahaiDate
   describe Month do
     it 'can be created given a number from 1 to 19 or -1' do

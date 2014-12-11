@@ -1,13 +1,6 @@
-require 'date'
-require_relative 'year'
-require_relative 'month'
-require_relative 'day'
-require_relative 'weekday'
-require_relative 'year_data'
-require_relative 'occasion_factory'
-
 module BahaiDate
   class BahaiDate
+
     AYYAM_I_HA = -1
 
     attr_reader :weekday, :day, :month, :year, :gregorian_date, :occasions

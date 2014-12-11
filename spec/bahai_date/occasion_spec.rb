@@ -1,5 +1,3 @@
-require 'bahai_date/occasion'
-
 module BahaiDate
   describe Occasion do
 

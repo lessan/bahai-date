@@ -1,5 +1,3 @@
-require 'bahai_date/year_calendar'
-
 module BahaiDate
   describe YearCalendar do
 

@@ -1,5 +1,3 @@
-require 'bahai_date/bahai_date'
-
 module BahaiDate
   describe BahaiDate do
 

@@ -1,5 +1,3 @@
-require 'date'
-
 module BahaiDate
   class YearData
     # valid up to 2148
