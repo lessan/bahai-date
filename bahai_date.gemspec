@@ -15,5 +15,8 @@ Gem::Specification.new do |s|
   s.test_files   = Dir['spec/**/*']
 
   s.required_ruby_version = '>=2.0'
+  s.add_runtime_dependency 'tzinfo'
+  s.add_runtime_dependency 'RubySunrise'
+  s.add_runtime_dependency 'astro-algo'
   s.add_development_dependency 'rspec', '~> 3'
 end

@@ -1,5 +1,6 @@
 require 'date'
 require 'bahai_date/version'
+require 'bahai_date/logic'
 require 'bahai_date/bahai_date'
 require 'bahai_date/year'
 require 'bahai_date/month'
