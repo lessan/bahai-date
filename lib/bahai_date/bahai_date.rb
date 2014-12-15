@@ -1,6 +1,5 @@
 module BahaiDate
   class BahaiDate
-
     AYYAM_I_HA = -1
 
     attr_reader :weekday, :day, :month, :year, :gregorian_date, :occasions

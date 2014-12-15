@@ -1,6 +1,5 @@
 module BahaiDate
   describe Day do
-
     it 'can be created given a number from 1 to 19' do
       expect(Day.new(1)).to_not be_nil
       expect(Day.new(19)).to_not be_nil
@@ -56,6 +55,5 @@ module BahaiDate
         expect(day.occasions).to be occasions
       end
     end
-
   end
 end

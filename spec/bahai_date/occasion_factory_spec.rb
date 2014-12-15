@@ -1,6 +1,5 @@
 module BahaiDate
   describe OccasionFactory do
-
     it 'can be created given a year, month, and day' do
       occasion_factory = OccasionFactory.new(1, 1, 1)
       expect(occasion_factory).not_to be_nil
@@ -81,7 +80,6 @@ module BahaiDate
         occasions = OccasionFactory.new(172, 13, 10).occasions
         expect(occasions.first.short_title).to eq 'Birth of the Bab'
       end
-
     end
 
     it 'can find the month and day for a given occasion on a given year' do

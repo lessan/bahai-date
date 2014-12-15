@@ -21,7 +21,6 @@ module BahaiDate
     end
 
     context 'when created using -1' do
-
       it 'has a title of Ayyam-i-Ha' do
         month = Month.new(-1)
 
@@ -66,6 +65,5 @@ module BahaiDate
         expect(month.days[1]).to be day
       end
     end
-
   end
 end

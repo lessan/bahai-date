@@ -1,6 +1,5 @@
 module BahaiDate
   describe BahaiDate do
-
     it 'can be created from a year, month and day' do
       bahai_date = BahaiDate.new(year: 1, month: 1, day: 1)
 
@@ -20,7 +19,6 @@ module BahaiDate
     end
 
     context "when validating the Baha'i Era date" do
-
       context 'year' do
         it 'raises an error if less than 1' do
           expect do
@@ -76,7 +74,6 @@ module BahaiDate
           end
         end
       end
-
     end
 
     it 'exposes weekday, day, month, year and gregorian_date' do
@@ -90,7 +87,6 @@ module BahaiDate
     end
 
     context 'when converting to a gregorian date' do
-
       it 'handles the first day of the calendar' do
         bahai_date = BahaiDate.new(year: 1, month: 1, day: 1)
         expect(bahai_date.gregorian_date).to eq(Date.new(1844, 3, 21))
@@ -134,11 +130,9 @@ module BahaiDate
           expect(bahai_date.gregorian_date).to eq(Date.new(2013, 3, 1))
         end
       end
-
     end
 
     context 'when converting from gregorian date' do
-
       it 'handles the first day of the calendar' do
         bahai_date = BahaiDate.new(date: Date.new(1844, 3, 21))
         expect(bahai_date.year.bahai_era).to be 1
@@ -198,7 +192,6 @@ module BahaiDate
           expect(bahai_date.day.number).to be 4
         end
       end
-
     end
 
     it 'can get weekday from a gregorian date accurately' do
@@ -250,6 +243,5 @@ module BahaiDate
       bahai_date.next_day!
       expect(bahai_date.gregorian_date).to eq Date.new(1844, 3, 22)
     end
-
   end
 end

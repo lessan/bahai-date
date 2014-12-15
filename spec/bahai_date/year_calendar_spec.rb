@@ -1,6 +1,5 @@
 module BahaiDate
   describe YearCalendar do
-
     subject(:year_calendar) { YearCalendar.new(1) }
 
     it 'can be created' do
@@ -36,6 +35,5 @@ module BahaiDate
       day = year_calendar.months[1].days[1]
       expect(day.occasions.size).to be 2
     end
-
   end
 end

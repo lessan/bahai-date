@@ -37,6 +37,5 @@ module BahaiDate
     it 'provides access to the English equivalent' do
       expect(weekday.english_equivalent).to eq('Saturday')
     end
-
   end
 end

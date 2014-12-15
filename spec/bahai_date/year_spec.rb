@@ -104,6 +104,5 @@ module BahaiDate
         expect(year.months[1]).to be month
       end
     end
-
   end
 end
