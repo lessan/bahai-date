@@ -30,6 +30,14 @@ module BahaiDate
       @tz = TZInfo::Timezone.get('Asia/Tehran')
     end
 
+    def self.nawruz_for(year)
+      self.new.nawruz_date year
+    end
+
+    def self.leap?(year)
+      self.new.leap? year
+    end
+
     def nawruz_date(year)
       if year < 2015
         Date.new(year, 3, 21)

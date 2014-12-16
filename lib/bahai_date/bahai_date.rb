@@ -43,24 +43,24 @@ module BahaiDate
     end
 
     def ayyam_i_ha_days(year = @year.bahai_era)
-      YearData.leap?(year) ? 5 : 4
+      Logic.leap?(year) ? 5 : 4
     end
 
     def to_gregorian
       year_gregorian = @year.bahai_era + 1844 - 1
-      nawruz = YearData.nawruz_for(year_gregorian)
+      nawruz = Logic.nawruz_for(year_gregorian)
       nawruz + days_from_nawruz
     end
 
     def from_gregorian
-      nawruz = YearData.nawruz_for(@gregorian_date.year)
+      nawruz = Logic.nawruz_for(@gregorian_date.year)
 
       year = @gregorian_date.year - 1844
       if @gregorian_date >= nawruz
         year += 1
         days = (@gregorian_date - nawruz).to_i
       else
-        days = (@gregorian_date - YearData.nawruz_for(@gregorian_date.year - 1)).to_i
+        days = (@gregorian_date - Logic.nawruz_for(@gregorian_date.year - 1)).to_i
       end
 
       # determine day and month, taking into account ayyam-i-ha
