@@ -1,5 +1,4 @@
 require 'bundler/setup'
-require 'date'
 require 'tzinfo'
 require 'solareventcalculator'
 require 'astro-algo'
@@ -71,7 +70,7 @@ module BahaiDate
     def leap?(year)
       gregorian_year = bahai_era_to_gregorian_year(year)
       if gregorian_year < 2015
-        Date.leap? gregorian_year
+        Date.leap? gregorian_year + 1
       else
         leap_bahai_era? gregorian_year
       end
