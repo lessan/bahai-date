@@ -60,6 +60,11 @@ module BahaiDate
         occasions = OccasionFactory.new(1, 13, 9).occasions
         expect(occasions.first.short_title).to eq "Birth of Baha'u'llah"
       end
+
+      it 'can find the month and day for a given occasion on a given year' do
+        month_and_day = OccasionFactory.find(:birth_bab, 163)
+        expect(month_and_day).to eq '12.5'
+      end
     end
 
     context 'for dates after 172 B.E.' do
@@ -80,11 +85,11 @@ module BahaiDate
         occasions = OccasionFactory.new(172, 13, 10).occasions
         expect(occasions.first.short_title).to eq 'Birth of the Bab'
       end
-    end
 
-    it 'can find the month and day for a given occasion on a given year' do
-      month_and_day = OccasionFactory.find(:birth_bab, 173)
-      expect(month_and_day).to eq '12.18'
+      it 'can find the month and day for a given occasion on a given year' do
+        month_and_day = OccasionFactory.find(:birth_bab, 173)
+        expect(month_and_day).to eq '12.18'
+      end
     end
   end
 end

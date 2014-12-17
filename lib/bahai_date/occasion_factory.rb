@@ -137,144 +137,6 @@ module BahaiDate
       '6.17' => [:martyrdom_bab]
     }
 
-    DATES_LUNAR = {
-      172 => { '13.10' => [:birth_bab], '13.11' => [:birth_bahaullah] },
-      173 => { '12.18' => [:birth_bab], '12.19' => [:birth_bahaullah] },
-      174 => { '12.7'  => [:birth_bab], '12.8'  => [:birth_bahaullah] },
-      175 => { '13.6'  => [:birth_bab], '13.7'  => [:birth_bahaullah] },
-      176 => { '12.14' => [:birth_bab], '12.15' => [:birth_bahaullah] },
-      177 => { '12.4'  => [:birth_bab], '12.5'  => [:birth_bahaullah] },
-      178 => { '13.4'  => [:birth_bab], '13.5'  => [:birth_bahaullah] },
-      179 => { '12.11' => [:birth_bab], '12.12' => [:birth_bahaullah] },
-      180 => { '12.1'  => [:birth_bab], '12.2'  => [:birth_bahaullah] },
-      181 => { '12.19' => [:birth_bab], '13.1'  => [:birth_bahaullah] },
-      182 => { '12.8'  => [:birth_bab], '12.9'  => [:birth_bahaullah] },
-      183 => { '13.7'  => [:birth_bab], '13.8'  => [:birth_bahaullah] },
-      184 => { '12.15' => [:birth_bab], '12.16' => [:birth_bahaullah] },
-      185 => { '12.5'  => [:birth_bab], '12.6'  => [:birth_bahaullah] },
-      186 => { '13.5'  => [:birth_bab], '13.6'  => [:birth_bahaullah] },
-      187 => { '12.14' => [:birth_bab], '12.15' => [:birth_bahaullah] },
-      188 => { '12.2'  => [:birth_bab], '12.3'  => [:birth_bahaullah] },
-      189 => { '13.2'  => [:birth_bab], '13.3'  => [:birth_bahaullah] },
-      190 => { '12.10' => [:birth_bab], '12.11' => [:birth_bahaullah] },
-      191 => { '13.10' => [:birth_bab], '13.11' => [:birth_bahaullah] },
-      192 => { '12.17' => [:birth_bab], '12.18' => [:birth_bahaullah] },
-      193 => { '12.6'  => [:birth_bab], '12.7'  => [:birth_bahaullah] },
-      194 => { '13.6'  => [:birth_bab], '13.7'  => [:birth_bahaullah] },
-      195 => { '12.15' => [:birth_bab], '12.16' => [:birth_bahaullah] },
-      196 => { '12.4'  => [:birth_bab], '12.5'  => [:birth_bahaullah] },
-      197 => { '13.4'  => [:birth_bab], '13.5'  => [:birth_bahaullah] },
-      198 => { '12.12' => [:birth_bab], '12.13' => [:birth_bahaullah] },
-      199 => { '12.1'  => [:birth_bab], '12.2'  => [:birth_bahaullah] },
-      200 => { '12.19' => [:birth_bab], '13.1'  => [:birth_bahaullah] },
-      201 => { '12.8'  => [:birth_bab], '12.9'  => [:birth_bahaullah] },
-      202 => { '13.8'  => [:birth_bab], '13.9'  => [:birth_bahaullah] },
-      203 => { '12.16' => [:birth_bab], '12.17' => [:birth_bahaullah] },
-      204 => { '12.5'  => [:birth_bab], '12.6'  => [:birth_bahaullah] },
-      205 => { '13.5'  => [:birth_bab], '13.6'  => [:birth_bahaullah] },
-      206 => { '12.14' => [:birth_bab], '12.15' => [:birth_bahaullah] },
-      207 => { '12.3'  => [:birth_bab], '12.4'  => [:birth_bahaullah] },
-      208 => { '13.2'  => [:birth_bab], '13.3'  => [:birth_bahaullah] },
-      209 => { '12.10' => [:birth_bab], '12.11' => [:birth_bahaullah] },
-      210 => { '13.9'  => [:birth_bab], '13.10' => [:birth_bahaullah] },
-      211 => { '12.18' => [:birth_bab], '12.19' => [:birth_bahaullah] },
-      212 => { '12.6'  => [:birth_bab], '12.7'  => [:birth_bahaullah] },
-      213 => { '13.6'  => [:birth_bab], '13.7'  => [:birth_bahaullah] },
-      214 => { '12.15' => [:birth_bab], '12.16' => [:birth_bahaullah] },
-      215 => { '12.4'  => [:birth_bab], '12.5'  => [:birth_bahaullah] },
-      216 => { '13.4'  => [:birth_bab], '13.5'  => [:birth_bahaullah] },
-      217 => { '12.11' => [:birth_bab], '12.12' => [:birth_bahaullah] },
-      218 => { '11.19' => [:birth_bab], '12.1'  => [:birth_bahaullah] },
-      219 => { '12.19' => [:birth_bab], '13.1'  => [:birth_bahaullah] },
-      220 => { '12.9'  => [:birth_bab], '12.10' => [:birth_bahaullah] },
-      221 => { '13.8'  => [:birth_bab], '13.9'  => [:birth_bahaullah] },
-      222 => { '12.16' => [:birth_bab], '12.17' => [:birth_bahaullah] },
-      223 => { '12.6'  => [:birth_bab], '12.7'  => [:birth_bahaullah] },
-      224 => { '13.6'  => [:birth_bab], '13.7'  => [:birth_bahaullah] },
-      225 => { '12.13' => [:birth_bab], '12.14' => [:birth_bahaullah] },
-      226 => { '12.2'  => [:birth_bab], '12.3'  => [:birth_bahaullah] },
-      227 => { '13.2'  => [:birth_bab], '13.3'  => [:birth_bahaullah] },
-      228 => { '12.10' => [:birth_bab], '12.11' => [:birth_bahaullah] },
-      229 => { '13.9'  => [:birth_bab], '13.10' => [:birth_bahaullah] },
-      230 => { '12.18' => [:birth_bab], '12.19' => [:birth_bahaullah] },
-      231 => { '12.7'  => [:birth_bab], '12.8'  => [:birth_bahaullah] },
-      232 => { '13.7'  => [:birth_bab], '13.8'  => [:birth_bahaullah] },
-      233 => { '12.15' => [:birth_bab], '12.16' => [:birth_bahaullah] },
-      234 => { '12.4'  => [:birth_bab], '12.5'  => [:birth_bahaullah] },
-      235 => { '13.4'  => [:birth_bab], '13.5'  => [:birth_bahaullah] },
-      236 => { '12.12' => [:birth_bab], '12.13' => [:birth_bahaullah] },
-      237 => { '11.19' => [:birth_bab], '12.1'  => [:birth_bahaullah] },
-      238 => { '12.19' => [:birth_bab], '13.1'  => [:birth_bahaullah] },
-      239 => { '12.9'  => [:birth_bab], '12.10' => [:birth_bahaullah] },
-      240 => { '13.9'  => [:birth_bab], '13.10' => [:birth_bahaullah] },
-      241 => { '12.16' => [:birth_bab], '12.17' => [:birth_bahaullah] },
-      242 => { '12.6'  => [:birth_bab], '12.7'  => [:birth_bahaullah] },
-      243 => { '13.5'  => [:birth_bab], '13.6'  => [:birth_bahaullah] },
-      244 => { '12.13' => [:birth_bab], '12.14' => [:birth_bahaullah] },
-      245 => { '12.2'  => [:birth_bab], '12.3'  => [:birth_bahaullah] },
-      246 => { '13.1'  => [:birth_bab], '13.2'  => [:birth_bahaullah] },
-      247 => { '12.10' => [:birth_bab], '12.11' => [:birth_bahaullah] },
-      248 => { '13.10' => [:birth_bab], '13.11' => [:birth_bahaullah] },
-      249 => { '12.19' => [:birth_bab], '13.1'  => [:birth_bahaullah] },
-      250 => { '12.7'  => [:birth_bab], '12.8'  => [:birth_bahaullah] },
-      251 => { '13.7'  => [:birth_bab], '13.8'  => [:birth_bahaullah] },
-      252 => { '12.15' => [:birth_bab], '12.16' => [:birth_bahaullah] },
-      253 => { '12.4'  => [:birth_bab], '12.5'  => [:birth_bahaullah] },
-      254 => { '13.3'  => [:birth_bab], '13.4'  => [:birth_bahaullah] },
-      255 => { '12.11' => [:birth_bab], '12.12' => [:birth_bahaullah] },
-      256 => { '12.1'  => [:birth_bab], '12.2'  => [:birth_bahaullah] },
-      257 => { '13.1'  => [:birth_bab], '13.2'  => [:birth_bahaullah] },
-      258 => { '12.9'  => [:birth_bab], '12.10' => [:birth_bahaullah] },
-      259 => { '13.9'  => [:birth_bab], '13.10' => [:birth_bahaullah] },
-      260 => { '12.17' => [:birth_bab], '12.18' => [:birth_bahaullah] },
-      261 => { '12.6'  => [:birth_bab], '12.7'  => [:birth_bahaullah] },
-      262 => { '13.5'  => [:birth_bab], '13.6'  => [:birth_bahaullah] },
-      263 => { '12.13' => [:birth_bab], '12.14' => [:birth_bahaullah] },
-      264 => { '12.2'  => [:birth_bab], '12.3'  => [:birth_bahaullah] },
-      265 => { '13.2'  => [:birth_bab], '13.3'  => [:birth_bahaullah] },
-      266 => { '12.10' => [:birth_bab], '12.11' => [:birth_bahaullah] },
-      267 => { '13.10' => [:birth_bab], '13.11' => [:birth_bahaullah] },
-      268 => { '12.19' => [:birth_bab], '13.1'  => [:birth_bahaullah] },
-      269 => { '12.8'  => [:birth_bab], '12.9'  => [:birth_bahaullah] },
-      270 => { '13.7'  => [:birth_bab], '13.8'  => [:birth_bahaullah] },
-      271 => { '12.15' => [:birth_bab], '12.16' => [:birth_bahaullah] },
-      272 => { '12.4'  => [:birth_bab], '12.5'  => [:birth_bahaullah] },
-      273 => { '13.4'  => [:birth_bab], '13.5'  => [:birth_bahaullah] },
-      274 => { '12.11' => [:birth_bab], '12.12' => [:birth_bahaullah] },
-      275 => { '12.1'  => [:birth_bab], '12.2'  => [:birth_bahaullah] },
-      276 => { '13.1'  => [:birth_bab], '13.2'  => [:birth_bahaullah] },
-      277 => { '12.9'  => [:birth_bab], '12.10' => [:birth_bahaullah] },
-      278 => { '13.8'  => [:birth_bab], '13.9'  => [:birth_bahaullah] },
-      279 => { '12.16' => [:birth_bab], '12.17' => [:birth_bahaullah] },
-      280 => { '12.5'  => [:birth_bab], '12.6'  => [:birth_bahaullah] },
-      281 => { '13.5'  => [:birth_bab], '13.6'  => [:birth_bahaullah] },
-      282 => { '12.14' => [:birth_bab], '12.15' => [:birth_bahaullah] },
-      283 => { '12.2'  => [:birth_bab], '12.3'  => [:birth_bahaullah] },
-      284 => { '13.2'  => [:birth_bab], '13.3'  => [:birth_bahaullah] },
-      285 => { '12.11' => [:birth_bab], '12.12' => [:birth_bahaullah] },
-      286 => { '13.11' => [:birth_bab], '13.12' => [:birth_bahaullah] },
-      287 => { '12.18' => [:birth_bab], '12.19' => [:birth_bahaullah] },
-      288 => { '12.7'  => [:birth_bab], '12.8'  => [:birth_bahaullah] },
-      289 => { '13.7'  => [:birth_bab], '13.8'  => [:birth_bahaullah] },
-      290 => { '12.15' => [:birth_bab], '12.16' => [:birth_bahaullah] },
-      291 => { '12.4'  => [:birth_bab], '12.5'  => [:birth_bahaullah] },
-      292 => { '13.4'  => [:birth_bab], '13.5'  => [:birth_bahaullah] },
-      293 => { '12.12' => [:birth_bab], '12.13' => [:birth_bahaullah] },
-      294 => { '12.2'  => [:birth_bab], '12.3'  => [:birth_bahaullah] },
-      295 => { '13.1'  => [:birth_bab], '13.2'  => [:birth_bahaullah] },
-      296 => { '12.9'  => [:birth_bab], '12.10' => [:birth_bahaullah] },
-      297 => { '13.9'  => [:birth_bab], '13.10' => [:birth_bahaullah] },
-      298 => { '12.17' => [:birth_bab], '12.18' => [:birth_bahaullah] },
-      299 => { '12.5'  => [:birth_bab], '12.6'  => [:birth_bahaullah] },
-      300 => { '13.5'  => [:birth_bab], '13.6'  => [:birth_bahaullah] },
-      301 => { '12.14' => [:birth_bab], '12.15' => [:birth_bahaullah] },
-      302 => { '12.3'  => [:birth_bab], '12.4'  => [:birth_bahaullah] },
-      303 => { '13.2'  => [:birth_bab], '13.3'  => [:birth_bahaullah] },
-      304 => { '12.11' => [:birth_bab], '12.12' => [:birth_bahaullah] },
-      305 => { '13.10' => [:birth_bab], '13.11' => [:birth_bahaullah] },
-      306 => { '12.18' => [:birth_bab], '12.19' => [:birth_bahaullah] }
-    }
-
     def initialize(year, month, day)
       @year = year
       @month = month
@@ -289,7 +151,7 @@ module BahaiDate
       if year < 172
         all_dates = DATES.merge(DATES_BEFORE_172)
       else
-        all_dates = DATES.merge(DATES_AFTER_172).merge(DATES_LUNAR[year])
+        all_dates = DATES.merge(DATES_AFTER_172).merge(dates_lunar(year))
       end
       all_dates.find { |_key, array| array.include? occasion }.first
     end
@@ -316,8 +178,17 @@ module BahaiDate
         yield DATES_BEFORE_172[key]
       else
         yield DATES_AFTER_172[key]
-        yield DATES_LUNAR[@year][key]
+        yield (self.class.dates_lunar(@year))[key]
       end
+    end
+
+    def self.dates_lunar(year)
+      twin = Logic.twin_holy_days_date year
+      birth_bab = BahaiDate.new(date: twin)
+      birth_bab_string = "#{birth_bab.month.number}.#{birth_bab.day.number}"
+      birth_bahaullah = BahaiDate.new(date: twin + 1)
+      birth_bahaullah_string = "#{birth_bahaullah.month.number}.#{birth_bahaullah.day.number}"
+      { birth_bab_string => [:birth_bab], birth_bahaullah_string => [:birth_bahaullah] }
     end
   end
 end

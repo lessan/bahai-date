@@ -31,11 +31,15 @@ module BahaiDate
     end
 
     def self.nawruz_for(year)
-      self.new.nawruz_date year
+      new.nawruz_date year
     end
 
-    def self.leap?(year)
-      self.new.leap? year
+    def self.leap?(year_bahai_era)
+      new.leap? year_bahai_era
+    end
+
+    def self.twin_holy_days_date(year_bahai_era)
+      new.twin_holy_days_for year_bahai_era
     end
 
     def nawruz_date(year)
@@ -60,8 +64,9 @@ module BahaiDate
       increment_if_after_sunset localize(Astro.date_of_vernal_equinox(year).to_utc)
     end
 
-    def twin_holy_days_for(year)
-      increment_if_after_sunset(eighth_new_moon_for(year)) + 1
+    def twin_holy_days_for(year_bahai_era)
+      gregorian_year = bahai_era_to_gregorian_year(year_bahai_era)
+      increment_if_after_sunset(eighth_new_moon_for(gregorian_year)) + 1
     end
 
     def eighth_new_moon_for(year)
@@ -75,8 +80,8 @@ module BahaiDate
       localize(Astro.date_of_moon(lunation, Astro::PhaseNew).to_utc)
     end
 
-    def leap?(year)
-      gregorian_year = bahai_era_to_gregorian_year(year)
+    def leap?(year_bahai_era)
+      gregorian_year = bahai_era_to_gregorian_year(year_bahai_era)
       if gregorian_year < 2015
         Date.leap? gregorian_year + 1
       else
