@@ -74,7 +74,7 @@ gregorian_date: 2014-10-04
 
 Calendar:
 ```ruby
-calendar = YearCalendar.new(171)
+calendar = BahaiDate::YearCalendar.new(171)
 puts "Year: " + calendar.bahai_era.to_s
 puts "Month 1:" + calendar.months[1].title
 puts "  Day 1 in Month 1:" + calendar.months[1].days[1].title
