@@ -20,11 +20,9 @@ Calculations
 ------------
 The source of the algorithms used to determine the vernal equinox and lunar
 phases is the book [*Astronomical Algorithms*](http://www.willbell.com/math/mc1.htm) by Jean Meeus, which has become an authority on this subject in computer science circles (for example, [NASA uses it](http://eclipse.gsfc.nasa.gov/phase/phasecat.html)). Some of the algorithms in the book have been implemented in the *astro-algo* ruby
-gem (https://rubygems.org/gems/astro-algo
-), which we use here.
+gem (https://rubygems.org/gems/astro-algo), which we use here.
 
-Also, the ruby gem *sunrise* (https://rubygems.org/gems/RubySunrise
-) is widely used to determine the time for sunrise/sunset at a given location, and we use it here.
+Also, the ruby gem *sunrise* (https://rubygems.org/gems/RubySunrise) is widely used to determine the time for sunrise/sunset at a given location, and we use it here.
 
 
 Functionality
