@@ -19,13 +19,11 @@ More information about this calendar is on the [Wikipedia entry](http://en.wikip
 Calculations
 ------------
 The source of the algorithms used to determine the vernal equinox and lunar
-phases is the book [*Astronomical Algorithms*](http://www.willbell.com/math/mc1.htm) by Jean Meeus, which has become an authority on this subject in computer science circles (for example, [NASA uses it](http://eclipse.gsfc.nasa.gov/phase/phasecat.html)).
-
-Some of the algorithms in the book have been implemented in the following ruby
+phases is the book [*Astronomical Algorithms*](http://www.willbell.com/math/mc1.htm) by Jean Meeus, which has become an authority on this subject in computer science circles (for example, [NASA uses it](http://eclipse.gsfc.nasa.gov/phase/phasecat.html)). Some of the algorithms in the book have been implemented in the following ruby
 gem, which we use here:
 https://rubygems.org/gems/astro-algo
 
-The following ruby gem is widely used to determine the time for sunset at a given location, and we use it here:
+Also, the ruby gem *sunrise* is widely used to determine the time for sunrise/sunset at a given location, and we use it here:
 https://rubygems.org/gems/RubySunrise
 
 
@@ -54,13 +52,13 @@ Example Usage
 -------------
 Creating an instance:
 ```ruby
-require "bahai_date"
+require 'bahai_date'
 
-today = BahaiDate.new(date: Date.today)
+today = BahaiDate::BahaiDate.new(date: Date.today)
 
 #or
 
-nawruz = BahaiDate.new(year: 171, month: 1, day: 1)
+nawruz = BahaiDate::BahaiDate.new(year: 171, month: 1, day: 1)
 ```
 
 Attributes:
