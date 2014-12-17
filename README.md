@@ -16,6 +16,19 @@ The calendar begins on the vernal equinox, normally on the 20th or 21st of March
 More information about this calendar is on the [Wikipedia entry](http://en.wikipedia.org/wiki/Bah%C3%A1'%C3%AD_calendar).
 
 
+Calculations
+------------
+The source of the algorithms used to determine the vernal equinox and lunar
+phases is the book [*Astronomical Algorithms*](http://www.willbell.com/math/mc1.htm) by Jean Meeus, which has become an authority on this subject in computer science circles (for example, [NASA uses it](http://eclipse.gsfc.nasa.gov/phase/phasecat.html)).
+
+Some of the algorithms in the book have been implemented in the following ruby
+gem, which we use here:
+https://rubygems.org/gems/astro-algo
+
+The following ruby gem is widely used to determine the time for sunset at a given location, and we use it here:
+https://rubygems.org/gems/RubySunrise
+
+
 Functionality
 -------------
 A BahaiDate instance can be created either from a Gregorian date or supplying the year, month and day in the Baha'i calendar.
