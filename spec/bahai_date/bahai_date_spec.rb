@@ -230,6 +230,11 @@ module BahaiDate
       expect(bahai_date.long_format).to eq 'Istijlal 1 Baha 1 B.E.'
     end
 
+    it 'can provide the date in short format' do
+      bahai_date = BahaiDate.new(date: Date.new(1844, 3, 21))
+      expect(bahai_date.short_format).to eq '1 Baha 1'
+    end
+
     it 'can provide an array of occasions for a given day' do
       bahai_date = BahaiDate.new(date: Date.new(1844, 3, 21))
       occasions_array = bahai_date.occasions
@@ -238,10 +243,16 @@ module BahaiDate
       expect(occasions_array.last.short_title).to eq 'Feast of Baha'
     end
 
-    it 'can advance to the next day' do
+    it 'can add to date, returning itself' do
       bahai_date = BahaiDate.new(date: Date.new(1844, 3, 21))
-      bahai_date.next_day!
+      bahai_date += 1
       expect(bahai_date.gregorian_date).to eq Date.new(1844, 3, 22)
+    end
+
+    it 'can subtract from the date, returning itself' do
+      bahai_date = BahaiDate.new(date: Date.new(1844, 3, 22))
+      bahai_date -= 1
+      expect(bahai_date.gregorian_date).to eq Date.new(1844, 3, 21)
     end
   end
 end

@@ -11,7 +11,7 @@ module BahaiDate
       date = BahaiDate.new(year: @bahai_era, month: 1, day: 1)
       while date.year.bahai_era == @bahai_era
         add_to_calendar date
-        date.next_day!
+        date += 1
       end
     end
 

@@ -35,8 +35,16 @@ module BahaiDate
       "#{@weekday} #{@day.number} #{@month} #{@year.bahai_era} B.E."
     end
 
-    def next_day!
-      initialize(date: @gregorian_date + 1)
+    def short_format
+      "#{@day.number} #{@month} #{@year.bahai_era}"
+    end
+
+    def +(val)
+      self.class.new(date: @gregorian_date + val)
+    end
+
+    def -(val)
+      self.class.new(date: @gregorian_date - val)
     end
 
     private
