@@ -1,63 +1,63 @@
 module BahaiDate
   describe BahaiDate do
-    it 'can be created from a year, month and day' do
+    it "can be created from a year, month and day" do
       bahai_date = BahaiDate.new(year: 1, month: 1, day: 1)
 
       expect(bahai_date).to_not be_nil
     end
 
-    it 'can be created from a gregorian Date object' do
+    it "can be created from a gregorian Date object" do
       bahai_date = BahaiDate.new(date: Date.new(2010, 1, 1))
 
       expect(bahai_date).to_not be_nil
     end
 
-    it 'raises an error if invalid arguments are passed to the initializer' do
+    it "raises an error if invalid arguments are passed to the initializer" do
       expect { BahaiDate.new }.to raise_error(ArgumentError)
       expect { BahaiDate.new({}) }.to raise_error(ArgumentError)
       expect { BahaiDate.new(day: 1) }.to raise_error(ArgumentError)
     end
 
     context "when validating the Baha'i Era date" do
-      context 'year' do
-        it 'raises an error if less than 1' do
+      context "year" do
+        it "raises an error if less than 1" do
           expect do
             BahaiDate.new(year: 0, month: 1, day: 1)
           end.to raise_error(ArgumentError)
         end
       end
 
-      context 'month' do
-        it 'raises an error if 0' do
+      context "month" do
+        it "raises an error if 0" do
           expect do
             BahaiDate.new(year: 1, month: 0, day: 1)
           end.to raise_error(ArgumentError)
         end
-        it 'raises an error if less than -1' do
+        it "raises an error if less than -1" do
           expect do
             BahaiDate.new(year: 1, month: -2, day: 1)
           end.to raise_error(ArgumentError)
         end
-        it 'raises an error if greater than 19' do
+        it "raises an error if greater than 19" do
           expect do
             BahaiDate.new(year: 1, month: 20, day: 1)
           end.to raise_error(ArgumentError)
         end
       end
 
-      context 'day' do
-        it 'raises an error if less than 1' do
+      context "day" do
+        it "raises an error if less than 1" do
           expect do
             BahaiDate.new(year: 1, month: 1, day: 0)
           end.to raise_error(ArgumentError)
         end
-        it 'raises an error if greater than 19' do
+        it "raises an error if greater than 19" do
           expect do
             BahaiDate.new(year: 1, month: 1, day: 20)
           end.to raise_error(ArgumentError)
         end
-        context 'in Ayyam-i-Ha' do
-          it 'raises an error if greater than 4 on a non-leap year' do
+        context "in Ayyam-i-Ha" do
+          it "raises an error if greater than 4 on a non-leap year" do
             expect do
               BahaiDate.new(year: 1, month: -1, day: 5)
             end.to raise_error(ArgumentError)
@@ -67,7 +67,7 @@ module BahaiDate
               BahaiDate.new(year: 4, month: -1, day: 5)
             end.not_to raise_error
           end
-          it 'raises an error if greater than 5 on a leap year' do
+          it "raises an error if greater than 5 on a leap year" do
             expect do
               BahaiDate.new(year: 4, month: -1, day: 6)
             end.to raise_error(ArgumentError)
@@ -76,7 +76,7 @@ module BahaiDate
       end
     end
 
-    it 'exposes weekday, day, month, year and gregorian_date' do
+    it "exposes weekday, day, month, year and gregorian_date" do
       bahai_date = BahaiDate.new(year: 1, month: 1, day: 1)
 
       expect(bahai_date.weekday).to be_an_instance_of(Weekday)
@@ -86,97 +86,97 @@ module BahaiDate
       expect(bahai_date.gregorian_date).to be_an_instance_of(Date)
     end
 
-    context 'when converting to a gregorian date' do
-      it 'handles the first day of the calendar' do
+    context "when converting to a gregorian date" do
+      it "handles the first day of the calendar" do
         bahai_date = BahaiDate.new(year: 1, month: 1, day: 1)
         expect(bahai_date.gregorian_date).to eq(Date.new(1844, 3, 21))
       end
 
-      it 'handles the last day of the year' do
+      it "handles the last day of the year" do
         bahai_date = BahaiDate.new(year: 1, month: 19, day: 19)
         expect(bahai_date.gregorian_date).to eq(Date.new(1845, 3, 20))
       end
 
-      it 'handles the year component' do
+      it "handles the year component" do
         bahai_date = BahaiDate.new(year: 2, month: 1, day: 1)
         expect(bahai_date.gregorian_date).to eq(Date.new(1845, 3, 21))
       end
 
-      context 'in a leap year' do
-        it 'handles the day before Ayyam-i-Ha' do
+      context "in a leap year" do
+        it "handles the day before Ayyam-i-Ha" do
           bahai_date = BahaiDate.new(year: 168, month: 18, day: 19)
           expect(bahai_date.gregorian_date).to eq(Date.new(2012, 2, 25))
         end
 
-        it 'handles the first day of Ayyam-i-Ha' do
+        it "handles the first day of Ayyam-i-Ha" do
           bahai_date = BahaiDate.new(year: 168, month: -1, day: 1)
           expect(bahai_date.gregorian_date).to eq(Date.new(2012, 2, 26))
         end
 
-        it 'handles the last day of Ayyam-i-Ha' do
+        it "handles the last day of Ayyam-i-Ha" do
           bahai_date = BahaiDate.new(year: 168, month: -1, day: 5)
           expect(bahai_date.gregorian_date).to eq(Date.new(2012, 3, 1))
         end
 
-        it 'handles the first day of the month after Ayyam-i-Ha' do
+        it "handles the first day of the month after Ayyam-i-Ha" do
           bahai_date = BahaiDate.new(year: 168, month: 19, day: 1)
           expect(bahai_date.gregorian_date).to eq(Date.new(2012, 3, 2))
         end
       end
 
-      context 'in a non-leap year' do
-        it 'handles the last day of Ayyam-i-Ha' do
+      context "in a non-leap year" do
+        it "handles the last day of Ayyam-i-Ha" do
           bahai_date = BahaiDate.new(year: 169, month: -1, day: 4)
           expect(bahai_date.gregorian_date).to eq(Date.new(2013, 3, 1))
         end
       end
     end
 
-    context 'when converting from gregorian date' do
-      it 'handles the first day of the calendar' do
+    context "when converting from gregorian date" do
+      it "handles the first day of the calendar" do
         bahai_date = BahaiDate.new(date: Date.new(1844, 3, 21))
         expect(bahai_date.year.bahai_era).to be 1
         expect(bahai_date.month.number).to be 1
         expect(bahai_date.day.number).to be 1
       end
 
-      it 'handles the last day of the year' do
+      it "handles the last day of the year" do
         bahai_date = BahaiDate.new(date: Date.new(1845, 3, 20))
         expect(bahai_date.year.bahai_era).to be 1
         expect(bahai_date.month.number).to be 19
         expect(bahai_date.day.number).to be 19
       end
 
-      it 'handles the year component' do
+      it "handles the year component" do
         bahai_date = BahaiDate.new(date: Date.new(1845, 3, 21))
         expect(bahai_date.year.bahai_era).to be 2
         expect(bahai_date.month.number).to be 1
         expect(bahai_date.day.number).to be 1
       end
 
-      context 'in a leap year' do
-        it 'handles the day before Ayyam-i-Ha' do
+      context "in a leap year" do
+        it "handles the day before Ayyam-i-Ha" do
           bahai_date = BahaiDate.new(date: Date.new(2012, 2, 25))
           expect(bahai_date.year.bahai_era).to be 168
           expect(bahai_date.month.number).to be 18
           expect(bahai_date.day.number).to be 19
         end
 
-        it 'handles the first day of Ayyam-i-Ha' do
+        it "handles the first day of Ayyam-i-Ha" do
           bahai_date = BahaiDate.new(date: Date.new(2012, 2, 26))
           expect(bahai_date.year.bahai_era).to be 168
           expect(bahai_date.month.number).to be(-1)
           expect(bahai_date.day.number).to be 1
         end
 
-        it 'handles the last day of Ayyam-i-Ha' do
+        it "handles the last day of Ayyam-i-Ha" do
           bahai_date = BahaiDate.new(date: Date.new(2012, 3, 1))
           expect(bahai_date.year.bahai_era).to be 168
           expect(bahai_date.month.number).to be(-1)
           expect(bahai_date.day.number).to be 5
         end
 
-        it 'handles the first day of the month after Ayyam-i-Ha' do
+        it "handles the first day of the month after Ayyam-i-Ha" do
           bahai_date = BahaiDate.new(date: Date.new(2012, 3, 2))
           expect(bahai_date.year.bahai_era).to be 168
           expect(bahai_date.month.number).to be 19
@@ -184,8 +184,8 @@ module BahaiDate
         end
       end
 
-      context 'in a non-leap year' do
-        it 'handles the last day of Ayyam-i-Ha' do
+      context "in a non-leap year" do
+        it "handles the last day of Ayyam-i-Ha" do
           bahai_date = BahaiDate.new(date: Date.new(2013, 3, 1))
           expect(bahai_date.year.bahai_era).to be 169
           expect(bahai_date.month.number).to be(-1)
@@ -194,7 +194,7 @@ module BahaiDate
       end
     end
 
-    it 'can get weekday from a gregorian date accurately' do
+    it "can get weekday from a gregorian date accurately" do
       bahai_date = BahaiDate.new(date: Date.new(1844, 3, 21))
       expect(bahai_date.weekday.number).to be 6
 
@@ -220,36 +220,36 @@ module BahaiDate
       expect(bahai_date.weekday.number).to be 6
     end
 
-    it 'can be converted to string' do
+    it "can be converted to string" do
       bahai_date = BahaiDate.new(date: Date.new(1844, 3, 21))
-      expect(bahai_date.to_s).to eq '1.1.1'
+      expect(bahai_date.to_s).to eq "1.1.1"
     end
 
-    it 'can provide the date in long format' do
+    it "can provide the date in long format" do
       bahai_date = BahaiDate.new(date: Date.new(1844, 3, 21))
-      expect(bahai_date.long_format).to eq 'Istijlal 1 Baha 1 B.E.'
+      expect(bahai_date.long_format).to eq "Istijlal 1 Baha 1 B.E."
     end
 
-    it 'can provide the date in short format' do
+    it "can provide the date in short format" do
       bahai_date = BahaiDate.new(date: Date.new(1844, 3, 21))
-      expect(bahai_date.short_format).to eq '1 Baha 1'
+      expect(bahai_date.short_format).to eq "1 Baha 1"
     end
 
-    it 'can provide an array of occasions for a given day' do
+    it "can provide an array of occasions for a given day" do
       bahai_date = BahaiDate.new(date: Date.new(1844, 3, 21))
       occasions_array = bahai_date.occasions
       expect(occasions_array.size).to be 2
-      expect(occasions_array.first.short_title).to eq 'Naw-Ruz'
-      expect(occasions_array.last.short_title).to eq 'Feast of Baha'
+      expect(occasions_array.first.short_title).to eq "Naw-Ruz"
+      expect(occasions_array.last.short_title).to eq "Feast of Baha"
     end
 
-    it 'can add to date, returning itself' do
+    it "can add to date, returning itself" do
       bahai_date = BahaiDate.new(date: Date.new(1844, 3, 21))
       bahai_date += 1
       expect(bahai_date.gregorian_date).to eq Date.new(1844, 3, 22)
     end
 
-    it 'can subtract from the date, returning itself' do
+    it "can subtract from the date, returning itself" do
       bahai_date = BahaiDate.new(date: Date.new(1844, 3, 22))
       bahai_date -= 1
       expect(bahai_date.gregorian_date).to eq Date.new(1844, 3, 21)

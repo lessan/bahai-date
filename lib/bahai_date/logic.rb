@@ -1,7 +1,7 @@
-require 'bundler/setup'
-require 'tzinfo'
-require 'solareventcalculator'
-require 'astro-algo'
+require "bundler/setup"
+require "tzinfo"
+require "solareventcalculator"
+require "astro-algo"
 
 module BahaiDate
   class Logic
@@ -27,7 +27,7 @@ module BahaiDate
     AZIMUTH = 90.833333
 
     def initialize
-      @tz = TZInfo::Timezone.get('Asia/Tehran')
+      @tz = TZInfo::Timezone.get("Asia/Tehran")
     end
 
     def self.nawruz_for(year)
@@ -100,7 +100,7 @@ module BahaiDate
     private
 
     def localize(time)
-      (@tz.utc_to_local(time)).to_time
+      @tz.utc_to_local(time).to_time
     end
 
     def increment_if_after_sunset(time)
