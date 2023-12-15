@@ -67,6 +67,36 @@ module BahaiDate
       end
     end
 
+    context "Ayyam-i-ha date ranges" do
+      it "Finds the date range for Ayyam-i-ha" do
+        range = OccasionFactory.ayyam_i_ha_range(180)
+        expect(range.first).to eq(Date.parse("2024-02-26"))
+        expect(range.last).to eq(Date.parse("2024-02-29"))
+        expect(range.to_a.length).to eq(4)
+      end
+
+      it "Finds the date range for Ayyam-i-ha for the current year" do
+        range = OccasionFactory.ayyam_i_ha_range(187)
+        expect(range.first).to eq(Date.parse("2031-02-25"))
+        expect(range.last).to eq(Date.parse("2031-03-01"))
+        expect(range.to_a.length).to eq(5)
+      end
+    end
+
+    context "Fasting date ranges" do
+      it "Finds the date range for Fasting month" do
+        range = OccasionFactory.fasting_range(180)
+        expect(range.first).to eq(Date.parse("2024-03-01"))
+        expect(range.last).to eq(Date.parse("2024-03-19"))
+      end
+
+      it "Finds the date range for Fasting month leap year" do
+        range = OccasionFactory.fasting_range(187)
+        expect(range.first).to eq(Date.parse("2031-03-02"))
+        expect(range.last).to eq(Date.parse("2031-03-20"))
+      end
+    end
+
     context 'for dates after 172 B.E.' do
       it 'provides the Declaration of the Bab on the correct day' do
         occasions = OccasionFactory.new(172, 4, 7).occasions

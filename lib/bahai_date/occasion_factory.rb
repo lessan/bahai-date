@@ -147,6 +147,19 @@ module BahaiDate
       create_occasions_classes_from occasions_hashes
     end
 
+    def self.ayyam_i_ha_range(year)
+      first = BahaiDate.new(year:, month: -1, day: 1)
+      last = BahaiDate.new(year:, month: 19, day: 1)
+
+      first.gregorian_date..(last.gregorian_date.prev_day)
+    end
+
+    def self.fasting_range(year)
+      first = BahaiDate.new(year:, month: 19, day: 1)
+      last = BahaiDate.new(year:, month: 19, day: 19)
+
+      first.gregorian_date..(last.gregorian_date)
+    end
     def self.find(occasion, year)
       if year < 172
         all_dates = DATES.merge(DATES_BEFORE_172)
