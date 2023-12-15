@@ -18,7 +18,7 @@ module BahaiDate
         validate_ayyam_i_ha
         @gregorian_date = to_gregorian
       else
-        fail ArgumentError, 'Invalid arguments. Use a hash with :date or with :year, :month, and :day.'
+        fail ArgumentError, "Invalid arguments. Use a hash with :date or with :year, :month, and :day."
       end
       @weekday = Weekday.new(weekday_from_gregorian)
     end
@@ -39,12 +39,12 @@ module BahaiDate
       "#{@day.number} #{@month} #{@year.bahai_era}"
     end
 
-    def +(val)
-      self.class.new(date: @gregorian_date + val)
+    def +(other)
+      self.class.new(date: @gregorian_date + other)
     end
 
-    def -(val)
-      self.class.new(date: @gregorian_date - val)
+    def -(other)
+      self.class.new(date: @gregorian_date - other)
     end
 
     private
@@ -84,7 +84,7 @@ module BahaiDate
           day = days - (342 + ayyam_i_ha_days(year))
         end
       else
-        month, day = (days).divmod(19)
+        month, day = days.divmod(19)
         month += 1
       end
       day += 1
@@ -93,7 +93,7 @@ module BahaiDate
 
     def weekday_from_gregorian
       # saturday (6 in ruby) is the first day of the week
-      @gregorian_date.wday == 6 ? 1 : @gregorian_date.wday + 2
+      (@gregorian_date.wday == 6) ? 1 : @gregorian_date.wday + 2
     end
 
     def days_from_nawruz
