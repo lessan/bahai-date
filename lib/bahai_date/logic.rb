@@ -1,7 +1,8 @@
-require "bundler/setup"
+require "bigdecimal"
+require "date"
 require "tzinfo"
 require "solareventcalculator"
-require "astro-algo"
+require "bahai_date/astro"
 
 module BahaiDate
   class Logic
@@ -31,7 +32,10 @@ module BahaiDate
     end
 
     def self.nawruz_for(year)
-      new.nawruz_date year
+      # Memoised: every conversion asks for this once or twice per date, and the
+      # answer for a given year cannot change within a process.
+      @nawruz_dates ||= {}
+      @nawruz_dates[year] ||= new.nawruz_date(year)
     end
 
     def self.leap?(year_bahai_era)
@@ -61,7 +65,7 @@ module BahaiDate
     end
 
     def spring_equinox_in_tehran(year)
-      increment_if_after_sunset localize(Astro.date_of_vernal_equinox(year).to_utc)
+      increment_if_after_sunset localize(Astro.utc(Astro.date_of_vernal_equinox(year)))
     end
 
     def twin_holy_days_for(year_bahai_era)
@@ -77,7 +81,7 @@ module BahaiDate
     end
 
     def new_moon(lunation)
-      localize(Astro.date_of_moon(lunation, Astro::PhaseNew).to_utc)
+      localize(Astro.utc(Astro.date_of_moon(lunation, Astro::PHASE_NEW)))
     end
 
     def leap?(year_bahai_era)

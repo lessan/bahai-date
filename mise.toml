@@ -1,0 +1,27 @@
+# Toolchain for this project. The first Ruby is the default; `mise run test:all`
+# checks the suite against all three supported versions. Keep in sync with
+# .ruby-version.
+[tools]
+ruby = ["4.0.10", "3.4.13", "3.3.14"]
+
+# The machine-global `gem:standard` tool ships its own `standardrb` binstub,
+# which shadows the version bundled here (and fails, because it resolves this
+# repo's lockfile with its own bundle path). Linting comes from the Gemfile.
+[settings]
+disable_tools = ["gem:standard"]
+
+[tasks.test]
+description = "Run the specs on the default Ruby"
+run = "bundle exec rspec"
+
+[tasks."test:all"]
+description = "Run the specs on every supported Ruby (3.3, 3.4, 4.0)"
+run = [
+  "mise exec ruby@3.3.14 -- bash -c 'bundle install --quiet && bundle exec rspec --format progress'",
+  "mise exec ruby@3.4.13 -- bash -c 'bundle install --quiet && bundle exec rspec --format progress'",
+  "mise exec ruby@4.0.10 -- bash -c 'bundle install --quiet && bundle exec rspec --format progress'"
+]
+
+[tasks.lint]
+description = "Run the linter"
+run = "bundle exec standardrb"
