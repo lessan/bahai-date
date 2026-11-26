@@ -167,7 +167,7 @@ module BahaiDate
       else
         DATES.merge(DATES_AFTER_172).merge(dates_lunar(year))
       end
-      all_dates.find { |_key, array| array.include? occasion }.first
+      all_dates.find { |_key, array| array.include? occasion }&.first
     end
 
     def self.dates_lunar(year)

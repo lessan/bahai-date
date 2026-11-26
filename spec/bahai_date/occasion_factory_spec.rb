@@ -65,6 +65,10 @@ module BahaiDate
         month_and_day = OccasionFactory.find(:birth_bab, 163)
         expect(month_and_day).to eq "12.5"
       end
+
+      it "returns nil for an unknown occasion" do
+        expect(OccasionFactory.find(:not_an_occasion, 163)).to be_nil
+      end
     end
 
     context "Ayyam-i-ha date ranges" do

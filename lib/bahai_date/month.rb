@@ -29,8 +29,7 @@ module BahaiDate
     end
 
     def add_day(day_number)
-      return if @days[day_number]
-      @days[day_number] = Day.new(day_number)
+      @days[day_number] ||= Day.new(day_number)
     end
 
     private
