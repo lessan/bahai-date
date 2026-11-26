@@ -94,7 +94,7 @@ module BahaiDate
     end
 
     def leap_bahai_era?(year)
-      (nawruz_date(year + 1) - nawruz_date(year)) == 366
+      (self.class.nawruz_for(year + 1) - self.class.nawruz_for(year)) == 366
     end
 
     def bahai_era_to_gregorian_year(year)
