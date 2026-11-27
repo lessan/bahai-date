@@ -1,6 +1,5 @@
 *.gem
 *.swp
 .DS_Store
-.ruby-version
-Gemfile.lock
 coverage/
+/.agents/skills/rubypowers

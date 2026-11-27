@@ -1,3 +1,3 @@
-require 'simplecov'
+require "simplecov"
 SimpleCov.start
-require 'bahai_date'
+require "bahai_date"

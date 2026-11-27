@@ -1,11 +1,11 @@
 module BahaiDate
   class Occasion
     attr_reader :type,
-                :work_suspended,
-                :title,
-                :short_title,
-                :title_html,
-                :short_title_html
+      :work_suspended,
+      :title,
+      :short_title,
+      :title_html,
+      :short_title_html
     alias_method :work_suspended?, :work_suspended
 
     def initialize(opts = {})

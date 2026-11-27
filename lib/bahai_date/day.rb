@@ -1,8 +1,8 @@
 module BahaiDate
   class Day
-    TITLES = %w(Baha Jalal Jamal Azamat Nur Rahmat Kalimat Kamal Asma Izzat Mashiyyat Ilm Qudrat Qawl Masail Sharaf Sultan Mulk Ala)
-    TITLES_HTML = %w(Bahá Jalál Jamál ‘Aẓamat Núr Raḥmat Kalimát Kamál Asmá’ ‘Izzat Ma<u>sh</u>íyyat ‘Ilm Qudrat Qawl Masá’il <u>Sh</u>araf Sulṭán Mulk ‘Alá’)
-    TITLES_EN = %w(Splendour Glory Beauty Grandeur Light Mercy Words Perfection Names Might Will Knowledge Power Speech Questions Honour Sovereignty Dominion Loftiness)
+    TITLES = %w[Baha Jalal Jamal Azamat Nur Rahmat Kalimat Kamal Asma Izzat Mashiyyat Ilm Qudrat Qawl Masail Sharaf Sultan Mulk Ala]
+    TITLES_HTML = %w[Bahá Jalál Jamál ‘Aẓamat Núr Raḥmat Kalimát Kamál Asmá’ ‘Izzat Ma<u>sh</u>íyyat ‘Ilm Qudrat Qawl Masá’il <u>Sh</u>araf Sulṭán Mulk ‘Alá’]
+    TITLES_EN = %w[Splendour Glory Beauty Grandeur Light Mercy Words Perfection Names Might Will Knowledge Power Speech Questions Honour Sovereignty Dominion Loftiness]
 
     attr_reader :number
     attr_accessor :occasions, :weekday
@@ -36,7 +36,7 @@ module BahaiDate
 
     def validate(number_arg)
       number = number_arg.to_i
-      return if (1..19).include? number
+      return if (1..19).cover? number
       fail ArgumentError, "'#{number}' is not a valid day. Please use 1 to 19."
     end
   end
