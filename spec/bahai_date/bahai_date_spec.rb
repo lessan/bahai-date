@@ -12,6 +12,29 @@ module BahaiDate
       expect(bahai_date).to_not be_nil
     end
 
+    it "can be created from a Time or DateTime, keeping only the date" do
+      from_time = BahaiDate.new(date: Time.new(2026, 11, 28, 21, 0, 0, "+10:00"))
+      from_datetime = BahaiDate.new(date: DateTime.new(2026, 11, 28, 21, 0, 0))
+
+      expect(from_time.gregorian_date).to eq Date.new(2026, 11, 28)
+      expect(from_time.gregorian_date).to be_an_instance_of(Date)
+      expect(from_datetime.gregorian_date).to be_an_instance_of(Date)
+      expect(from_time.to_s).to eq from_datetime.to_s
+    end
+
+    it "raises an ArgumentError for a date that is not a date" do
+      expect { BahaiDate.new(date: 20261128) }.to raise_error(ArgumentError, /respond to to_date/)
+    end
+
+    it "supports Gregorian dates up to the end of the year 1157 B.E." do
+      expect(BahaiDate.new(year: 1157, month: 19, day: 19).to_s).to eq "1157.19.19"
+      last = BahaiDate.new(year: 1157, month: 19, day: 19).gregorian_date
+      expect(BahaiDate.new(date: last).to_s).to eq "1157.19.19"
+      expect { BahaiDate.new(date: last + 1) }.to raise_error(ArgumentError, /not a valid year/)
+      expect { BahaiDate.new(date: Date.new(3002, 1, 1)) }.to raise_error(ArgumentError, /outside the supported range/)
+      expect { BahaiDate.new(date: Date.new(1_000_000, 1, 1)) }.to raise_error(ArgumentError, /outside the supported range/)
+    end
+
     it "raises an error if invalid arguments are passed to the initializer" do
       expect { BahaiDate.new }.to raise_error(ArgumentError)
       expect { BahaiDate.new({}) }.to raise_error(ArgumentError)

@@ -6,7 +6,7 @@ module BahaiDate
 
     def initialize(date: nil, year: nil, month: nil, day: nil)
       if date
-        @gregorian_date = date
+        @gregorian_date = to_date(date)
         year, month, day = from_gregorian
         @year = Year.new(year)
         @month = Month.new(month)
@@ -48,6 +48,12 @@ module BahaiDate
     end
 
     private
+
+    def to_date(date)
+      fail ArgumentError, "date must be a Date, or respond to to_date (such as a Time or DateTime)" unless date.respond_to?(:to_date)
+
+      date.to_date.tap { |converted| Logic.check_gregorian_year(converted.year) }
+    end
 
     def validate_ayyam_i_ha
       fail ArgumentError, "'#{@day.number}' is not a valid day for Ayyam-i-Ha in the year #{@year.bahai_era}" if @month.number == AYYAM_I_HA && @day.number > ayyam_i_ha_days

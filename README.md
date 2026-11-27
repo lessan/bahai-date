@@ -7,7 +7,7 @@ A Ruby gem for conversion between the Gregorian calendar and the Baha'i (or Badi
 
 The Baha'i calendar
 -------------------
-In the Baha'i (or Badi) calendar there are 19 months each having 19 days, with 4 or 5 days left aside as intercalery days. Each weekday, day of the month and month of the year have a name, named after the attributes of God (such as Glory, Beauty, etc). The names have been transliterated into English from the original Arabic, and a translation is also provided.
+In the Baha'i (or Badi) calendar there are 19 months each having 19 days, with 4 or 5 days left aside as intercalary days. Each weekday, day of the month and month of the year have a name, named after the attributes of God (such as Glory, Beauty, etc). The names have been transliterated into English from the original Arabic, and a translation is also provided.
 
 Each year also has a name, as part of a 19 year cycle called a Vahid (meaning "unity"). Every 19 Vahids (i.e. 361 years) constitute a Kull-i-Shay (meaning "all things"). 
 
@@ -29,6 +29,18 @@ Functionality
 A BahaiDate instance can be created either from a Gregorian date or supplying the year, month and day in the Baha'i calendar.
 
 A calendar can also be obtained using the YearCalendar class and providing a year. It is then populated with details about that year, each month and each day in it.
+
+
+Limits
+------
+- Years 1 to 1157 B.E. are supported, which is Gregorian 21 March 1844 to
+  March 3001. The astronomical algorithms are not accurate beyond that.
+- A Baha'i day begins at sunset, but this gem converts whole Gregorian dates.
+  `BahaiDate.new(date: Date.today)` gives the Baha'i date that begins at
+  sunset on the evening before `Date.today`, so after sunset you need the next
+  day's date. `Date.today` is also in the server's time zone, not the reader's.
+- Holy days use Tehran as the reference point, as the Universal House of
+  Justice set out in 2014 for dates from 172 B.E. (2015) onwards.
 
 
 Installation

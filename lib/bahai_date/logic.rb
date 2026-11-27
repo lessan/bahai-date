@@ -1,6 +1,5 @@
 require "bigdecimal"
 require "date"
-require "tzinfo"
 require "solareventcalculator"
 require "bahai_date/astro"
 
@@ -27,11 +26,21 @@ module BahaiDate
     #         http://www.satsig.net/degrees-minutes-seconds-calculator.htm
     AZIMUTH = 90.833333
 
-    def initialize
-      @tz = TZInfo::Timezone.get("Asia/Tehran")
-    end
+    # Iran Standard Time. Tehran has kept this offset all year since it dropped
+    # daylight saving in 2022, and before that daylight saving only ran from
+    # late March to late September, so neither Naw-Ruz nor the new moons of the
+    # Twin Holy Days ever fell in it. The offset only decides which calendar
+    # date a moment is labelled with before it is compared with that date's
+    # sunset, so any offset within a few hours gives the same answers; this one
+    # matches the zoneinfo answers for every year from 2015 to 3001.
+    TEHRAN_UTC_OFFSET = "+03:30"
+
+    # The astronomical algorithms are good to about the year 3000, and the last
+    # Baha'i year that starts by then is 1157 (it ends in March 3001).
+    MAX_GREGORIAN_YEAR = 3001
 
     def self.nawruz_for(year)
+      check_gregorian_year(year)
       # Memoised: every conversion asks for this once or twice per date, and the
       # answer for a given year cannot change within a process.
       @nawruz_dates ||= {}
@@ -39,11 +48,19 @@ module BahaiDate
     end
 
     def self.leap?(year_bahai_era)
+      Year.check(year_bahai_era)
       new.leap? year_bahai_era
     end
 
     def self.twin_holy_days_date(year_bahai_era)
+      Year.check(year_bahai_era)
       new.twin_holy_days_for year_bahai_era
+    end
+
+    def self.check_gregorian_year(year)
+      return if year.is_a?(Integer) && year <= MAX_GREGORIAN_YEAR
+
+      fail ArgumentError, "'#{year}' is outside the supported range. Dates up to the end of the year #{Year::MAX} B.E. (March #{MAX_GREGORIAN_YEAR}) are supported."
     end
 
     def nawruz_date(year)
@@ -104,7 +121,7 @@ module BahaiDate
     private
 
     def localize(time)
-      @tz.utc_to_local(time).to_time
+      time.to_time.getlocal(TEHRAN_UTC_OFFSET)
     end
 
     def increment_if_after_sunset(time)
