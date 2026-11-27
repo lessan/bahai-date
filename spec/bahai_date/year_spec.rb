@@ -7,12 +7,27 @@ module BahaiDate
 
     it "can't be created with a number less than 1" do
       expect { Year.new(0) }.to raise_error(
-        ArgumentError, "'0' is not a valid year. Please use a number greater than or equal to 1."
+        ArgumentError, "'0' is not a valid year. Please use a number from 1 to 1157."
       )
 
       expect { Year.new("hello") }.to raise_error(
-        ArgumentError, "'0' is not a valid year. Please use a number greater than or equal to 1."
+        ArgumentError, "'hello' is not a valid year. Please use a number from 1 to 1157."
       )
+    end
+
+    it "can be created up to 1157, the last year that begins by the Gregorian year 3000" do
+      expect(Year.new(1157).bahai_era).to eq 1157
+      expect { Year.new(1158) }.to raise_error(ArgumentError, "'1158' is not a valid year. Please use a number from 1 to 1157.")
+      expect { Year.new(10**20) }.to raise_error(ArgumentError)
+    end
+
+    it "translates the name of every year of a Vahid" do
+      expect(Year::TITLES_EN.size).to eq 19
+      expect(Year::TITLES.size).to eq 19
+      expect(Year::TITLES_HTML.size).to eq 19
+      expect(Year.new(17).translation).to eq "Luminous"
+      expect(Year.new(18).translation).to eq "Most Luminous"
+      expect(Year.new(19).translation).to eq "Unity"
     end
 
     subject(:year) { Year.new(1) }

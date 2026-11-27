@@ -1,0 +1,34 @@
+# Publishes the version in lib/bahai_date/version.rb to RubyGems.org with
+# trusted publishing (no API key), and tags the release vX.Y.Z.
+#
+# To release: bump the version and CHANGELOG on master, then run this workflow
+# from the Actions tab. It waits for approval in the "release" environment.
+name: Release
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    uses: ./.github/workflows/ci.yml
+
+  release:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    environment: release
+    permissions:
+      id-token: write # trusted publishing
+      contents: write # rake release pushes the version tag
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: ruby/setup-ruby@145243922b4465b78e04dd66294782c7de45901f # v1.345.0
+        with:
+          ruby-version: "4.0"
+          bundler-cache: true
+      - uses: rubygems/release-gem@2654a0fe0dc39725c07fe84d7fe863a084f2424e # v1.5.0

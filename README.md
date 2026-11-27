@@ -7,7 +7,7 @@ A Ruby gem for conversion between the Gregorian calendar and the Baha'i (or Badi
 
 The Baha'i calendar
 -------------------
-In the Baha'i (or Badi) calendar there are 19 months each having 19 days, with 4 or 5 days left aside as intercalery days. Each weekday, day of the month and month of the year have a name, named after the attributes of God (such as Glory, Beauty, etc). The names have been transliterated into English from the original Arabic, and a translation is also provided.
+In the Baha'i (or Badi) calendar there are 19 months each having 19 days, with 4 or 5 days left aside as intercalary days. Each weekday, day of the month and month of the year have a name, named after the attributes of God (such as Glory, Beauty, etc). The names have been transliterated into English from the original Arabic, and a translation is also provided.
 
 Each year also has a name, as part of a 19 year cycle called a Vahid (meaning "unity"). Every 19 Vahids (i.e. 361 years) constitute a Kull-i-Shay (meaning "all things"). 
 
@@ -18,10 +18,26 @@ More information about this calendar is on the [Wikipedia entry](http://en.wikip
 
 Calculations
 ------------
-The source of the algorithms used to determine the vernal equinox and lunar
-phases is the book [*Astronomical Algorithms*](http://www.willbell.com/math/mc1.htm) by Jean Meeus, which has become an authority on this subject in computer science circles (for example, [NASA uses it](http://eclipse.gsfc.nasa.gov/phase/phasecat.html)). These algorithms came from the *astro-algo* gem (https://github.com/lessan/astro-algo), which is unmaintained and no longer works on modern Ruby, so they now live in `lib/bahai_date/astro.rb`.
+From 172 B.E. (2015), Naw-Ruz is the day on which the vernal equinox falls in
+Tehran, counting days from sunset to sunset, and the Twin Holy Days are the
+first and second days after the eighth new moon after Naw-Ruz, as the Universal
+House of Justice set out in its message of 10 July 2014. Before 172 B.E. the
+gem uses the earlier fixed dates (Naw-Ruz on 21 March, and the Twin Holy Days
+on 5 'Ilm and 9 Qudrat).
 
-Also, the ruby gem *sunrise* (https://rubygems.org/gems/RubySunrise) is widely used to determine the time for sunrise/sunset at a given location, and we use it here.
+- The vernal equinox and new moons come from the algorithms in Jean Meeus,
+  [*Astronomical Algorithms*](http://www.willbell.com/math/mc1.htm), in
+  `lib/bahai_date/astro.rb`. They came from the *astro-algo* gem, which is
+  unmaintained and no longer works on modern Ruby.
+- Sunset comes from the US Naval Observatory's *Almanac for Computers*
+  algorithm, in `lib/bahai_date/sunset.rb`. It came from the *RubySunrise* gem.
+
+The gem has no runtime dependencies.
+
+The specs check the gem against the calendar bahai.org publishes (172-221
+B.E.) and against the independent [badiDate](https://github.com/janrg/badiDate)
+JavaScript library for every year it covers (172-507 B.E., to 2351). Why dates
+stop at the Gregorian year 3000 is explained in `lib/bahai_date/logic.rb`.
 
 
 Functionality
@@ -29,6 +45,18 @@ Functionality
 A BahaiDate instance can be created either from a Gregorian date or supplying the year, month and day in the Baha'i calendar.
 
 A calendar can also be obtained using the YearCalendar class and providing a year. It is then populated with details about that year, each month and each day in it.
+
+
+Limits
+------
+- Years 1 to 1157 B.E. are supported, which is Gregorian 21 March 1844 to
+  March 3001. Past about 2351 the dates are the algorithms' best estimate:
+  the Earth's rotation cannot be predicted precisely, and in some years the
+  equinox falls within minutes of sunset in Tehran.
+- A Baha'i day begins at sunset, but this gem converts whole Gregorian dates.
+  `BahaiDate.new(date: Date.today)` gives the Baha'i date that begins at
+  sunset on the evening before `Date.today`, so after sunset you need the next
+  day's date. `Date.today` is also in the server's time zone, not the reader's.
 
 
 Installation
