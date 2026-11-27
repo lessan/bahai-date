@@ -21,9 +21,13 @@ Other changes:
   `DateTime`, and `gregorian_date` is then always a `Date`. Anything else
   raises `ArgumentError`. Note that a Baha'i day begins at sunset, while this
   gem converts whole Gregorian dates.
-- No longer depends on tzinfo or on system time zone data. Tehran time is a
-  fixed UTC+03:30, which gives the same dates as the Asia/Tehran zone for
-  every year from 2015 to 3001.
+- No runtime dependencies. The sunset algorithm from `RubySunrise` now
+  lives in `lib/bahai_date/sunset.rb` as `BahaiDate::Sunset`, which removes
+  `RubySunrise`, `tzinfo` and `bigdecimal`. Tehran time is a fixed UTC+03:30,
+  which gives the same dates as the Asia/Tehran zone for every year from 2015
+  to 3001, so no system time zone data is needed. `Logic::TEHRAN_LAT` and
+  `Logic::TEHRAN_LONG` are now Floats rather than BigDecimals. Naw-Ruz and the
+  Twin Holy Days are unchanged for every year from 2015 to 3001.
 - The gemspec sets `rubygems_mfa_required`, so a release can only be pushed
   with multi-factor authentication, and links to the source, changelog and
   issues.
@@ -31,7 +35,6 @@ Other changes:
   `lib/bahai_date/astro.rb` as `BahaiDate::Astro`. Its only published release
   does not work on modern Ruby and the gem is unmaintained, and it used to
   reopen `Numeric`, `Array` and `DateTime` on load; it no longer does.
-- `bigdecimal`, a bundled gem since Ruby 3.4, is now declared as a dependency.
 - Removed `require "bundler/setup"` from the library.
 - `Month#add_day` returns the existing day instead of `nil` when called twice.
 - `OccasionFactory.find` returns `nil` for an unknown occasion instead of
@@ -40,4 +43,6 @@ Other changes:
   (and building a `YearCalendar`) far cheaper.
 - The specs check every published month start, Ayyam-i-Ha range, holy day and
   significant date for eras 172-221 against bahai.org itself. Refresh the data
-  with `script/collect_published_calendar.js`.
+  with `script/collect_published_calendar.js`. They also check Naw-Ruz, the
+  Twin Holy Days and Ayyam-i-Ha against the badiDate JavaScript library for
+  172-507 (2015-2351), and agree on every year.

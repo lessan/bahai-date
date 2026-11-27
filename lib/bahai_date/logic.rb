@@ -1,7 +1,6 @@
-require "bigdecimal"
 require "date"
-require "solareventcalculator"
 require "bahai_date/astro"
+require "bahai_date/sunset"
 
 module BahaiDate
   class Logic
@@ -16,15 +15,13 @@ module BahaiDate
     #         Latitude: 35° 41' 45.9996", Longitude: 51° 25' 23.0016"
     # Converted to decimal using:
     #         http://transition.fcc.gov/mb/audio/bickel/DDDMMSS-decimal.html
-    TEHRAN_LAT = BigDecimal("35.696111")
-    TEHRAN_LONG = BigDecimal("51.423056")
+    TEHRAN_LAT = 35.696111
+    TEHRAN_LONG = 51.423056
 
-    # *** Azimuth (for determining sunset times) ***
+    # *** Zenith angle of the Sun at sunset (named azimuth here historically) ***
     # Source: http://www.timeanddate.com/astronomy/about-sun-calculator.html
     #         "Technically, sunrise and sunset are calculated based on the true geocentric position of the Sun at 90°50' from the zenith position (directly above the observer)."
-    # Converted to decimal using:
-    #         http://www.satsig.net/degrees-minutes-seconds-calculator.htm
-    AZIMUTH = 90.833333
+    AZIMUTH = Sunset::OFFICIAL_ZENITH
 
     # Iran Standard Time. Tehran has kept this offset all year since it dropped
     # daylight saving in 2022, and before that daylight saving only ran from
@@ -35,8 +32,38 @@ module BahaiDate
     # matches the zoneinfo answers for every year from 2015 to 3001.
     TEHRAN_UTC_OFFSET = "+03:30"
 
-    # The astronomical algorithms are good to about the year 3000, and the last
-    # Baha'i year that starts by then is 1157 (it ends in March 3001).
+    # *** Why dates stop at the Gregorian year 3000 ***
+    #
+    # From 172 B.E. (2015) Naw-Ruz is the day on which the vernal equinox
+    # falls in Tehran, counting days from sunset to sunset, and the Twin Holy
+    # Days follow the eighth new moon after it. So the date of Naw-Ruz turns on
+    # which side of a Tehran sunset the equinox falls, and in some years the two
+    # are minutes apart: within 10 minutes in 2026 and 2059, and within half a
+    # minute in 2418.
+    #
+    # The positions of the Sun and Moon are not the weak point: Meeus's methods
+    # (Astro) give the equinox and new moons in Terrestrial Time, a uniform
+    # time scale, closely enough to match an ephemeris-based library on every
+    # year to 2351 (below). The weak point is turning that into clock time. Clocks follow the Earth's rotation, which is slowing (tidal
+    # friction from the Moon) and also speeds up and slows down irregularly
+    # (the core, ice and sea level), so the difference between the two, Delta T,
+    # can only be measured, not predicted. Astro.delta_T extrapolates it with
+    # NASA's polynomials, which run to the year 3000 and no further. By then
+    # Delta T is about 74 minutes, and NASA puts the standard error of the
+    # prediction at about 10 minutes in 2500 and 31 minutes in 3000
+    # (https://eclipse.gsfc.nasa.gov/SEhelp/uncertainty2004.html). Between
+    # 2501 and 3001 there are 21 years in which the equinox falls within 30
+    # minutes of sunset, so in some of those years this gem's Naw-Ruz will be a
+    # day out. The sunset formula (Sunset) is an approximation too.
+    #
+    # For comparison, bahai.org publishes dates to 221 B.E. (2064), and the
+    # badiDate JavaScript library stops after 2351 because Naw-Ruz 2352 may be
+    # wrong; this gem agrees with both for every year they cover (see
+    # spec/bahai_date/published_calendar_spec.rb and badidate_spec.rb). Past
+    # 2351, treat the dates as the best estimate the algorithms give, not as
+    # certain.
+    #
+    # The last Baha'i year that begins by 3000 is 1157, which ends in March 3001.
     MAX_GREGORIAN_YEAR = 3001
 
     def self.nawruz_for(year)
@@ -76,9 +103,7 @@ module BahaiDate
     end
 
     def sunset_time_for(date)
-      calc = SolarEventCalculator.new(date, TEHRAN_LAT, TEHRAN_LONG)
-      sunset_time = calc.compute_utc_solar_event(AZIMUTH, false)
-      localize(sunset_time.utc)
+      localize(Sunset.utc(date, TEHRAN_LAT, TEHRAN_LONG, AZIMUTH))
     end
 
     def spring_equinox_in_tehran(year)

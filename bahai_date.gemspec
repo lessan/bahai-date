@@ -19,8 +19,6 @@ Gem::Specification.new do |s|
   s.files = Dir["{bin,lib,spec}/**/*"] + %w[CHANGELOG.md LICENSE.md README.md]
 
   s.required_ruby_version = ">= 3.3"
-  s.add_dependency "bigdecimal", ">= 3.1"
-  s.add_dependency "RubySunrise", "~> 0.3"
   s.add_development_dependency "irb", ">= 1.14"
   s.add_development_dependency "rake", ">= 13.0"
   s.add_development_dependency "rspec", "~> 3.13"
