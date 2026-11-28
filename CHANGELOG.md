@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- `Sunset.utc` puts sunset on the right UTC day far from Greenwich. It used to
+  return a time 24 hours early west of about 90°W (the Americas), where sunset
+  falls after midnight UTC. Tehran, and so the calendar, was never affected.
+- The gem package contains only `lib/` and the documents, not the specs.
+
 ## 2.0.0
 
 Breaking changes:

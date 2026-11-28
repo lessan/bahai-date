@@ -22,4 +22,5 @@ The dates agree with the official dates the Bahá’í World Centre published fo
 library for every year to 2351. For the official calendar, see
 [bahai.org](https://www.bahai.org/action/devotional-life/calendar).
 
+<script src="site/sunset.js"></script>
 <script src="site/app.js"></script>

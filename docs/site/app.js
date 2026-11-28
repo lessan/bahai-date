@@ -53,17 +53,63 @@ function describe(b) {
   return `${b.weekday}, ${where} ${b.data.year} B.E.`;
 }
 
+const PLACE_KEY = "bahai-dates-place";
+
+function savedPlace() {
+  try { return JSON.parse(localStorage.getItem(PLACE_KEY)); } catch { return null; }
+}
+
+function time(d) { return d.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }); }
+
 async function showToday(el) {
   const now = new Date();
   const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
   const [before, after] = await Promise.all([badiDate(today), badiDate(today + DAY)]);
   if (!before) { el.textContent = "Today is outside the years this site covers."; return; }
   const holy = (b) => (b && b.holy.length ? ` — ${escape(b.holy.join(", "))}` : "");
+  const place = savedPlace();
+  const sunset = place && typeof Sunset !== "undefined" ? Sunset.at(now.getFullYear(), now.getMonth() + 1, now.getDate(), place.lat, place.lon) : null;
+
+  if (place && sunset) {
+    const afterSunset = now >= sunset;
+    const current = afterSunset ? after : before;
+    const next = afterSunset ? null : after;
+    el.innerHTML = `
+      <div class="muted">Now, at your location:</div>
+      <div class="date">${escape(describe(current))}${holy(current)}</div>
+      <div class="muted" style="margin-top:.5rem">${afterSunset
+        ? `This day began at sunset, ${escape(time(sunset))}.`
+        : `Sunset today is at ${escape(time(sunset))}${next ? `; then it becomes ${escape(describe(next))}${holy(next)}` : ""}.`.replace(/\.\.$/, ".")}</div>
+      <div class="note">Sunset is calculated in your browser for your saved location (to within a minute or two); the location is not sent anywhere.
+      In some places far north, the Bahá’í community uses fixed clock times instead; see <a href="calendar-rules.html#5-how-to-calculate-the-dates">the rules</a>.
+      <button type="button" class="link" id="forget">Forget my location</button></div>`;
+    document.getElementById("forget").onclick = () => { localStorage.removeItem(PLACE_KEY); showToday(el); };
+    return;
+  }
+
   el.innerHTML = `
     <div class="muted">Until sunset today, ${escape(pretty(today))}:</div>
     <div class="date">${escape(describe(before))}${holy(before)}</div>
     ${after ? `<div class="muted" style="margin-top:.5rem">From sunset this evening: ${escape(describe(after))}${holy(after)}</div>` : ""}
-    <div class="note">Sunset depends on where you are; this page uses your device’s date and does not know your sunset time.</div>`;
+    <div class="note">${place
+      ? "There is no sunset at your saved location today, so this shows the date only. "
+      : "A Bahá’í day begins at sunset, which depends on where you are. "}
+    ${"geolocation" in navigator ? `<button type="button" class="link" id="locate">${place ? "Update my location" : "Use my location to find sunset"}</button>` : ""}
+    <span id="locate-status"></span></div>`;
+  const button = document.getElementById("locate");
+  if (button) button.onclick = () => {
+    const status = document.getElementById("locate-status");
+    status.textContent = " Finding your location…";
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const round = (x) => Math.round(x * 100) / 100; // about 1 km
+        localStorage.setItem(PLACE_KEY, JSON.stringify({ lat: round(pos.coords.latitude), lon: round(pos.coords.longitude) }));
+        showToday(el);
+      },
+      (err) => { status.textContent = err.code === err.PERMISSION_DENIED ? " Location permission was not given." : " Your location could not be found."; },
+      { maximumAge: 3600000, timeout: 15000 }
+    );
+  };
 }
 
 async function showYear(el, year) {
@@ -111,6 +157,9 @@ function setUpYears(el) {
 }
 
 const todayEl = document.getElementById("today");
-if (todayEl) showToday(todayEl);
+if (todayEl) {
+  showToday(todayEl);
+  setInterval(() => { if (!todayEl.contains(document.activeElement)) showToday(todayEl); }, 60000);
+}
 const yearEl = document.getElementById("year-view");
 if (yearEl) setUpYears(yearEl);

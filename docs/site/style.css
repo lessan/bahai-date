@@ -54,3 +54,4 @@ pre code { padding: 0; background: none; }
 main p, main li, main blockquote, .today { max-width: 60ch; }
 main p, main li { text-wrap: pretty; }
 h1, h2, h3 { text-wrap: balance; }
+button.link { font: inherit; color: var(--link); background: none; border: none; padding: 0; text-decoration: underline; cursor: pointer; }

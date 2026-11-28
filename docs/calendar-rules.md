@@ -203,7 +203,11 @@ ends at sunset on *x*.
 
 **Today’s date** depends on where you are. After local sunset, the Bahá’í date is
 the one for the next Gregorian date. A server’s “today” is in the server’s time
-zone, not the reader’s.
+zone, not the reader’s. Where the sun does not set or rise for part of the year,
+and in some other places far north, Bahá’í communities use fixed clock times
+instead of sunset (the badiDate library implements such rules for northern
+Canada, Alaska, Finland, Iceland, Norway and Sweden); check with the local
+Bahá’í community.
 
 ## 6. Edge cases
 
