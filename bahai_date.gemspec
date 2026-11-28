@@ -16,10 +16,13 @@ Gem::Specification.new do |s|
     "bug_tracker_uri" => "https://github.com/lessan/bahai-date/issues"
   }
 
-  s.files = Dir["{bin,lib,spec}/**/*"] + %w[CHANGELOG.md LICENSE.md README.md]
+  s.files = Dir["lib/**/*"] + %w[CHANGELOG.md LICENSE.md README.md]
 
   s.required_ruby_version = ">= 3.3"
+  s.add_development_dependency "csv", ">= 3.3"
   s.add_development_dependency "irb", ">= 1.14"
+  s.add_development_dependency "kramdown", ">= 2.5"
+  s.add_development_dependency "kramdown-parser-gfm", ">= 1.1"
   s.add_development_dependency "rake", ">= 13.0"
   s.add_development_dependency "rspec", "~> 3.13"
   s.add_development_dependency "simplecov", ">= 0.22"

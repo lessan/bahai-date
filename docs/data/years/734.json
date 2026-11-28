@@ -1,0 +1,230 @@
+{
+  "title": "Bahá’í (Badí‘) calendar dates, 1 to 1157 B.E.",
+  "generated_by": "bahai_date 2.0.0 (https://github.com/lessan/bahai-date)",
+  "dates": "Each Gregorian date is the day on which the Bahá’í day ends. A Bahá’í day begins at sunset, so it begins on the evening before the date given.",
+  "rules": "https://github.com/lessan/bahai-date/blob/master/docs/calendar-rules.md",
+  "year": 734,
+  "year_name": "Javáb",
+  "year_translation": "Answer",
+  "year_in_vahid": 12,
+  "vahid": 1,
+  "kull_i_shay": 3,
+  "confidence": "estimate",
+  "nawruz": "2577-03-20",
+  "days_in_year": 365,
+  "ayyam_i_ha": {
+    "first": "2578-02-25",
+    "last": "2578-02-28",
+    "days": 4
+  },
+  "fast": {
+    "first": "2578-03-01",
+    "last": "2578-03-19"
+  },
+  "months": [
+    {
+      "number": 1,
+      "name": "Bahá",
+      "translation": "Splendour",
+      "first_day": "2577-03-20"
+    },
+    {
+      "number": 2,
+      "name": "Jalál",
+      "translation": "Glory",
+      "first_day": "2577-04-08"
+    },
+    {
+      "number": 3,
+      "name": "Jamál",
+      "translation": "Beauty",
+      "first_day": "2577-04-27"
+    },
+    {
+      "number": 4,
+      "name": "‘Aẓamat",
+      "translation": "Grandeur",
+      "first_day": "2577-05-16"
+    },
+    {
+      "number": 5,
+      "name": "Núr",
+      "translation": "Light",
+      "first_day": "2577-06-04"
+    },
+    {
+      "number": 6,
+      "name": "Raḥmat",
+      "translation": "Mercy",
+      "first_day": "2577-06-23"
+    },
+    {
+      "number": 7,
+      "name": "Kalimát",
+      "translation": "Words",
+      "first_day": "2577-07-12"
+    },
+    {
+      "number": 8,
+      "name": "Kamál",
+      "translation": "Perfection",
+      "first_day": "2577-07-31"
+    },
+    {
+      "number": 9,
+      "name": "Asmá’",
+      "translation": "Names",
+      "first_day": "2577-08-19"
+    },
+    {
+      "number": 10,
+      "name": "‘Izzat",
+      "translation": "Might",
+      "first_day": "2577-09-07"
+    },
+    {
+      "number": 11,
+      "name": "Mashíyyat",
+      "translation": "Will",
+      "first_day": "2577-09-26"
+    },
+    {
+      "number": 12,
+      "name": "‘Ilm",
+      "translation": "Knowledge",
+      "first_day": "2577-10-15"
+    },
+    {
+      "number": 13,
+      "name": "Qudrat",
+      "translation": "Power",
+      "first_day": "2577-11-03"
+    },
+    {
+      "number": 14,
+      "name": "Qawl",
+      "translation": "Speech",
+      "first_day": "2577-11-22"
+    },
+    {
+      "number": 15,
+      "name": "Masá’il",
+      "translation": "Questions",
+      "first_day": "2577-12-11"
+    },
+    {
+      "number": 16,
+      "name": "Sharaf",
+      "translation": "Honour",
+      "first_day": "2577-12-30"
+    },
+    {
+      "number": 17,
+      "name": "Sulṭán",
+      "translation": "Sovereignty",
+      "first_day": "2578-01-18"
+    },
+    {
+      "number": 18,
+      "name": "Mulk",
+      "translation": "Dominion",
+      "first_day": "2578-02-06"
+    },
+    {
+      "number": 19,
+      "name": "‘Alá’",
+      "translation": "Loftiness",
+      "first_day": "2578-03-01"
+    }
+  ],
+  "holy_days": [
+    {
+      "id": "nawruz",
+      "name": "Naw-Rúz",
+      "month": 1,
+      "day": 1,
+      "date": "2577-03-20",
+      "work_suspended": true
+    },
+    {
+      "id": "ridvan_1",
+      "name": "1st day of Riḍván",
+      "month": 2,
+      "day": 13,
+      "date": "2577-04-20",
+      "work_suspended": true
+    },
+    {
+      "id": "ridvan_9",
+      "name": "9th day of Riḍván",
+      "month": 3,
+      "day": 2,
+      "date": "2577-04-28",
+      "work_suspended": true
+    },
+    {
+      "id": "ridvan_12",
+      "name": "12th day of Riḍván",
+      "month": 3,
+      "day": 5,
+      "date": "2577-05-01",
+      "work_suspended": true
+    },
+    {
+      "id": "declaration_bab",
+      "name": "Declaration of the Báb",
+      "month": 4,
+      "day": 8,
+      "date": "2577-05-23",
+      "work_suspended": true
+    },
+    {
+      "id": "ascension_bahaullah",
+      "name": "Ascension of Bahá’u’lláh",
+      "month": 4,
+      "day": 13,
+      "date": "2577-05-28",
+      "work_suspended": true
+    },
+    {
+      "id": "martyrdom_bab",
+      "name": "Martyrdom of the Báb",
+      "month": 6,
+      "day": 17,
+      "date": "2577-07-09",
+      "work_suspended": true
+    },
+    {
+      "id": "birth_bab",
+      "name": "Birth of the Báb",
+      "month": 11,
+      "day": 19,
+      "date": "2577-10-14",
+      "work_suspended": true
+    },
+    {
+      "id": "birth_bahaullah",
+      "name": "Birth of Bahá’u’lláh",
+      "month": 12,
+      "day": 1,
+      "date": "2577-10-15",
+      "work_suspended": true
+    },
+    {
+      "id": "covenant",
+      "name": "Day of the Covenant",
+      "month": 14,
+      "day": 4,
+      "date": "2577-11-25",
+      "work_suspended": false
+    },
+    {
+      "id": "ascension_abdulbaha",
+      "name": "Ascension of ‘Abdu’l-Bahá",
+      "month": 14,
+      "day": 6,
+      "date": "2577-11-27",
+      "work_suspended": false
+    }
+  ]
+}

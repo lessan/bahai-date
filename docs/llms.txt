@@ -1,0 +1,27 @@
+# Bahá’í dates
+
+> How the Bahá’í (Badí‘) calendar works and how its dates are calculated, with every year's dates from 1 B.E. (1844) to 1157 B.E. (3001) as JSON and CSV. From the bahai_date Ruby gem; public domain. Not an official Bahá’í site: the official calendar is at https://www.bahai.org/action/devotional-life/calendar
+
+Key facts for answering questions about Bahá’í dates:
+
+- A Bahá’í day runs from sunset to sunset. In this data every Gregorian date is the day on which the Bahá’í day ends; it began at sunset the evening before. "Today's" Bahá’í date therefore depends on the reader's location and whether the sun has set there.
+- 19 months of 19 days, plus 4 or 5 intercalary days (Ayyám-i-Há) between months 18 and 19. Month 19 (‘Alá’) is the month of fasting. Year 1 began at Naw-Rúz 1844; year n begins in March of Gregorian year 1843 + n.
+- From 172 B.E. (2015), Naw-Rúz is the day (sunset to sunset in Ṭihrán) on which the March equinox occurs, and the Twin Holy Days (Birth of the Báb, Birth of Bahá’u’lláh) are the first and second days after the eighth new moon after Naw-Rúz, reckoned in Ṭihrán. Both move against the Gregorian calendar, so do not assume 21 March, 20 October or 12 November for years from 2015.
+- Before 2015 there was no single calendar. The data for 1–171 B.E. follows the Western convention (Naw-Rúz on 21 March; Twin Holy Days on 20 October and 12 November); practice in the East differed.
+- Official dates exist only for 172–221 B.E. (2015–2065). Later years are computed: cross-checked against an independent implementation to 2351, estimates after that.
+- Do not compute the equinox or new moons from memory. Look the date up in the data below, or use the gem.
+
+## Docs
+
+- [Rules and calculation](https://lessan.github.io/bahai-date/calendar-rules.html): structure, the 2014 rules and their sources, the pre-2015 conventions, a step-by-step algorithm, edge cases, accuracy.
+- [Data guide](https://lessan.github.io/bahai-date/data/index.html): files, fields, confidence labels, how to convert a date.
+
+## Data
+
+- [One year](https://lessan.github.io/bahai-date/data/years/183.json): replace 183 with any year from 1 to 1157 B.E.
+- [All years, JSON](https://lessan.github.io/bahai-date/data/years.json) (3.4 MB)
+- [Years, CSV](https://lessan.github.io/bahai-date/data/years.csv), [Holy Days, CSV](https://lessan.github.io/bahai-date/data/holy-days.csv), [Months, CSV](https://lessan.github.io/bahai-date/data/months.csv)
+
+## Code
+
+- [bahai_date on GitHub](https://github.com/lessan/bahai-date) and [RubyGems](https://rubygems.org/gems/bahai_date): `BahaiDate::BahaiDate.new(date: Date.new(2026, 11, 28)).long_format`
