@@ -8,7 +8,7 @@
     "event": "The year of the event itself: the date is the day of the event, not an anniversary.",
     "proleptic": "After the event but before the first known observance: the Day of the Covenant before 1901."
   },
-  "eastern_reconstruction": "For 1-171 B.E.: Naw-Rúz by the rule used from 172 B.E. (the day, sunset to sunset in Tehran, in which the March equinox falls), applied backwards, and the length of Ayyám-i-Há that follows from it. A modern reconstruction, not a record of what any community observed; uncertain where the equinox falls within 15 minutes of sunset. Bahá’ís in Iran also kept the Twin Holy Days, the Declaration and the Martyrdom of the Báb on Islamic lunar dates, which are not given here.",
+  "eastern_reconstruction_note": "For 1-171 B.E.: Naw-Rúz by the rule used from 172 B.E. (the day, sunset to sunset in Tehran, in which the March equinox falls), applied backwards, and the length of Ayyám-i-Há that follows from it. A modern reconstruction, not a record of what any community observed; uncertain where the equinox falls within 15 minutes of sunset. Bahá’ís in Iran also kept the Twin Holy Days, the Declaration and the Martyrdom of the Báb on Islamic lunar dates, which are not given here.",
   "year": 831,
   "year_name": "Vahháb",
   "year_translation": "Bountiful",

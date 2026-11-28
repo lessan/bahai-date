@@ -144,7 +144,7 @@ module DataExport
       rules: "https://github.com/lessan/bahai-date/blob/master/docs/calendar-rules.md",
       confidence: CONFIDENCE.map { |range, label, note| {years: "#{range.first}-#{range.last}", label: label, note: note} },
       holy_day_status: STATUSES,
-      eastern_reconstruction: "For 1-171 B.E.: Naw-Rúz by the rule used from 172 B.E. (the day, sunset to sunset in Tehran, in which the March equinox falls), applied backwards, and the length of Ayyám-i-Há that follows from it. A modern reconstruction, not a record of what any community observed; uncertain where the equinox falls within #{UNCERTAIN_MINUTES} minutes of sunset. Bahá’ís in Iran also kept the Twin Holy Days, the Declaration and the Martyrdom of the Báb on Islamic lunar dates, which are not given here."
+      eastern_reconstruction_note: "For 1-171 B.E.: Naw-Rúz by the rule used from 172 B.E. (the day, sunset to sunset in Tehran, in which the March equinox falls), applied backwards, and the length of Ayyám-i-Há that follows from it. A modern reconstruction, not a record of what any community observed; uncertain where the equinox falls within #{UNCERTAIN_MINUTES} minutes of sunset. Bahá’ís in Iran also kept the Twin Holy Days, the Declaration and the Martyrdom of the Báb on Islamic lunar dates, which are not given here."
     }
   end
 
