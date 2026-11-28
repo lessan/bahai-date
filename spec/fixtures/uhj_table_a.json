@@ -1,0 +1,614 @@
+{
+  "source": {
+    "title": "Bahá’í Dates 172 to 221 B.E., Table A",
+    "prepared_by": "An ad hoc committee at the Bahá’í World Centre, using data from HM Nautical Almanac Office; Ṭihrán per the World Geodetic System 1984",
+    "issued": "2014-12-11",
+    "public_copies": [
+      "https://bahai-library.com/6581",
+      "https://bahaidailycalendar.com/__l5e/assets-v1/f37af62b-7a3c-4b57-9c5a-4c5e0693ee9d/uhj-bahai-dates-172-221.pdf"
+    ],
+    "note": "Transcribed from the table. Dates are the Gregorian day on which each Bahá’í day ends (it begins at sunset the evening before)."
+  },
+  "years": [
+    {
+      "year": 172,
+      "nawruz": "2015-03-21",
+      "twin_holy_days_badi": "10, 11 Qudrat",
+      "birth_of_the_bab": "2015-11-13",
+      "birth_of_bahaullah": "2015-11-14",
+      "ayyam_i_ha": {
+        "first": "2016-02-26",
+        "last": "2016-02-29",
+        "days": 4
+      }
+    },
+    {
+      "year": 173,
+      "nawruz": "2016-03-20",
+      "twin_holy_days_badi": "18, 19 ‘Ilm",
+      "birth_of_the_bab": "2016-11-01",
+      "birth_of_bahaullah": "2016-11-02",
+      "ayyam_i_ha": {
+        "first": "2017-02-25",
+        "last": "2017-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 174,
+      "nawruz": "2017-03-20",
+      "twin_holy_days_badi": "7, 8 ‘Ilm",
+      "birth_of_the_bab": "2017-10-21",
+      "birth_of_bahaullah": "2017-10-22",
+      "ayyam_i_ha": {
+        "first": "2018-02-25",
+        "last": "2018-03-01",
+        "days": 5
+      }
+    },
+    {
+      "year": 175,
+      "nawruz": "2018-03-21",
+      "twin_holy_days_badi": "6, 7 Qudrat",
+      "birth_of_the_bab": "2018-11-09",
+      "birth_of_bahaullah": "2018-11-10",
+      "ayyam_i_ha": {
+        "first": "2019-02-26",
+        "last": "2019-03-01",
+        "days": 4
+      }
+    },
+    {
+      "year": 176,
+      "nawruz": "2019-03-21",
+      "twin_holy_days_badi": "14, 15 ‘Ilm",
+      "birth_of_the_bab": "2019-10-29",
+      "birth_of_bahaullah": "2019-10-30",
+      "ayyam_i_ha": {
+        "first": "2020-02-26",
+        "last": "2020-02-29",
+        "days": 4
+      }
+    },
+    {
+      "year": 177,
+      "nawruz": "2020-03-20",
+      "twin_holy_days_badi": "4, 5 ‘Ilm",
+      "birth_of_the_bab": "2020-10-18",
+      "birth_of_bahaullah": "2020-10-19",
+      "ayyam_i_ha": {
+        "first": "2021-02-25",
+        "last": "2021-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 178,
+      "nawruz": "2021-03-20",
+      "twin_holy_days_badi": "4, 5 Qudrat",
+      "birth_of_the_bab": "2021-11-06",
+      "birth_of_bahaullah": "2021-11-07",
+      "ayyam_i_ha": {
+        "first": "2022-02-25",
+        "last": "2022-03-01",
+        "days": 5
+      }
+    },
+    {
+      "year": 179,
+      "nawruz": "2022-03-21",
+      "twin_holy_days_badi": "11, 12 ‘Ilm",
+      "birth_of_the_bab": "2022-10-26",
+      "birth_of_bahaullah": "2022-10-27",
+      "ayyam_i_ha": {
+        "first": "2023-02-26",
+        "last": "2023-03-01",
+        "days": 4
+      }
+    },
+    {
+      "year": 180,
+      "nawruz": "2023-03-21",
+      "twin_holy_days_badi": "1, 2 ‘Ilm",
+      "birth_of_the_bab": "2023-10-16",
+      "birth_of_bahaullah": "2023-10-17",
+      "ayyam_i_ha": {
+        "first": "2024-02-26",
+        "last": "2024-02-29",
+        "days": 4
+      }
+    },
+    {
+      "year": 181,
+      "nawruz": "2024-03-20",
+      "twin_holy_days_badi": "19 ‘Ilm, 1 Qudrat",
+      "birth_of_the_bab": "2024-11-02",
+      "birth_of_bahaullah": "2024-11-03",
+      "ayyam_i_ha": {
+        "first": "2025-02-25",
+        "last": "2025-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 182,
+      "nawruz": "2025-03-20",
+      "twin_holy_days_badi": "8, 9 ‘Ilm",
+      "birth_of_the_bab": "2025-10-22",
+      "birth_of_bahaullah": "2025-10-23",
+      "ayyam_i_ha": {
+        "first": "2026-02-25",
+        "last": "2026-03-01",
+        "days": 5
+      }
+    },
+    {
+      "year": 183,
+      "nawruz": "2026-03-21",
+      "twin_holy_days_badi": "7, 8 Qudrat",
+      "birth_of_the_bab": "2026-11-10",
+      "birth_of_bahaullah": "2026-11-11",
+      "ayyam_i_ha": {
+        "first": "2027-02-26",
+        "last": "2027-03-01",
+        "days": 4
+      }
+    },
+    {
+      "year": 184,
+      "nawruz": "2027-03-21",
+      "twin_holy_days_badi": "15, 16 ‘Ilm",
+      "birth_of_the_bab": "2027-10-30",
+      "birth_of_bahaullah": "2027-10-31",
+      "ayyam_i_ha": {
+        "first": "2028-02-26",
+        "last": "2028-02-29",
+        "days": 4
+      }
+    },
+    {
+      "year": 185,
+      "nawruz": "2028-03-20",
+      "twin_holy_days_badi": "5, 6 ‘Ilm",
+      "birth_of_the_bab": "2028-10-19",
+      "birth_of_bahaullah": "2028-10-20",
+      "ayyam_i_ha": {
+        "first": "2029-02-25",
+        "last": "2029-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 186,
+      "nawruz": "2029-03-20",
+      "twin_holy_days_badi": "5, 6 Qudrat",
+      "birth_of_the_bab": "2029-11-07",
+      "birth_of_bahaullah": "2029-11-08",
+      "ayyam_i_ha": {
+        "first": "2030-02-25",
+        "last": "2030-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 187,
+      "nawruz": "2030-03-20",
+      "twin_holy_days_badi": "14, 15 ‘Ilm",
+      "birth_of_the_bab": "2030-10-28",
+      "birth_of_bahaullah": "2030-10-29",
+      "ayyam_i_ha": {
+        "first": "2031-02-25",
+        "last": "2031-03-01",
+        "days": 5
+      }
+    },
+    {
+      "year": 188,
+      "nawruz": "2031-03-21",
+      "twin_holy_days_badi": "2, 3 ‘Ilm",
+      "birth_of_the_bab": "2031-10-17",
+      "birth_of_bahaullah": "2031-10-18",
+      "ayyam_i_ha": {
+        "first": "2032-02-26",
+        "last": "2032-02-29",
+        "days": 4
+      }
+    },
+    {
+      "year": 189,
+      "nawruz": "2032-03-20",
+      "twin_holy_days_badi": "2, 3 Qudrat",
+      "birth_of_the_bab": "2032-11-04",
+      "birth_of_bahaullah": "2032-11-05",
+      "ayyam_i_ha": {
+        "first": "2033-02-25",
+        "last": "2033-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 190,
+      "nawruz": "2033-03-20",
+      "twin_holy_days_badi": "10, 11 ‘Ilm",
+      "birth_of_the_bab": "2033-10-24",
+      "birth_of_bahaullah": "2033-10-25",
+      "ayyam_i_ha": {
+        "first": "2034-02-25",
+        "last": "2034-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 191,
+      "nawruz": "2034-03-20",
+      "twin_holy_days_badi": "10, 11 Qudrat",
+      "birth_of_the_bab": "2034-11-12",
+      "birth_of_bahaullah": "2034-11-13",
+      "ayyam_i_ha": {
+        "first": "2035-02-25",
+        "last": "2035-03-01",
+        "days": 5
+      }
+    },
+    {
+      "year": 192,
+      "nawruz": "2035-03-21",
+      "twin_holy_days_badi": "17, 18 ‘Ilm",
+      "birth_of_the_bab": "2035-11-01",
+      "birth_of_bahaullah": "2035-11-02",
+      "ayyam_i_ha": {
+        "first": "2036-02-26",
+        "last": "2036-02-29",
+        "days": 4
+      }
+    },
+    {
+      "year": 193,
+      "nawruz": "2036-03-20",
+      "twin_holy_days_badi": "6, 7 ‘Ilm",
+      "birth_of_the_bab": "2036-10-20",
+      "birth_of_bahaullah": "2036-10-21",
+      "ayyam_i_ha": {
+        "first": "2037-02-25",
+        "last": "2037-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 194,
+      "nawruz": "2037-03-20",
+      "twin_holy_days_badi": "6, 7 Qudrat",
+      "birth_of_the_bab": "2037-11-08",
+      "birth_of_bahaullah": "2037-11-09",
+      "ayyam_i_ha": {
+        "first": "2038-02-25",
+        "last": "2038-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 195,
+      "nawruz": "2038-03-20",
+      "twin_holy_days_badi": "15, 16 ‘Ilm",
+      "birth_of_the_bab": "2038-10-29",
+      "birth_of_bahaullah": "2038-10-30",
+      "ayyam_i_ha": {
+        "first": "2039-02-25",
+        "last": "2039-03-01",
+        "days": 5
+      }
+    },
+    {
+      "year": 196,
+      "nawruz": "2039-03-21",
+      "twin_holy_days_badi": "4, 5 ‘Ilm",
+      "birth_of_the_bab": "2039-10-19",
+      "birth_of_bahaullah": "2039-10-20",
+      "ayyam_i_ha": {
+        "first": "2040-02-26",
+        "last": "2040-02-29",
+        "days": 4
+      }
+    },
+    {
+      "year": 197,
+      "nawruz": "2040-03-20",
+      "twin_holy_days_badi": "4, 5 Qudrat",
+      "birth_of_the_bab": "2040-11-06",
+      "birth_of_bahaullah": "2040-11-07",
+      "ayyam_i_ha": {
+        "first": "2041-02-25",
+        "last": "2041-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 198,
+      "nawruz": "2041-03-20",
+      "twin_holy_days_badi": "12, 13 ‘Ilm",
+      "birth_of_the_bab": "2041-10-26",
+      "birth_of_bahaullah": "2041-10-27",
+      "ayyam_i_ha": {
+        "first": "2042-02-25",
+        "last": "2042-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 199,
+      "nawruz": "2042-03-20",
+      "twin_holy_days_badi": "1, 2 ‘Ilm",
+      "birth_of_the_bab": "2042-10-15",
+      "birth_of_bahaullah": "2042-10-16",
+      "ayyam_i_ha": {
+        "first": "2043-02-25",
+        "last": "2043-03-01",
+        "days": 5
+      }
+    },
+    {
+      "year": 200,
+      "nawruz": "2043-03-21",
+      "twin_holy_days_badi": "19 ‘Ilm, 1 Qudrat",
+      "birth_of_the_bab": "2043-11-03",
+      "birth_of_bahaullah": "2043-11-04",
+      "ayyam_i_ha": {
+        "first": "2044-02-26",
+        "last": "2044-02-29",
+        "days": 4
+      }
+    },
+    {
+      "year": 201,
+      "nawruz": "2044-03-20",
+      "twin_holy_days_badi": "8, 9 ‘Ilm",
+      "birth_of_the_bab": "2044-10-22",
+      "birth_of_bahaullah": "2044-10-23",
+      "ayyam_i_ha": {
+        "first": "2045-02-25",
+        "last": "2045-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 202,
+      "nawruz": "2045-03-20",
+      "twin_holy_days_badi": "8, 9 Qudrat",
+      "birth_of_the_bab": "2045-11-10",
+      "birth_of_bahaullah": "2045-11-11",
+      "ayyam_i_ha": {
+        "first": "2046-02-25",
+        "last": "2046-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 203,
+      "nawruz": "2046-03-20",
+      "twin_holy_days_badi": "16, 17 ‘Ilm",
+      "birth_of_the_bab": "2046-10-30",
+      "birth_of_bahaullah": "2046-10-31",
+      "ayyam_i_ha": {
+        "first": "2047-02-25",
+        "last": "2047-03-01",
+        "days": 5
+      }
+    },
+    {
+      "year": 204,
+      "nawruz": "2047-03-21",
+      "twin_holy_days_badi": "5, 6 ‘Ilm",
+      "birth_of_the_bab": "2047-10-20",
+      "birth_of_bahaullah": "2047-10-21",
+      "ayyam_i_ha": {
+        "first": "2048-02-26",
+        "last": "2048-02-29",
+        "days": 4
+      }
+    },
+    {
+      "year": 205,
+      "nawruz": "2048-03-20",
+      "twin_holy_days_badi": "5, 6 Qudrat",
+      "birth_of_the_bab": "2048-11-07",
+      "birth_of_bahaullah": "2048-11-08",
+      "ayyam_i_ha": {
+        "first": "2049-02-25",
+        "last": "2049-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 206,
+      "nawruz": "2049-03-20",
+      "twin_holy_days_badi": "14, 15 ‘Ilm",
+      "birth_of_the_bab": "2049-10-28",
+      "birth_of_bahaullah": "2049-10-29",
+      "ayyam_i_ha": {
+        "first": "2050-02-25",
+        "last": "2050-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 207,
+      "nawruz": "2050-03-20",
+      "twin_holy_days_badi": "3, 4 ‘Ilm",
+      "birth_of_the_bab": "2050-10-17",
+      "birth_of_bahaullah": "2050-10-18",
+      "ayyam_i_ha": {
+        "first": "2051-02-25",
+        "last": "2051-03-01",
+        "days": 5
+      }
+    },
+    {
+      "year": 208,
+      "nawruz": "2051-03-21",
+      "twin_holy_days_badi": "2, 3 Qudrat",
+      "birth_of_the_bab": "2051-11-05",
+      "birth_of_bahaullah": "2051-11-06",
+      "ayyam_i_ha": {
+        "first": "2052-02-26",
+        "last": "2052-02-29",
+        "days": 4
+      }
+    },
+    {
+      "year": 209,
+      "nawruz": "2052-03-20",
+      "twin_holy_days_badi": "10, 11 ‘Ilm",
+      "birth_of_the_bab": "2052-10-24",
+      "birth_of_bahaullah": "2052-10-25",
+      "ayyam_i_ha": {
+        "first": "2053-02-25",
+        "last": "2053-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 210,
+      "nawruz": "2053-03-20",
+      "twin_holy_days_badi": "9, 10 Qudrat",
+      "birth_of_the_bab": "2053-11-11",
+      "birth_of_bahaullah": "2053-11-12",
+      "ayyam_i_ha": {
+        "first": "2054-02-25",
+        "last": "2054-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 211,
+      "nawruz": "2054-03-20",
+      "twin_holy_days_badi": "18, 19 ‘Ilm",
+      "birth_of_the_bab": "2054-11-01",
+      "birth_of_bahaullah": "2054-11-02",
+      "ayyam_i_ha": {
+        "first": "2055-02-25",
+        "last": "2055-03-01",
+        "days": 5
+      }
+    },
+    {
+      "year": 212,
+      "nawruz": "2055-03-21",
+      "twin_holy_days_badi": "6, 7 ‘Ilm",
+      "birth_of_the_bab": "2055-10-21",
+      "birth_of_bahaullah": "2055-10-22",
+      "ayyam_i_ha": {
+        "first": "2056-02-26",
+        "last": "2056-02-29",
+        "days": 4
+      }
+    },
+    {
+      "year": 213,
+      "nawruz": "2056-03-20",
+      "twin_holy_days_badi": "6, 7 Qudrat",
+      "birth_of_the_bab": "2056-11-08",
+      "birth_of_bahaullah": "2056-11-09",
+      "ayyam_i_ha": {
+        "first": "2057-02-25",
+        "last": "2057-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 214,
+      "nawruz": "2057-03-20",
+      "twin_holy_days_badi": "15, 16 ‘Ilm",
+      "birth_of_the_bab": "2057-10-29",
+      "birth_of_bahaullah": "2057-10-30",
+      "ayyam_i_ha": {
+        "first": "2058-02-25",
+        "last": "2058-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 215,
+      "nawruz": "2058-03-20",
+      "twin_holy_days_badi": "4, 5 ‘Ilm",
+      "birth_of_the_bab": "2058-10-18",
+      "birth_of_bahaullah": "2058-10-19",
+      "ayyam_i_ha": {
+        "first": "2059-02-25",
+        "last": "2059-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 216,
+      "nawruz": "2059-03-20",
+      "twin_holy_days_badi": "4, 5 Qudrat",
+      "birth_of_the_bab": "2059-11-06",
+      "birth_of_bahaullah": "2059-11-07",
+      "ayyam_i_ha": {
+        "first": "2060-02-25",
+        "last": "2060-02-29",
+        "days": 5
+      }
+    },
+    {
+      "year": 217,
+      "nawruz": "2060-03-20",
+      "twin_holy_days_badi": "11, 12 ‘Ilm",
+      "birth_of_the_bab": "2060-10-25",
+      "birth_of_bahaullah": "2060-10-26",
+      "ayyam_i_ha": {
+        "first": "2061-02-25",
+        "last": "2061-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 218,
+      "nawruz": "2061-03-20",
+      "twin_holy_days_badi": "19 Mashíyyat, 1 ‘Ilm",
+      "birth_of_the_bab": "2061-10-14",
+      "birth_of_bahaullah": "2061-10-15",
+      "ayyam_i_ha": {
+        "first": "2062-02-25",
+        "last": "2062-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 219,
+      "nawruz": "2062-03-20",
+      "twin_holy_days_badi": "19 ‘Ilm, 1 Qudrat",
+      "birth_of_the_bab": "2062-11-02",
+      "birth_of_bahaullah": "2062-11-03",
+      "ayyam_i_ha": {
+        "first": "2063-02-25",
+        "last": "2063-02-28",
+        "days": 4
+      }
+    },
+    {
+      "year": 220,
+      "nawruz": "2063-03-20",
+      "twin_holy_days_badi": "9, 10 ‘Ilm",
+      "birth_of_the_bab": "2063-10-23",
+      "birth_of_bahaullah": "2063-10-24",
+      "ayyam_i_ha": {
+        "first": "2064-02-25",
+        "last": "2064-02-29",
+        "days": 5
+      }
+    },
+    {
+      "year": 221,
+      "nawruz": "2064-03-20",
+      "twin_holy_days_badi": "8, 9 Qudrat",
+      "birth_of_the_bab": "2064-11-10",
+      "birth_of_bahaullah": "2064-11-11",
+      "ayyam_i_ha": {
+        "first": "2065-02-25",
+        "last": "2065-02-28",
+        "days": 4
+      }
+    }
+  ]
+}

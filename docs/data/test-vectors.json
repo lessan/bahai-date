@@ -1,0 +1,195 @@
+{
+  "title": "Test cases for Bahá’í date calculations",
+  "generated_by": "bahai_date 2.0.1 (https://github.com/lessan/bahai-date)",
+  "about": "https://lessan.github.io/bahai-date/rules.html#edge-cases",
+  "dates": "Each Gregorian date is the day on which the Bahá’í day ends. A Bahá’í day begins at sunset, so it begins on the evening before the date given.",
+  "gregorian_to_badi": [
+    {
+      "gregorian": "1844-03-21",
+      "year": 1,
+      "month": 1,
+      "month_name": "Bahá",
+      "day": 1,
+      "weekday": "Istijlál",
+      "confidence": "convention-proleptic",
+      "note": "The first day of the calendar (Western convention)."
+    },
+    {
+      "gregorian": "2015-03-20",
+      "year": 171,
+      "month": 19,
+      "month_name": "‘Alá’",
+      "day": 19,
+      "weekday": "Istiqlál",
+      "confidence": "convention",
+      "note": "The last day of 171 B.E., before the 2014 rules took effect."
+    },
+    {
+      "gregorian": "2015-03-21",
+      "year": 172,
+      "month": 1,
+      "month_name": "Bahá",
+      "day": 1,
+      "weekday": "Jalál",
+      "confidence": "published",
+      "note": "Naw-Rúz 172 B.E., the first year of the 2014 rules."
+    },
+    {
+      "gregorian": "2016-02-29",
+      "year": 172,
+      "month": -1,
+      "month_name": "Ayyám-i-Há",
+      "day": 4,
+      "weekday": "Kamál",
+      "confidence": "published",
+      "note": "29 February inside a four-day Ayyám-i-Há."
+    },
+    {
+      "gregorian": "2018-03-01",
+      "year": 174,
+      "month": -1,
+      "month_name": "Ayyám-i-Há",
+      "day": 5,
+      "weekday": "Istijlál",
+      "confidence": "published",
+      "note": "The fifth day of Ayyám-i-Há in a year whose February had 28 days."
+    },
+    {
+      "gregorian": "2026-11-28",
+      "year": 183,
+      "month": 14,
+      "month_name": "Qawl",
+      "day": 6,
+      "weekday": "Jalál",
+      "confidence": "published",
+      "note": "A Holy Day (Ascension of ‘Abdu’l-Bahá)."
+    },
+    {
+      "gregorian": "2027-02-15",
+      "year": 183,
+      "month": 18,
+      "month_name": "Mulk",
+      "day": 9,
+      "weekday": "Kamál",
+      "confidence": "published",
+      "note": "January to March belongs to the Bahá’í year that began the previous March."
+    },
+    {
+      "gregorian": "2059-03-20",
+      "year": 216,
+      "month": 1,
+      "month_name": "Bahá",
+      "day": 1,
+      "weekday": "Istijlál",
+      "confidence": "published",
+      "note": "Naw-Rúz on 20 March: the equinox about a minute and a half before sunset."
+    }
+  ],
+  "nawruz": [
+    {
+      "gregorian_year": 2016,
+      "year": 173,
+      "nawruz": "2016-03-20",
+      "confidence": "published",
+      "note": "The first Naw-Rúz on 20 March under the 2014 rules."
+    },
+    {
+      "gregorian_year": 2026,
+      "year": 183,
+      "nawruz": "2026-03-21",
+      "confidence": "published",
+      "note": "The equinox about 11 seconds after sunset in Ṭihrán by this gem’s calculation; the official date agrees."
+    },
+    {
+      "gregorian_year": 2059,
+      "year": 216,
+      "nawruz": "2059-03-20",
+      "confidence": "published",
+      "note": "The equinox about 98 seconds before sunset."
+    },
+    {
+      "gregorian_year": 2352,
+      "year": 509,
+      "nawruz": "2352-03-21",
+      "confidence": "estimate",
+      "note": "The first year after badiDate’s range; the equinox within 8 minutes of sunset."
+    },
+    {
+      "gregorian_year": 2418,
+      "year": 575,
+      "nawruz": "2418-03-21",
+      "confidence": "estimate",
+      "note": "The equinox about 15 seconds before the exact sunset; this gem truncates sunset to the minute, which makes it 21 March. Treat as uncertain."
+    }
+  ],
+  "twin_holy_days": [
+    {
+      "year": 172,
+      "birth_of_the_bab": "2015-11-13",
+      "birth_of_bahaullah": "2015-11-14",
+      "confidence": "published",
+      "note": "The first year of the new-moon rule: the eighth new moon after sunset on 11 November 2015 (9 Qudrat)."
+    },
+    {
+      "year": 184,
+      "birth_of_the_bab": "2027-10-30",
+      "birth_of_bahaullah": "2027-10-31",
+      "confidence": "published",
+      "note": "The eighth new moon within 6 minutes of sunset in Ṭihrán."
+    },
+    {
+      "year": 191,
+      "birth_of_the_bab": "2034-11-12",
+      "birth_of_bahaullah": "2034-11-13",
+      "confidence": "published",
+      "note": "A new moon falls during the day of Naw-Rúz (20 March 2034) and is not counted; counting it would give 13 and 14 October."
+    },
+    {
+      "year": 210,
+      "birth_of_the_bab": "2053-11-11",
+      "birth_of_bahaullah": "2053-11-12",
+      "confidence": "published",
+      "note": "A new moon during the day of Naw-Rúz, not counted (2053)."
+    },
+    {
+      "year": 181,
+      "birth_of_the_bab": "2024-11-02",
+      "birth_of_bahaullah": "2024-11-03",
+      "confidence": "published",
+      "note": "The two days fall in different months (19 ‘Ilm and 1 Qudrat)."
+    },
+    {
+      "year": 218,
+      "birth_of_the_bab": "2061-10-14",
+      "birth_of_bahaullah": "2061-10-15",
+      "confidence": "published",
+      "note": "The earliest month: 19 Mashíyyat and 1 ‘Ilm (2061)."
+    }
+  ],
+  "ayyam_i_ha": [
+    {
+      "year": 174,
+      "first": "2018-02-25",
+      "last": "2018-03-01",
+      "days": 5,
+      "confidence": "published",
+      "note": "Five days though February 2018 had 28."
+    },
+    {
+      "year": 176,
+      "first": "2020-02-26",
+      "last": "2020-02-29",
+      "days": 4,
+      "confidence": "published",
+      "note": "Four days though February 2020 had 29."
+    },
+    {
+      "year": 171,
+      "first": "2015-02-26",
+      "last": "2015-03-01",
+      "days": 4,
+      "confidence": "convention",
+      "note": "Western convention: four days, as February 2015 had 28."
+    }
+  ]
+}

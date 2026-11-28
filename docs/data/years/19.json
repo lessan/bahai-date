@@ -1,0 +1,199 @@
+{
+  "$schema": "https://lessan.github.io/bahai-date/data/schema/year.schema.json",
+  "about": "https://lessan.github.io/bahai-date/data/",
+  "dates": "Each Gregorian date is the day on which the Bahá’í day ends. A Bahá’í day begins at sunset, so it begins on the evening before the date given.",
+  "confidence_note": "The Western convention set out under Shoghi Effendi (Naw-Rúz on 21 March, the Twin Holy Days on 20 October and 12 November), applied to years before any Western Bahá’í community kept the calendar (its first attested use in the West is 1910). Bahá’ís in Iran reckoned differently: see eastern_reconstruction and https://lessan.github.io/bahai-date/history.html.",
+  "eastern_reconstruction_note": "For 1-171 B.E.: Naw-Rúz by the rule used from 172 B.E. (the day, sunset to sunset in Ṭihrán, in which the March equinox falls), applied backwards, and the length of Ayyám-i-Há that follows from it. A modern reconstruction, not a record of what any community observed; uncertain where the equinox falls within 15 minutes of sunset. Bahá’ís in Iran also kept the Twin Holy Days, the Declaration and the Martyrdom of the Báb on Islamic lunar dates, which are not given here.",
+  "year": 19,
+  "year_name": "Váḥid",
+  "year_translation": "Unity",
+  "year_in_vahid": 19,
+  "vahid": 1,
+  "kull_i_shay": 1,
+  "confidence": "convention-proleptic",
+  "nawruz": "1862-03-21",
+  "days_in_year": 365,
+  "ayyam_i_ha": {
+    "first": "1863-02-26",
+    "last": "1863-03-01",
+    "days": 4
+  },
+  "fast": {
+    "first": "1863-03-02",
+    "last": "1863-03-20"
+  },
+  "months": [
+    {
+      "number": 1,
+      "name": "Bahá",
+      "translation": "Splendour",
+      "first_day": "1862-03-21"
+    },
+    {
+      "number": 2,
+      "name": "Jalál",
+      "translation": "Glory",
+      "first_day": "1862-04-09"
+    },
+    {
+      "number": 3,
+      "name": "Jamál",
+      "translation": "Beauty",
+      "first_day": "1862-04-28"
+    },
+    {
+      "number": 4,
+      "name": "‘Aẓamat",
+      "translation": "Grandeur",
+      "first_day": "1862-05-17"
+    },
+    {
+      "number": 5,
+      "name": "Núr",
+      "translation": "Light",
+      "first_day": "1862-06-05"
+    },
+    {
+      "number": 6,
+      "name": "Raḥmat",
+      "translation": "Mercy",
+      "first_day": "1862-06-24"
+    },
+    {
+      "number": 7,
+      "name": "Kalimát",
+      "translation": "Words",
+      "first_day": "1862-07-13"
+    },
+    {
+      "number": 8,
+      "name": "Kamál",
+      "translation": "Perfection",
+      "first_day": "1862-08-01"
+    },
+    {
+      "number": 9,
+      "name": "Asmá’",
+      "translation": "Names",
+      "first_day": "1862-08-20"
+    },
+    {
+      "number": 10,
+      "name": "‘Izzat",
+      "translation": "Might",
+      "first_day": "1862-09-08"
+    },
+    {
+      "number": 11,
+      "name": "Mashíyyat",
+      "translation": "Will",
+      "first_day": "1862-09-27"
+    },
+    {
+      "number": 12,
+      "name": "‘Ilm",
+      "translation": "Knowledge",
+      "first_day": "1862-10-16"
+    },
+    {
+      "number": 13,
+      "name": "Qudrat",
+      "translation": "Power",
+      "first_day": "1862-11-04"
+    },
+    {
+      "number": 14,
+      "name": "Qawl",
+      "translation": "Speech",
+      "first_day": "1862-11-23"
+    },
+    {
+      "number": 15,
+      "name": "Masá’il",
+      "translation": "Questions",
+      "first_day": "1862-12-12"
+    },
+    {
+      "number": 16,
+      "name": "Sharaf",
+      "translation": "Honour",
+      "first_day": "1862-12-31"
+    },
+    {
+      "number": 17,
+      "name": "Sulṭán",
+      "translation": "Sovereignty",
+      "first_day": "1863-01-19"
+    },
+    {
+      "number": 18,
+      "name": "Mulk",
+      "translation": "Dominion",
+      "first_day": "1863-02-07"
+    },
+    {
+      "number": 19,
+      "name": "‘Alá’",
+      "translation": "Loftiness",
+      "first_day": "1863-03-02"
+    }
+  ],
+  "holy_days": [
+    {
+      "id": "nawruz",
+      "name": "Naw-Rúz",
+      "month": 1,
+      "month_name": "Bahá",
+      "day": 1,
+      "date": "1862-03-21",
+      "work_suspended": true,
+      "status": "observed"
+    },
+    {
+      "id": "declaration_bab",
+      "name": "Declaration of the Báb",
+      "month": 4,
+      "month_name": "‘Aẓamat",
+      "day": 7,
+      "date": "1862-05-23",
+      "work_suspended": true,
+      "status": "observed"
+    },
+    {
+      "id": "martyrdom_bab",
+      "name": "Martyrdom of the Báb",
+      "month": 6,
+      "month_name": "Raḥmat",
+      "day": 16,
+      "date": "1862-07-09",
+      "work_suspended": true,
+      "status": "observed"
+    },
+    {
+      "id": "birth_bab",
+      "name": "Birth of the Báb",
+      "month": 12,
+      "month_name": "‘Ilm",
+      "day": 5,
+      "date": "1862-10-20",
+      "work_suspended": true,
+      "status": "observed"
+    },
+    {
+      "id": "birth_bahaullah",
+      "name": "Birth of Bahá’u’lláh",
+      "month": 13,
+      "month_name": "Qudrat",
+      "day": 9,
+      "date": "1862-11-12",
+      "work_suspended": true,
+      "status": "observed"
+    }
+  ],
+  "eastern_reconstruction": {
+    "nawruz": "1862-03-21",
+    "ayyam_i_ha_days": 4,
+    "uncertain": false,
+    "minutes_from_sunset": 357.6
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "title": "Dates of the events the Holy Days commemorate, as the sources give them",
+  "about": "https://lessan.github.io/bahai-date/history.html#event-dates",
+  "note": "These are the historical events, not the yearly observances (for those, see years/<year>.json). Gregorian dates converted from Islamic lunar dates may differ by a day or two from the day actually reckoned, because Islamic months began with the sighting of the crescent. Source ids refer to https://lessan.github.io/bahai-date/sources.html.",
+  "events": [
+    {
+      "id": "birth_bahaullah",
+      "holy_days": ["birth_bahaullah"],
+      "islamic_date": "2 Muḥarram 1233",
+      "gregorian_dates": [{"date": "1817-11-12", "sources": ["bahai-world"]}],
+      "place": "Ṭihrán",
+      "disputed": false
+    },
+    {
+      "id": "birth_bab",
+      "holy_days": ["birth_bab"],
+      "islamic_date": "1 Muḥarram 1235",
+      "gregorian_dates": [{"date": "1819-10-20", "sources": ["bahai-world"]}],
+      "place": "Shíráz",
+      "disputed": false
+    },
+    {
+      "id": "declaration_bab",
+      "holy_days": ["declaration_bab"],
+      "islamic_date": "The eve of 5 Jamádí I 1260",
+      "gregorian_dates": [{"date": "1844-05-23", "sources": ["dawn-breakers", "lights-of-guidance", "bahai-world"]}],
+      "time": "2 hours and 11 minutes after sunset on the evening of 22 May 1844, which began the day labelled 23 May",
+      "place": "Shíráz",
+      "badi_date": "8 ‘Aẓamat 1 B.E. if Naw-Rúz 1844 was 20 March (the before-sunset rule); 7 ‘Aẓamat under the Western convention (Naw-Rúz on 21 March)",
+      "disputed": false,
+      "notes": "“22 or 23 May” is a matter of labelling the evening, not a disagreement about the event (Lights of Guidance no. 1542)."
+    },
+    {
+      "id": "martyrdom_bab",
+      "holy_days": ["martyrdom_bab"],
+      "islamic_date": "28 Sha‘bán 1266 (Bahá’í histories); 27 Sha‘bán (Persian court historians)",
+      "gregorian_dates": [
+        {"date": "1850-07-09", "sources": ["dawn-breakers", "bahai-world"]},
+        {"date": "1850-07-08", "sources": ["momen-1981", "walbridge-1996"], "note": "The British consul in Tabríz, and Persian court historians"}
+      ],
+      "time": "About noon",
+      "place": "Tabríz",
+      "disputed": true,
+      "notes": "The Dawn-Breakers says Sunday; 9 July 1850 was a Tuesday and 8 July a Monday (the court historian Sipihr gives Monday 27 Sha‘bán). With Naw-Rúz on 21 March 1850, 9 July was 16 Raḥmat and 17 Raḥmat was 10 July. The observance is fixed on 17 Raḥmat from 172 B.E."
+    },
+    {
+      "id": "ridvan",
+      "holy_days": ["ridvan_1", "ridvan_9", "ridvan_12"],
+      "islamic_date": "3 Dhi’l-Qa‘dih 1279",
+      "gregorian_dates": [{"date": "1863-04-22", "sources": ["god-passes-by"]}],
+      "time": "Wednesday afternoon",
+      "place": "The Najíbíyyih garden (Riḍván), Baghdád",
+      "disputed": false,
+      "notes": "God Passes By says “thirty-one days after Naw-Rúz”, which implies Naw-Rúz on 22 March 1863; the equinox fell before dawn on 21 March, which would make 22 April 14 Jalál. The festival is kept from 13 Jalál (Kitáb-i-Aqdas, Questions and Answers 1). The ninth and twelfth days of the event were 30 April and 3 May 1863."
+    },
+    {
+      "id": "ascension_bahaullah",
+      "holy_days": ["ascension_bahaullah"],
+      "islamic_date": "2 Dhi’l-Qa‘dih 1309",
+      "gregorian_dates": [
+        {"date": "1892-05-29", "sources": ["god-passes-by", "bahai-world"], "note": "The Bahá’í World from volume 7"},
+        {"date": "1892-05-28", "sources": ["bahai-world", "ayyam-i-tisih"], "note": "The Bahá’í World volume 4; Nabíl’s account, whose Rúmí date (16 Ayyár) and count of seventy days from a Naw-Rúz on 20 March both point to 28 May"}
+      ],
+      "time": "Dawn, about 8 hours after sunset",
+      "place": "Bahjí",
+      "badi_date": "13 ‘Aẓamat, the seventieth day of the year, in every reckoning",
+      "disputed": true,
+      "notes": "The Universal House of Justice named the day of the Ascension as one of the historical discrepancies it set aside (letter of 20 December 2017)."
+    },
+    {
+      "id": "ascension_abdulbaha",
+      "holy_days": ["ascension_abdulbaha"],
+      "gregorian_dates": [{"date": "1921-11-28", "sources": ["god-passes-by"]}],
+      "time": "Shortly after 1:15 a.m.",
+      "place": "Haifa",
+      "badi_date": "6 Qawl 78 B.E.",
+      "disputed": false
+    }
+  ]
+}

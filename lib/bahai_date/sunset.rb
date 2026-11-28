@@ -42,6 +42,11 @@ module BahaiDate
       hour_angle = degrees(Math.acos(cos_hour_angle)) / 15.0
       local_mean_time = hour_angle + right_ascension - 0.06571 * t - 6.622
       hours = normalize(local_mean_time - longitude_hour, 24.0)
+      # hours is a UTC time of day. Sunset is near 18:00 local mean time, so
+      # pick the UTC day that puts it there: far west of Greenwich sunset falls
+      # on the next UTC day, far east on the previous one.
+      expected = 18.0 - longitude_hour
+      hours += [-24.0, 0.0, 24.0].min_by { |shift| (hours + shift - expected).abs }
 
       Time.utc(date.year, date.month, date.day) + (hours * 60).floor * 60
     end

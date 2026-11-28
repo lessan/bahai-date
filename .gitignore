@@ -4,3 +4,4 @@
 coverage/
 /.agents/skills/rubypowers
 pkg/
+_site/

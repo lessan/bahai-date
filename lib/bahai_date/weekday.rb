@@ -1,7 +1,7 @@
 module BahaiDate
   class Weekday
     TITLES = %w[Jalal Jamal Kamal Fidal Idal Istijlal Istiqlal]
-    TITLES_HTML = %w[Jalál Jamál Kamál Fiḍál ‘Idál Istijlál Istiqlál]
+    TITLES_HTML = %w[Jalál Jamál Kamál Fiḍál ‘Idál Istijlál Istiqlál]
     TITLES_EN = %w[Glory Beauty Perfection Grace Justice Majesty Independence]
     ENGLISH_EQUIVALENTS = %w[Saturday Sunday Monday Tuesday Wednesday Thursday Friday]
 

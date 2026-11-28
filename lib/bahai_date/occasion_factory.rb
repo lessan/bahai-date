@@ -28,9 +28,9 @@ module BahaiDate
       feast_1: {type: :feast, work_suspended: false, title: "Nineteen Day Feast of the month of Baha (Splendour)", short_title: "Feast of Baha", title_html: "Nineteen Day Feast of the month of Bahá (Splendour)", short_title_html: "Feast of Bahá"},
       feast_2: {type: :feast, work_suspended: false, title: "Nineteen Day Feast of the month of Jalal (Glory)", short_title: "Feast of Jalal", title_html: "Nineteen Day Feast of the month of Jalál (Glory)", short_title_html: "Feast of Jalál"},
       feast_3: {type: :feast, work_suspended: false, title: "Nineteen Day Feast of the month of Jamal (Beauty)", short_title: "Feast of Jamal", title_html: "Nineteen Day Feast of the month of Jamál (Beauty)", short_title_html: "Feast of Jamál"},
-      feast_4: {type: :feast, work_suspended: false, title: "Nineteen Day Feast of the month of Azamat (Grandeur)", short_title: "Feast of Azamat", title_html: "Nineteen Day Feast of the month of ‘Aẓamat (Grandeur)", short_title_html: "Feast of ‘Aẓamat"},
+      feast_4: {type: :feast, work_suspended: false, title: "Nineteen Day Feast of the month of Azamat (Grandeur)", short_title: "Feast of Azamat", title_html: "Nineteen Day Feast of the month of ‘Aẓamat (Grandeur)", short_title_html: "Feast of ‘Aẓamat"},
       feast_5: {type: :feast, work_suspended: false, title: "Nineteen Day Feast of the month of Nur (Light)", short_title: "Feast of Nur", title_html: "Nineteen Day Feast of the month of Núr (Light)", short_title_html: "Feast of Núr"},
-      feast_6: {type: :feast, work_suspended: false, title: "Nineteen Day Feast of the month of Rahmat (Mercy)", short_title: "Feast of Rahmat", title_html: "Nineteen Day Feast of the month of Raḥmat (Mercy)", short_title_html: "Feast of Raḥmat"},
+      feast_6: {type: :feast, work_suspended: false, title: "Nineteen Day Feast of the month of Rahmat (Mercy)", short_title: "Feast of Rahmat", title_html: "Nineteen Day Feast of the month of Raḥmat (Mercy)", short_title_html: "Feast of Raḥmat"},
       feast_7: {type: :feast, work_suspended: false, title: "Nineteen Day Feast of the month of Kalimat (Words)", short_title: "Feast of Kalimat", title_html: "Nineteen Day Feast of the month of Kalimát (Words)", short_title_html: "Feast of Kalimát"},
       feast_8: {type: :feast, work_suspended: false, title: "Nineteen Day Feast of the month of Kamal (Perfection)", short_title: "Feast of Kamal", title_html: "Nineteen Day Feast of the month of Kamál (Perfection)", short_title_html: "Feast of Kamál"},
       feast_9: {type: :feast, work_suspended: false, title: "Nineteen Day Feast of the month of Asma (Names)", short_title: "Feast of Asma", title_html: "Nineteen Day Feast of the month of Asmá’ (Names)", short_title_html: "Feast of Asmá’"},
@@ -41,21 +41,21 @@ module BahaiDate
       feast_14: {type: :feast, work_suspended: false, title: "Nineteen Day Feast of the month of Qawl (Speech)", short_title: "Feast of Qawl", title_html: "Nineteen Day Feast of the month of Qawl (Speech)", short_title_html: "Feast of Qawl"},
       feast_15: {type: :feast, work_suspended: false, title: "Nineteen Day Feast of the month of Masail (Questions)", short_title: "Feast of Masail", title_html: "Nineteen Day Feast of the month of Masá’il (Questions)", short_title_html: "Feast of Masá’il"},
       feast_16: {type: :feast, work_suspended: false, title: "Nineteen Day Feast of the month of Sharaf (Honour)", short_title: "Feast of Sharaf", title_html: "Nineteen Day Feast of the month of <u>Sh</u>araf (Honour)", short_title_html: "Feast of <u>Sh</u>araf"},
-      feast_17: {type: :feast, work_suspended: false, title: "Nineteen Day Feast of the month of Sultan (Sovereignty)", short_title: "Feast of Sultan", title_html: "Nineteen Day Feast of the month of Sulṭán (Sovereignty)", short_title_html: "Feast of Sulṭán"},
+      feast_17: {type: :feast, work_suspended: false, title: "Nineteen Day Feast of the month of Sultan (Sovereignty)", short_title: "Feast of Sultan", title_html: "Nineteen Day Feast of the month of Sulṭán (Sovereignty)", short_title_html: "Feast of Sulṭán"},
       feast_18: {type: :feast, work_suspended: false, title: "Nineteen Day Feast of the month of Mulk (Dominion)", short_title: "Feast of Mulk", title_html: "Nineteen Day Feast of the month of Mulk (Dominion)", short_title_html: "Feast of Mulk"},
       feast_19: {type: :feast, work_suspended: false, title: "Nineteen Day Feast of the month of Ala (Loftiness)", short_title: "Feast of Ala", title_html: "Nineteen Day Feast of the month of ‘Alá’ (Loftiness)", short_title_html: "Feast of ‘Alá’"},
-      ridvan_1: {type: :holy, work_suspended: true, title: "First day of the Festival of Ridvan", short_title: "1st day of Ridvan", title_html: "First day of the Festival of Riḍván", short_title_html: "1<sup>st</sup> day of Riḍván"},
-      ridvan_2: {type: :ridvan, work_suspended: false, title: "Second day of the Festival of Ridvan", short_title: "2nd day of Ridvan", title_html: "Second day of the Festival of Riḍván", short_title_html: "2<sup>nd</sup> day of Riḍván"},
-      ridvan_3: {type: :ridvan, work_suspended: false, title: "Third day of the Festival of Ridvan", short_title: "3rd day of Ridvan", title_html: "Third day of the Festival of Riḍván", short_title_html: "3<sup>rd</sup> day of Riḍván"},
-      ridvan_4: {type: :ridvan, work_suspended: false, title: "Fourth day of the Festival of Ridvan", short_title: "4th day of Ridvan", title_html: "Fourth day of the Festival of Riḍván", short_title_html: "4<sup>th</sup> day of Riḍván"},
-      ridvan_5: {type: :ridvan, work_suspended: false, title: "Fifth day of the Festival of Ridvan", short_title: "5th day of Ridvan", title_html: "Fifth day of the Festival of Riḍván", short_title_html: "5<sup>th</sup> day of Riḍván"},
-      ridvan_6: {type: :ridvan, work_suspended: false, title: "Sixth day of the Festival of Ridvan", short_title: "6th day of Ridvan", title_html: "Sixth day of the Festival of Riḍván", short_title_html: "6<sup>th</sup> day of Riḍván"},
-      ridvan_7: {type: :ridvan, work_suspended: false, title: "Seventh day of the Festival of Ridvan", short_title: "7th day of Ridvan", title_html: "Seventh day of the Festival of Riḍván", short_title_html: "7<sup>th</sup> day of Riḍván"},
-      ridvan_8: {type: :ridvan, work_suspended: false, title: "Eighth day of the Festival of Ridvan", short_title: "8th day of Ridvan", title_html: "Eighth day of the Festival of Riḍván", short_title_html: "8<sup>th</sup> day of Riḍván"},
-      ridvan_9: {type: :holy, work_suspended: true, title: "Ninth day of the Festival of Ridvan", short_title: "9th day of Ridvan", title_html: "Ninth day of the Festival of Riḍván", short_title_html: "9<sup>th</sup> day of Riḍván"},
-      ridvan_10: {type: :ridvan, work_suspended: false, title: "Tenth day of the Festival of Ridvan", short_title: "10th day of Ridvan", title_html: "Tenth day of the Festival of Riḍván", short_title_html: "10<sup>th</sup> day of Riḍván"},
-      ridvan_11: {type: :ridvan, work_suspended: false, title: "Eleventh day of the Festival of Ridvan", short_title: "11th day of Ridvan", title_html: "Eleventh day of the Festival of Riḍván", short_title_html: "11<sup>th</sup> day of Riḍván"},
-      ridvan_12: {type: :holy, work_suspended: true, title: "Twelfth day of the Festival of Ridvan", short_title: "12th day of Ridvan", title_html: "Twelfth day of the Festival of Riḍván", short_title_html: "12<sup>th</sup> day of Riḍván"},
+      ridvan_1: {type: :holy, work_suspended: true, title: "First day of the Festival of Ridvan", short_title: "1st day of Ridvan", title_html: "First day of the Festival of Riḍván", short_title_html: "1<sup>st</sup> day of Riḍván"},
+      ridvan_2: {type: :ridvan, work_suspended: false, title: "Second day of the Festival of Ridvan", short_title: "2nd day of Ridvan", title_html: "Second day of the Festival of Riḍván", short_title_html: "2<sup>nd</sup> day of Riḍván"},
+      ridvan_3: {type: :ridvan, work_suspended: false, title: "Third day of the Festival of Ridvan", short_title: "3rd day of Ridvan", title_html: "Third day of the Festival of Riḍván", short_title_html: "3<sup>rd</sup> day of Riḍván"},
+      ridvan_4: {type: :ridvan, work_suspended: false, title: "Fourth day of the Festival of Ridvan", short_title: "4th day of Ridvan", title_html: "Fourth day of the Festival of Riḍván", short_title_html: "4<sup>th</sup> day of Riḍván"},
+      ridvan_5: {type: :ridvan, work_suspended: false, title: "Fifth day of the Festival of Ridvan", short_title: "5th day of Ridvan", title_html: "Fifth day of the Festival of Riḍván", short_title_html: "5<sup>th</sup> day of Riḍván"},
+      ridvan_6: {type: :ridvan, work_suspended: false, title: "Sixth day of the Festival of Ridvan", short_title: "6th day of Ridvan", title_html: "Sixth day of the Festival of Riḍván", short_title_html: "6<sup>th</sup> day of Riḍván"},
+      ridvan_7: {type: :ridvan, work_suspended: false, title: "Seventh day of the Festival of Ridvan", short_title: "7th day of Ridvan", title_html: "Seventh day of the Festival of Riḍván", short_title_html: "7<sup>th</sup> day of Riḍván"},
+      ridvan_8: {type: :ridvan, work_suspended: false, title: "Eighth day of the Festival of Ridvan", short_title: "8th day of Ridvan", title_html: "Eighth day of the Festival of Riḍván", short_title_html: "8<sup>th</sup> day of Riḍván"},
+      ridvan_9: {type: :holy, work_suspended: true, title: "Ninth day of the Festival of Ridvan", short_title: "9th day of Ridvan", title_html: "Ninth day of the Festival of Riḍván", short_title_html: "9<sup>th</sup> day of Riḍván"},
+      ridvan_10: {type: :ridvan, work_suspended: false, title: "Tenth day of the Festival of Ridvan", short_title: "10th day of Ridvan", title_html: "Tenth day of the Festival of Riḍván", short_title_html: "10<sup>th</sup> day of Riḍván"},
+      ridvan_11: {type: :ridvan, work_suspended: false, title: "Eleventh day of the Festival of Ridvan", short_title: "11th day of Ridvan", title_html: "Eleventh day of the Festival of Riḍván", short_title_html: "11<sup>th</sup> day of Riḍván"},
+      ridvan_12: {type: :holy, work_suspended: true, title: "Twelfth day of the Festival of Ridvan", short_title: "12th day of Ridvan", title_html: "Twelfth day of the Festival of Riḍván", short_title_html: "12<sup>th</sup> day of Riḍván"},
       nawruz: {type: :holy, work_suspended: true, title: "Naw-Ruz (New Year)", short_title: "Naw-Ruz", title_html: "Naw-Rúz (New Year)", short_title_html: "Naw-Rúz"},
       declaration_bab: {type: :holy, work_suspended: true, title: "Declaration of the Bab", short_title: "Declaration of the Bab", title_html: "Declaration of the Báb", short_title_html: "Declaration of the Báb"},
       ascension_bahaullah: {type: :holy, work_suspended: true, title: "Ascension of Baha'u'llah", short_title: "Ascension of Baha'u'llah", title_html: "Ascension of Bahá’u’lláh", short_title_html: "Ascension of Bahá’u’lláh"},
@@ -136,6 +136,34 @@ module BahaiDate
       "4.8" => [:declaration_bab],
       "6.17" => [:martyrdom_bab]
     }
+
+    # The Bahá'í year of the event each Holy Day commemorates, or in which it
+    # was appointed. Years before it have no anniversary to keep, though
+    # #occasions still lists the day there, as it always has. Holy Days not
+    # listed here (Naw-Rúz and the Twin Holy Birthdays) apply from year 1.
+    #
+    # Declaration of the Báb: 23 May 1844 (1 B.E.). Martyrdom of the Báb:
+    # 9 July 1850 (7 B.E.). Riḍván: 22 April to 3 May 1863 (20 B.E.).
+    # Ascension of Bahá'u'lláh: 29 May 1892 (49 B.E.). The Day of the Covenant
+    # was appointed by 'Abdu'l-Bahá in place of His own birthday, so not before
+    # 1892; the year is not known. Ascension of 'Abdu'l-Bahá: 28 November 1921
+    # (78 B.E.). See docs/history.md.
+    FIRST_YEARS = {
+      declaration_bab: 1,
+      martyrdom_bab: 7,
+      ridvan_1: 20,
+      ridvan_9: 20,
+      ridvan_12: 20,
+      ascension_bahaullah: 49,
+      covenant: 49,
+      ascension_abdulbaha: 78
+    }.freeze
+
+    # The first Bahá'í year in which the given occasion can be kept (see
+    # FIRST_YEARS); 1 for everything else.
+    def self.first_year(occasion)
+      FIRST_YEARS.fetch(occasion, 1)
+    end
 
     def initialize(year, month, day)
       @year = year

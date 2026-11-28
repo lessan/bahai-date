@@ -1,0 +1,66 @@
+:root {
+  --text: #1d1d1f;
+  --muted: #5b5b63;
+  --line: #d9d9de;
+  --panel: #f6f6f8;
+  --link: #1f5fa8;
+  --accent: #8a5a00;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #e8e8ec;
+    --muted: #a6a6ae;
+    --line: #3a3a40;
+    --panel: #1c1c20;
+    --link: #8db8f0;
+    --accent: #e0b25c;
+  }
+  body { background: #121214; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  color: var(--text);
+  font: 17px/1.6 Charter, "Iowan Old Style", Georgia, serif;
+}
+a { color: var(--link); }
+header.site, main, footer.site { max-width: 46rem; margin: 0 auto; padding: 0 1.25rem; }
+header.site {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem 1.5rem;
+  padding-top: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--line);
+  font-family: system-ui, sans-serif; font-size: 0.95rem;
+}
+header.site .name { font-weight: 600; color: var(--text); text-decoration: none; }
+header.site nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; }
+header.site nav a[aria-current="page"] { color: var(--text); text-decoration: none; font-weight: 600; }
+footer.site { margin-top: 3rem; padding-top: 1rem; padding-bottom: 2rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; font-family: system-ui, sans-serif; }
+h1 { font-size: 1.9rem; line-height: 1.25; margin: 2rem 0 1rem; }
+h2 { font-size: 1.35rem; margin: 2.25rem 0 0.75rem; }
+h3 { font-size: 1.1rem; margin: 1.75rem 0 0.5rem; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+.table-wrap { overflow-x: auto; margin: 1rem 0; }
+th, td { text-align: left; padding: 0.35rem 0.75rem 0.35rem 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-family: system-ui, sans-serif; font-size: 0.85rem; color: var(--muted); font-weight: 600; }
+code { font-size: 0.88em; background: var(--panel); padding: 0.1em 0.3em; border-radius: 3px; }
+pre { background: var(--panel); padding: 0.75rem 1rem; overflow-x: auto; border-radius: 4px; }
+pre code { padding: 0; background: none; }
+.today { background: var(--panel); border-left: 3px solid var(--accent); padding: 0.9rem 1.1rem; margin: 1.25rem 0; }
+.today .date { font-size: 1.35rem; font-weight: 600; }
+.today .note { color: var(--muted); font-size: 0.9rem; margin-top: 0.3rem; }
+.controls { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; font-family: system-ui, sans-serif; margin: 1rem 0; }
+.controls input { width: 6.5rem; font: inherit; padding: 0.3rem 0.5rem; border: 1px solid var(--line); border-radius: 4px; background: transparent; color: var(--text); }
+.controls button { font: inherit; padding: 0.3rem 0.75rem; border: 1px solid var(--line); border-radius: 4px; background: var(--panel); color: var(--text); cursor: pointer; }
+.label { display: inline-block; font-family: system-ui, sans-serif; font-size: 0.8rem; padding: 0.05rem 0.5rem; border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; }
+.muted { color: var(--muted); }
+main p, main li, main blockquote, .today { max-width: 60ch; }
+main p, main li { text-wrap: pretty; }
+h1, h2, h3 { text-wrap: balance; }
+button.link { font: inherit; color: var(--link); background: none; border: none; padding: 0; text-decoration: underline; cursor: pointer; }
+footer.site p { margin: 0.4rem 0; text-wrap: pretty; }
+.toc { font-family: system-ui, sans-serif; font-size: 0.92rem; background: var(--panel); padding: 0.6rem 1rem; border-radius: 4px; }
+.toc ul { margin: 0.2rem 0; padding-left: 1.1rem; }
+.converter { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; font-family: system-ui, sans-serif; margin: 0.75rem 0; }
+.converter input { font: inherit; padding: 0.3rem 0.5rem; border: 1px solid var(--line); border-radius: 4px; background: transparent; color: var(--text); }
+.converter output { font-weight: 600; }
+.confidence { font-family: system-ui, sans-serif; font-size: 0.85rem; color: var(--muted); }

@@ -1,0 +1,252 @@
+{
+  "$schema": "https://lessan.github.io/bahai-date/data/schema/year.schema.json",
+  "about": "https://lessan.github.io/bahai-date/data/",
+  "dates": "Each Gregorian date is the day on which the Bahá’í day ends. A Bahá’í day begins at sunset, so it begins on the evening before the date given.",
+  "confidence_note": "Computed; the uncertainty in the Earth's rotation (Delta T) means some years may be a day out where the equinox falls close to sunset in Ṭihrán.",
+  "year": 807,
+  "year_name": "Bahá",
+  "year_translation": "Splendour",
+  "year_in_vahid": 9,
+  "vahid": 5,
+  "kull_i_shay": 3,
+  "confidence": "estimate",
+  "nawruz": "2650-03-21",
+  "days_in_year": 365,
+  "ayyam_i_ha": {
+    "first": "2651-02-26",
+    "last": "2651-03-01",
+    "days": 4
+  },
+  "fast": {
+    "first": "2651-03-02",
+    "last": "2651-03-20"
+  },
+  "months": [
+    {
+      "number": 1,
+      "name": "Bahá",
+      "translation": "Splendour",
+      "first_day": "2650-03-21"
+    },
+    {
+      "number": 2,
+      "name": "Jalál",
+      "translation": "Glory",
+      "first_day": "2650-04-09"
+    },
+    {
+      "number": 3,
+      "name": "Jamál",
+      "translation": "Beauty",
+      "first_day": "2650-04-28"
+    },
+    {
+      "number": 4,
+      "name": "‘Aẓamat",
+      "translation": "Grandeur",
+      "first_day": "2650-05-17"
+    },
+    {
+      "number": 5,
+      "name": "Núr",
+      "translation": "Light",
+      "first_day": "2650-06-05"
+    },
+    {
+      "number": 6,
+      "name": "Raḥmat",
+      "translation": "Mercy",
+      "first_day": "2650-06-24"
+    },
+    {
+      "number": 7,
+      "name": "Kalimát",
+      "translation": "Words",
+      "first_day": "2650-07-13"
+    },
+    {
+      "number": 8,
+      "name": "Kamál",
+      "translation": "Perfection",
+      "first_day": "2650-08-01"
+    },
+    {
+      "number": 9,
+      "name": "Asmá’",
+      "translation": "Names",
+      "first_day": "2650-08-20"
+    },
+    {
+      "number": 10,
+      "name": "‘Izzat",
+      "translation": "Might",
+      "first_day": "2650-09-08"
+    },
+    {
+      "number": 11,
+      "name": "Mashíyyat",
+      "translation": "Will",
+      "first_day": "2650-09-27"
+    },
+    {
+      "number": 12,
+      "name": "‘Ilm",
+      "translation": "Knowledge",
+      "first_day": "2650-10-16"
+    },
+    {
+      "number": 13,
+      "name": "Qudrat",
+      "translation": "Power",
+      "first_day": "2650-11-04"
+    },
+    {
+      "number": 14,
+      "name": "Qawl",
+      "translation": "Speech",
+      "first_day": "2650-11-23"
+    },
+    {
+      "number": 15,
+      "name": "Masá’il",
+      "translation": "Questions",
+      "first_day": "2650-12-12"
+    },
+    {
+      "number": 16,
+      "name": "Sharaf",
+      "translation": "Honour",
+      "first_day": "2650-12-31"
+    },
+    {
+      "number": 17,
+      "name": "Sulṭán",
+      "translation": "Sovereignty",
+      "first_day": "2651-01-19"
+    },
+    {
+      "number": 18,
+      "name": "Mulk",
+      "translation": "Dominion",
+      "first_day": "2651-02-07"
+    },
+    {
+      "number": 19,
+      "name": "‘Alá’",
+      "translation": "Loftiness",
+      "first_day": "2651-03-02"
+    }
+  ],
+  "holy_days": [
+    {
+      "id": "nawruz",
+      "name": "Naw-Rúz",
+      "month": 1,
+      "month_name": "Bahá",
+      "day": 1,
+      "date": "2650-03-21",
+      "work_suspended": true,
+      "status": "observed"
+    },
+    {
+      "id": "ridvan_1",
+      "name": "1st day of Riḍván",
+      "month": 2,
+      "month_name": "Jalál",
+      "day": 13,
+      "date": "2650-04-21",
+      "work_suspended": true,
+      "status": "observed"
+    },
+    {
+      "id": "ridvan_9",
+      "name": "9th day of Riḍván",
+      "month": 3,
+      "month_name": "Jamál",
+      "day": 2,
+      "date": "2650-04-29",
+      "work_suspended": true,
+      "status": "observed"
+    },
+    {
+      "id": "ridvan_12",
+      "name": "12th day of Riḍván",
+      "month": 3,
+      "month_name": "Jamál",
+      "day": 5,
+      "date": "2650-05-02",
+      "work_suspended": true,
+      "status": "observed"
+    },
+    {
+      "id": "declaration_bab",
+      "name": "Declaration of the Báb",
+      "month": 4,
+      "month_name": "‘Aẓamat",
+      "day": 8,
+      "date": "2650-05-24",
+      "work_suspended": true,
+      "status": "observed"
+    },
+    {
+      "id": "ascension_bahaullah",
+      "name": "Ascension of Bahá’u’lláh",
+      "month": 4,
+      "month_name": "‘Aẓamat",
+      "day": 13,
+      "date": "2650-05-29",
+      "work_suspended": true,
+      "status": "observed"
+    },
+    {
+      "id": "martyrdom_bab",
+      "name": "Martyrdom of the Báb",
+      "month": 6,
+      "month_name": "Raḥmat",
+      "day": 17,
+      "date": "2650-07-10",
+      "work_suspended": true,
+      "status": "observed"
+    },
+    {
+      "id": "birth_bab",
+      "name": "Birth of the Báb",
+      "month": 12,
+      "month_name": "‘Ilm",
+      "day": 3,
+      "date": "2650-10-18",
+      "work_suspended": true,
+      "status": "observed"
+    },
+    {
+      "id": "birth_bahaullah",
+      "name": "Birth of Bahá’u’lláh",
+      "month": 12,
+      "month_name": "‘Ilm",
+      "day": 4,
+      "date": "2650-10-19",
+      "work_suspended": true,
+      "status": "observed"
+    },
+    {
+      "id": "covenant",
+      "name": "Day of the Covenant",
+      "month": 14,
+      "month_name": "Qawl",
+      "day": 4,
+      "date": "2650-11-26",
+      "work_suspended": false,
+      "status": "observed"
+    },
+    {
+      "id": "ascension_abdulbaha",
+      "name": "Ascension of ‘Abdu’l-Bahá",
+      "month": 14,
+      "month_name": "Qawl",
+      "day": 6,
+      "date": "2650-11-28",
+      "work_suspended": false,
+      "status": "observed"
+    }
+  ]
+}
