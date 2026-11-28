@@ -1,0 +1,507 @@
+{
+  "title": "Facts about the Bahá’í (Badí‘) calendar",
+  "generated_by": "bahai_date 2.0.1 (https://github.com/lessan/bahai-date)",
+  "about": "https://lessan.github.io/bahai-date/rules.html",
+  "sources": "https://lessan.github.io/bahai-date/sources.html",
+  "day": "From sunset to sunset. Gregorian dates in this dataset are the day on which the Bahá’í day ends.",
+  "weekdays": [
+    {
+      "number": 1,
+      "name": "Jalál",
+      "translation": "Glory",
+      "gregorian": "Saturday"
+    },
+    {
+      "number": 2,
+      "name": "Jamál",
+      "translation": "Beauty",
+      "gregorian": "Sunday"
+    },
+    {
+      "number": 3,
+      "name": "Kamál",
+      "translation": "Perfection",
+      "gregorian": "Monday"
+    },
+    {
+      "number": 4,
+      "name": "Fiḍál",
+      "translation": "Grace",
+      "gregorian": "Tuesday"
+    },
+    {
+      "number": 5,
+      "name": "‘Idál",
+      "translation": "Justice",
+      "gregorian": "Wednesday"
+    },
+    {
+      "number": 6,
+      "name": "Istijlál",
+      "translation": "Majesty",
+      "gregorian": "Thursday"
+    },
+    {
+      "number": 7,
+      "name": "Istiqlál",
+      "translation": "Independence",
+      "gregorian": "Friday"
+    }
+  ],
+  "day_of_rest": "Friday (Istiqlál)",
+  "months": [
+    {
+      "number": 1,
+      "name": "Bahá",
+      "translation": "Splendour"
+    },
+    {
+      "number": 2,
+      "name": "Jalál",
+      "translation": "Glory"
+    },
+    {
+      "number": 3,
+      "name": "Jamál",
+      "translation": "Beauty"
+    },
+    {
+      "number": 4,
+      "name": "‘Aẓamat",
+      "translation": "Grandeur"
+    },
+    {
+      "number": 5,
+      "name": "Núr",
+      "translation": "Light"
+    },
+    {
+      "number": 6,
+      "name": "Raḥmat",
+      "translation": "Mercy"
+    },
+    {
+      "number": 7,
+      "name": "Kalimát",
+      "translation": "Words"
+    },
+    {
+      "number": 8,
+      "name": "Kamál",
+      "translation": "Perfection"
+    },
+    {
+      "number": 9,
+      "name": "Asmá’",
+      "translation": "Names"
+    },
+    {
+      "number": 10,
+      "name": "‘Izzat",
+      "translation": "Might"
+    },
+    {
+      "number": 11,
+      "name": "Mashíyyat",
+      "translation": "Will"
+    },
+    {
+      "number": 12,
+      "name": "‘Ilm",
+      "translation": "Knowledge"
+    },
+    {
+      "number": 13,
+      "name": "Qudrat",
+      "translation": "Power"
+    },
+    {
+      "number": 14,
+      "name": "Qawl",
+      "translation": "Speech"
+    },
+    {
+      "number": 15,
+      "name": "Masá’il",
+      "translation": "Questions"
+    },
+    {
+      "number": 16,
+      "name": "Sharaf",
+      "translation": "Honour"
+    },
+    {
+      "number": 17,
+      "name": "Sulṭán",
+      "translation": "Sovereignty"
+    },
+    {
+      "number": 18,
+      "name": "Mulk",
+      "translation": "Dominion"
+    },
+    {
+      "number": 19,
+      "name": "‘Alá’",
+      "translation": "Loftiness"
+    }
+  ],
+  "ayyam_i_ha": "4 or 5 intercalary days between months 18 and 19, making the year end the day before the next Naw-Rúz",
+  "fast": "Month 19, ‘Alá’",
+  "years_of_a_vahid": [
+    {
+      "number": 1,
+      "name": "Alif",
+      "translation": "A"
+    },
+    {
+      "number": 2,
+      "name": "Bá’",
+      "translation": "B"
+    },
+    {
+      "number": 3,
+      "name": "Ab",
+      "translation": "Father"
+    },
+    {
+      "number": 4,
+      "name": "Dál",
+      "translation": "D"
+    },
+    {
+      "number": 5,
+      "name": "Báb",
+      "translation": "Gate"
+    },
+    {
+      "number": 6,
+      "name": "Váv",
+      "translation": "V"
+    },
+    {
+      "number": 7,
+      "name": "Abad",
+      "translation": "Eternity"
+    },
+    {
+      "number": 8,
+      "name": "Jád",
+      "translation": "Generosity"
+    },
+    {
+      "number": 9,
+      "name": "Bahá",
+      "translation": "Splendour"
+    },
+    {
+      "number": 10,
+      "name": "Ḥubb",
+      "translation": "Love"
+    },
+    {
+      "number": 11,
+      "name": "Bahháj",
+      "translation": "Delightful"
+    },
+    {
+      "number": 12,
+      "name": "Javáb",
+      "translation": "Answer"
+    },
+    {
+      "number": 13,
+      "name": "Aḥad",
+      "translation": "Single"
+    },
+    {
+      "number": 14,
+      "name": "Vahháb",
+      "translation": "Bountiful"
+    },
+    {
+      "number": 15,
+      "name": "Vidád",
+      "translation": "Affection"
+    },
+    {
+      "number": 16,
+      "name": "Badí‘",
+      "translation": "Beginning"
+    },
+    {
+      "number": 17,
+      "name": "Bahí",
+      "translation": "Luminous"
+    },
+    {
+      "number": 18,
+      "name": "Abhá",
+      "translation": "Most Luminous"
+    },
+    {
+      "number": 19,
+      "name": "Váḥid",
+      "translation": "Unity"
+    }
+  ],
+  "vahid": "A cycle of 19 years",
+  "kull_i_shay": "19 Váḥids, 361 years",
+  "epoch": "Year 1 B.E. began at Naw-Rúz 1844 (21 March by the Western convention). Year n begins in March of Gregorian year 1843 + n.",
+  "rules_from_172": {
+    "nawruz": "The Bahá’í day (sunset to sunset in Ṭihrán) in which the March equinox occurs.",
+    "twin_holy_days": "The first and second days after the day in which the eighth new moon (conjunction) after Naw-Rúz occurs, reckoned in Ṭihrán. A new moon during the day of Naw-Rúz is not counted.",
+    "ayyam_i_ha": "(next Naw-Rúz − this Naw-Rúz) − 361 days",
+    "source": "https://lessan.github.io/bahai-date/sources.html#uhj-2014-07-10"
+  },
+  "rules_before_172_western": {
+    "nawruz": "21 March",
+    "ayyam_i_ha": "26 February to 1 March (5 days if the following February has 29 days)",
+    "fast": "2 to 20 March",
+    "source": "https://lessan.github.io/bahai-date/sources.html#bahai-world"
+  },
+  "holy_days": [
+    {
+      "id": "nawruz",
+      "name": "Naw-Rúz",
+      "work_suspended": true,
+      "from_172": {
+        "month": 1,
+        "month_name": "Bahá",
+        "day": 1
+      },
+      "before_172_western": {
+        "month": 1,
+        "month_name": "Bahá",
+        "day": 1
+      },
+      "first_year": 1
+    },
+    {
+      "id": "ridvan_1",
+      "name": "1st day of Riḍván",
+      "work_suspended": true,
+      "from_172": {
+        "month": 2,
+        "month_name": "Jalál",
+        "day": 13
+      },
+      "before_172_western": {
+        "month": 2,
+        "month_name": "Jalál",
+        "day": 13
+      },
+      "first_year": 20,
+      "commemoration": {
+        "time": "Late in the afternoon (about 3 p.m.)",
+        "sources": [
+          "aqdas",
+          "walbridge-1996"
+        ]
+      }
+    },
+    {
+      "id": "ridvan_9",
+      "name": "9th day of Riḍván",
+      "work_suspended": true,
+      "from_172": {
+        "month": 3,
+        "month_name": "Jamál",
+        "day": 2
+      },
+      "before_172_western": {
+        "month": 3,
+        "month_name": "Jamál",
+        "day": 2
+      },
+      "first_year": 20
+    },
+    {
+      "id": "ridvan_12",
+      "name": "12th day of Riḍván",
+      "work_suspended": true,
+      "from_172": {
+        "month": 3,
+        "month_name": "Jamál",
+        "day": 5
+      },
+      "before_172_western": {
+        "month": 3,
+        "month_name": "Jamál",
+        "day": 5
+      },
+      "first_year": 20
+    },
+    {
+      "id": "declaration_bab",
+      "name": "Declaration of the Báb",
+      "work_suspended": true,
+      "from_172": {
+        "month": 4,
+        "month_name": "‘Aẓamat",
+        "day": 8
+      },
+      "before_172_western": {
+        "month": 4,
+        "month_name": "‘Aẓamat",
+        "day": 7
+      },
+      "first_year": 1,
+      "commemoration": {
+        "time": "2 hours and 11 minutes after sunset on the evening the day begins",
+        "sources": [
+          "lights-of-guidance"
+        ]
+      }
+    },
+    {
+      "id": "ascension_bahaullah",
+      "name": "Ascension of Bahá’u’lláh",
+      "work_suspended": true,
+      "from_172": {
+        "month": 4,
+        "month_name": "‘Aẓamat",
+        "day": 13
+      },
+      "before_172_western": {
+        "month": 4,
+        "month_name": "‘Aẓamat",
+        "day": 13
+      },
+      "first_year": 49,
+      "commemoration": {
+        "time": "About 8 hours after sunset (3 a.m.), by the sun",
+        "sources": [
+          "lights-of-guidance",
+          "uhj-2017-12-20"
+        ]
+      }
+    },
+    {
+      "id": "martyrdom_bab",
+      "name": "Martyrdom of the Báb",
+      "work_suspended": true,
+      "from_172": {
+        "month": 6,
+        "month_name": "Raḥmat",
+        "day": 17
+      },
+      "before_172_western": {
+        "month": 6,
+        "month_name": "Raḥmat",
+        "day": 16
+      },
+      "first_year": 7,
+      "commemoration": {
+        "time": "About noon",
+        "sources": [
+          "dawn-breakers"
+        ]
+      }
+    },
+    {
+      "id": "birth_bab",
+      "name": "Birth of the Báb",
+      "work_suspended": true,
+      "from_172": {
+        "rule": "The first day after the eighth new moon after Naw-Rúz, in Ṭihrán"
+      },
+      "before_172_western": {
+        "month": 12,
+        "month_name": "‘Ilm",
+        "day": 5
+      },
+      "first_year": 1
+    },
+    {
+      "id": "birth_bahaullah",
+      "name": "Birth of Bahá’u’lláh",
+      "work_suspended": true,
+      "from_172": {
+        "rule": "The second day after the eighth new moon after Naw-Rúz, in Ṭihrán"
+      },
+      "before_172_western": {
+        "month": 13,
+        "month_name": "Qudrat",
+        "day": 9
+      },
+      "first_year": 1
+    },
+    {
+      "id": "covenant",
+      "name": "Day of the Covenant",
+      "work_suspended": false,
+      "from_172": {
+        "month": 14,
+        "month_name": "Qawl",
+        "day": 4
+      },
+      "before_172_western": {
+        "month": 14,
+        "month_name": "Qawl",
+        "day": 4
+      },
+      "first_year": 49
+    },
+    {
+      "id": "ascension_abdulbaha",
+      "name": "Ascension of ‘Abdu’l-Bahá",
+      "work_suspended": false,
+      "from_172": {
+        "month": 14,
+        "month_name": "Qawl",
+        "day": 6
+      },
+      "before_172_western": {
+        "month": 14,
+        "month_name": "Qawl",
+        "day": 6
+      },
+      "first_year": 78,
+      "commemoration": {
+        "time": "About one hour after midnight, by the sun",
+        "sources": [
+          "lights-of-guidance"
+        ]
+      }
+    }
+  ],
+  "tehran": {
+    "latitude": 35.696111,
+    "longitude": 51.423056,
+    "utc_offset": "+03:30",
+    "sunset_zenith_degrees": 90.833333
+  },
+  "supported_years": {
+    "first": 1,
+    "last": 1157,
+    "gregorian": "21 March 1844 to March 3001"
+  },
+  "confidence_levels": [
+    {
+      "years": "1-66",
+      "label": "convention-proleptic",
+      "note": "The Western convention set out under Shoghi Effendi (Naw-Rúz on 21 March, the Twin Holy Days on 20 October and 12 November), applied to years before any Western Bahá’í community kept the calendar (its first attested use in the West is 1910). Bahá’ís in Iran reckoned differently: see eastern_reconstruction and https://lessan.github.io/bahai-date/history.html."
+    },
+    {
+      "years": "67-171",
+      "label": "convention",
+      "note": "The Western convention set out under Shoghi Effendi (Naw-Rúz on 21 March, the Twin Holy Days on 20 October and 12 November), as kept in the West. Bahá’ís in Iran reckoned differently: see eastern_reconstruction and https://lessan.github.io/bahai-date/history.html."
+    },
+    {
+      "years": "172-221",
+      "label": "published",
+      "note": "Matches the dates published by the Bahá’í World Centre for 172 to 221 B.E."
+    },
+    {
+      "years": "222-507",
+      "label": "cross-checked",
+      "note": "Computed; agrees with the independent badiDate library (JPL ephemeris) for every year to 2351."
+    },
+    {
+      "years": "508-1157",
+      "label": "estimate",
+      "note": "Computed; the uncertainty in the Earth's rotation (Delta T) means some years may be a day out where the equinox falls close to sunset in Ṭihrán."
+    }
+  ]
+}

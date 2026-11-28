@@ -81,7 +81,7 @@ async function showToday(el) {
         ? `This day began at sunset, ${escape(time(sunset))}.`
         : `Sunset today is at ${escape(time(sunset))}${next ? `; then it becomes ${escape(describe(next))}${holy(next)}` : ""}.`.replace(/\.\.$/, ".")}</div>
       <div class="note">Sunset is calculated in your browser for your saved location (to within a minute or two); the location is not sent anywhere.
-      In some places far north, the Bahá’í community uses fixed clock times instead; see <a href="calendar-rules.html#5-how-to-calculate-the-dates">the rules</a>.
+      In some places far north, the Bahá’í community uses fixed clock times instead; see <a href="rules.html#high-latitudes">the rules</a>.
       <button type="button" class="link" id="forget">Forget my location</button></div>`;
     document.getElementById("forget").onclick = () => { localStorage.removeItem(PLACE_KEY); showToday(el); };
     return;
@@ -124,12 +124,12 @@ async function showYear(el, year) {
     estimate: "Computed; some dates may be a day out (the Earth’s rotation cannot be predicted precisely).",
   };
   const day = (s) => escape(pretty(parse(s)));
-  const STATUS_NOTE = { event: " (the event itself)", proleptic: " (before its first known observance)" };
+  const STATUS_NOTE = { "event-year": " (the year of the event; see history)", proleptic: " (before its first known observance)" };
   const east = data.eastern_reconstruction;
   const eastText = east ? `<p><strong>In Iran</strong>, Naw-Rúz followed the moment of the equinox. Reckoned by the rule used since 2015, it fell on
     ${day(east.nawruz)}${east.uncertain ? " (uncertain: the equinox was within minutes of sunset)" : ""}, with ${east.ayyam_i_ha_days} days of Ayyám-i-Há.
     The Twin Holy Days, the Declaration and the Martyrdom of the Báb were kept on Islamic lunar dates.
-    See <a href="${root}history.html">history</a>.</p>` : "";
+    See <a href="${root}history.html#before-2015-in-iran-and-the-east">history</a>.</p>` : "";
   const rows = (items, cells) => items.map((x) => `<tr>${cells(x).map((c) => `<td>${c}</td>`).join("")}</tr>`).join("");
   el.innerHTML = `
     <h2>${data.year} B.E. <span class="label">${escape(conf)}</span></h2>
@@ -141,7 +141,7 @@ async function showYear(el, year) {
     ${eastText}
     <h3>Holy Days</h3>
     <table><thead><tr><th>Holy Day</th><th>Bahá’í date</th><th>Gregorian date</th><th>Work suspended</th></tr></thead>
-    <tbody>${rows(data.holy_days, (h) => [escape(h.name) + `<span class="muted">${STATUS_NOTE[h.status] || ""}</span>`, `${h.day} ${escape(data.months[h.month - 1].name)}`, day(h.date), h.work_suspended ? "yes" : "no"])}</tbody></table>
+    <tbody>${rows(data.holy_days, (h) => [escape(h.name) + `<span class="muted">${STATUS_NOTE[h.status] || ""}</span>`, `${h.day} ${escape(h.month_name)}`, day(h.date), h.work_suspended ? "yes" : "no"])}</tbody></table>
     ${data.holy_days.length < 11 ? `<p class="muted">Holy Days whose events had not yet happened are not listed.</p>` : ""}
     <h3>Months (Nineteen Day Feasts)</h3>
     <table><thead><tr><th></th><th>Month</th><th>First day</th></tr></thead>
@@ -152,25 +152,43 @@ async function showYear(el, year) {
 
 function setUpYears(el) {
   const input = document.getElementById("year");
+  const gregorian = document.getElementById("gregorian");
+  let lastEdited = input;
   const go = (y) => {
     y = Math.min(MAX_YEAR, Math.max(1, Number(y) || 1));
     input.value = y;
+    gregorian.value = y + 1843;
     history.replaceState(null, "", `?year=${y}`);
     showYear(el, y);
   };
+  const fromGregorian = () => { const g = Number(gregorian.value); if (g) go(g - 1843); };
+  input.addEventListener("input", () => { lastEdited = input; });
+  gregorian.addEventListener("input", () => { lastEdited = gregorian; });
   document.getElementById("prev").onclick = () => go(Number(input.value) - 1);
   document.getElementById("next").onclick = () => go(Number(input.value) + 1);
-  document.getElementById("show").onclick = () => go(input.value);
+  document.getElementById("show").onclick = () => (lastEdited === gregorian ? fromGregorian() : go(input.value));
   input.addEventListener("keydown", (e) => { if (e.key === "Enter") go(input.value); });
-  document.getElementById("gregorian").addEventListener("keydown", async (e) => {
-    if (e.key !== "Enter") return;
-    const g = Number(e.target.value);
-    if (g) go(g - 1843);
-  });
+  gregorian.addEventListener("keydown", (e) => { if (e.key === "Enter") fromGregorian(); });
   const param = Number(new URLSearchParams(location.search).get("year"));
   if (param) go(param);
   else badiDate(Date.UTC(new Date().getFullYear(), new Date().getMonth(), new Date().getDate())).then((b) => go(b ? b.data.year : 183));
 }
+
+async function setUpConverter(input, output) {
+  const show = async () => {
+    if (!input.value) { output.textContent = ""; return; }
+    const ms = parse(input.value);
+    const b = await badiDate(ms);
+    output.innerHTML = b
+      ? `${escape(describe(b))}${b.holy.length ? ` — ${escape(b.holy.join(", "))}` : ""} <span class="confidence">(${escape(b.data.confidence)}; began at sunset the evening before)</span>`
+      : "Outside the years covered (21 March 1844 to 20 March 3001).";
+  };
+  input.addEventListener("change", show);
+  input.addEventListener("input", show);
+}
+
+const convertEl = document.getElementById("convert-date");
+if (convertEl) setUpConverter(convertEl, document.getElementById("convert-result"));
 
 const todayEl = document.getElementById("today");
 if (todayEl) {

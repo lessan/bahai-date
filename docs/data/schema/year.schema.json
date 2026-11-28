@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lessan.github.io/bahai-date/data/schema/year.schema.json",
+  "title": "One year of the Bahá’í (Badí‘) calendar",
+  "description": "The format of data/years/<year>.json. Every Gregorian date is the day on which the Bahá’í day ends; the Bahá’í day begins at sunset on the evening before.",
+  "type": "object",
+  "required": ["year", "year_name", "year_translation", "year_in_vahid", "vahid", "kull_i_shay", "confidence", "nawruz", "days_in_year", "ayyam_i_ha", "fast", "months", "holy_days"],
+  "$defs": {
+    "date": {"type": "string", "format": "date", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"}
+  },
+  "properties": {
+    "$schema": {"type": "string"},
+    "about": {"type": "string", "format": "uri"},
+    "dates": {"type": "string"},
+    "confidence_note": {"type": "string"},
+    "holy_day_status": {"type": "object", "additionalProperties": {"type": "string"}},
+    "eastern_reconstruction_note": {"type": "string"},
+    "year": {"type": "integer", "minimum": 1, "maximum": 1157, "description": "Year of the Bahá’í Era (B.E.)"},
+    "year_name": {"type": "string", "description": "Name of the year within its Váḥid"},
+    "year_translation": {"type": "string"},
+    "year_in_vahid": {"type": "integer", "minimum": 1, "maximum": 19},
+    "vahid": {"type": "integer", "minimum": 1, "maximum": 19},
+    "kull_i_shay": {"type": "integer", "minimum": 1},
+    "confidence": {"enum": ["convention-proleptic", "convention", "published", "cross-checked", "estimate"]},
+    "nawruz": {"$ref": "#/$defs/date"},
+    "days_in_year": {"enum": [365, 366]},
+    "ayyam_i_ha": {
+      "type": "object",
+      "required": ["first", "last", "days"],
+      "properties": {"first": {"$ref": "#/$defs/date"}, "last": {"$ref": "#/$defs/date"}, "days": {"enum": [4, 5]}}
+    },
+    "fast": {
+      "type": "object",
+      "required": ["first", "last"],
+      "properties": {"first": {"$ref": "#/$defs/date"}, "last": {"$ref": "#/$defs/date"}}
+    },
+    "months": {
+      "type": "array", "minItems": 19, "maxItems": 19,
+      "items": {
+        "type": "object",
+        "required": ["number", "name", "translation", "first_day"],
+        "properties": {
+          "number": {"type": "integer", "minimum": 1, "maximum": 19},
+          "name": {"type": "string"},
+          "translation": {"type": "string"},
+          "first_day": {"$ref": "#/$defs/date", "description": "The day of the Nineteen Day Feast"}
+        }
+      }
+    },
+    "holy_days": {
+      "type": "array", "maxItems": 11,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "month", "month_name", "day", "date", "work_suspended", "status"],
+        "properties": {
+          "id": {"enum": ["nawruz", "ridvan_1", "ridvan_9", "ridvan_12", "declaration_bab", "ascension_bahaullah", "martyrdom_bab", "birth_bab", "birth_bahaullah", "covenant", "ascension_abdulbaha"]},
+          "name": {"type": "string"},
+          "month": {"type": "integer", "minimum": 1, "maximum": 19},
+          "month_name": {"type": "string"},
+          "day": {"type": "integer", "minimum": 1, "maximum": 19},
+          "date": {"$ref": "#/$defs/date"},
+          "work_suspended": {"type": "boolean"},
+          "status": {"enum": ["observed", "event-year", "proleptic"]}
+        }
+      }
+    },
+    "eastern_reconstruction": {
+      "type": "object",
+      "description": "Years 1-171 only: Naw-Rúz by the rule used from 172 B.E., applied backwards (a modern reconstruction of practice in Iran)",
+      "required": ["nawruz", "ayyam_i_ha_days", "uncertain", "minutes_from_sunset"],
+      "properties": {
+        "nawruz": {"$ref": "#/$defs/date"},
+        "ayyam_i_ha_days": {"enum": [4, 5]},
+        "uncertain": {"type": "boolean"},
+        "minutes_from_sunset": {"type": "number"}
+      }
+    }
+  },
+  "additionalProperties": false
+}

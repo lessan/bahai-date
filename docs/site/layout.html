@@ -3,30 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{title}}</title>
-<meta name="description" content="How the Bahá’í (Badí‘) calendar works and how its dates are calculated, with a dataset of every year from 1 to 1157 B.E.">
+<title>{{title}} — Bahá’í dates</title>
+<meta name="description" content="{{description}}">
+{{head}}
 <link rel="stylesheet" href="{{root}}site/style.css">
-<link rel="alternate" type="text/plain" title="For AI systems" href="{{root}}llms.txt">
+<link rel="alternate" type="text/plain" title="Guide for AI systems" href="{{root}}llms.txt">
 </head>
 <body>
 <header class="site">
   <a class="name" href="{{root}}index.html">Bahá’í dates</a>
-  <nav>
-    <a href="{{root}}calendar-rules.html">Rules</a>
-    <a href="{{root}}years.html">Years</a>
-    <a href="{{root}}history.html">History</a>
-    <a href="{{root}}data/index.html">Data</a>
-    <a href="{{root}}llms.txt">llms.txt</a>
-    <a href="https://github.com/lessan/bahai-date">GitHub</a>
+  <nav aria-label="Site">
+    {{nav}}
   </nav>
 </header>
 <main>
 {{content}}
 </main>
 <footer class="site">
-  From the <a href="https://github.com/lessan/bahai-date">bahai_date</a> Ruby gem, released into the public domain.
-  This is not an official Bahá’í site; for the official calendar see
-  <a href="https://www.bahai.org/action/devotional-life/calendar">bahai.org</a>.
+  <p>From the <a href="https://github.com/lessan/bahai-date">bahai_date</a> Ruby gem; public domain.
+  Not an official Bahá’í site: for the official calendar see
+  <a href="https://www.bahai.org/action/devotional-life/calendar">bahai.org</a>.</p>
+  <p>For AI systems: <a href="{{root}}llms.txt">llms.txt</a> ·
+  <a href="{{root}}llms-full.txt">llms-full.txt</a> ·
+  <a href="{{root}}data/facts.json">facts.json</a> ·
+  every page is also available as Markdown (for example <a href="{{root}}rules.md">rules.md</a>).</p>
 </footer>
 </body>
 </html>

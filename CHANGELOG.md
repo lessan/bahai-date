@@ -3,8 +3,10 @@
 ## 2.0.1
 
 - Documentation of the calendar's rules and how its dates are calculated
-  (`docs/calendar-rules.md`), and a dataset of every year from 1 to 1157 B.E.
+  (`docs/rules.md`), and a dataset of every year from 1 to 1157 B.E.
   (`docs/data/`), published at https://lessan.github.io/bahai-date/.
+- Names with diacritics (`TITLES_HTML`, occasion titles) are in Unicode NFC, so
+  they match text copied from web pages. They were partly decomposed (NFD).
 - The specs check the gem against Table A of the official *Bahá’í Dates 172 to
   221 B.E.*
 - `Sunset.utc` puts sunset on the right UTC day far from Greenwich. It used to

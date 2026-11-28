@@ -38,8 +38,9 @@ module BahaiDate
     # falls in Tehran, counting days from sunset to sunset, and the Twin Holy
     # Days follow the eighth new moon after it. So the date of Naw-Ruz turns on
     # which side of a Tehran sunset the equinox falls, and in some years the two
-    # are minutes apart: within 10 minutes in 2026 and 2059, and within half a
-    # minute in 2418.
+    # are seconds apart: by this gem's calculation the equinox came 11 seconds
+    # after sunset in 2026 and comes 98 seconds before it in 2059 (the official
+    # dates agree with both), and 15 seconds before the exact sunset in 2418.
     #
     # The positions of the Sun and Moon are not the weak point: Meeus's methods
     # (Astro) give the equinox and new moons in Terrestrial Time, a uniform

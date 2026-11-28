@@ -30,6 +30,38 @@ describe "the published dataset in docs/data" do
   it "lists no Holy Day before its event" do
     first = JSON.parse(File.read(File.join(DataExport::OUT, "years", "1.json")))
     expect(first["holy_days"].map { |h| h["id"] }).to contain_exactly("nawruz", "declaration_bab", "birth_bab", "birth_bahaullah")
-    expect(first["holy_days"].find { |h| h["id"] == "declaration_bab" }["status"]).to eq "event"
+    expect(first["holy_days"].find { |h| h["id"] == "declaration_bab" }["status"]).to eq "event-year"
+  end
+
+  it "has every year file in the shape its JSON Schema describes" do
+    schema = JSON.parse(File.read(File.join(DataExport::OUT, "schema", "year.schema.json")))
+    allowed = schema["properties"].keys
+    holy_allowed = schema["properties"]["holy_days"]["items"]["properties"].keys
+
+    wrong = Dir.glob(File.join(DataExport::OUT, "years", "*.json")).filter_map do |path|
+      year = JSON.parse(File.read(path))
+      problems = (schema["required"] - year.keys).map { |k| "missing #{k}" } + (year.keys - allowed).map { |k| "unexpected #{k}" }
+      year["holy_days"].each { |h| problems += (h.keys - holy_allowed).map { |k| "unexpected holy day #{k}" } }
+      [File.basename(path), problems] unless problems.empty?
+    end
+
+    expect(wrong).to be_empty, wrong.first(3).inspect
+  end
+
+  it "cites only sources listed on the sources page in events.json and facts.json" do
+    ids = File.read(File.expand_path("../docs/sources.md", __dir__)).scan(/<a id="([^"]+)"><\/a>/).flatten
+    events = JSON.parse(File.read(File.join(DataExport::OUT, "events.json")))["events"]
+    cited = events.flat_map { |e| e["gregorian_dates"].flat_map { |g| g["sources"] } }
+    facts = JSON.parse(File.read(File.join(DataExport::OUT, "facts.json")))
+    cited += facts["holy_days"].flat_map { |h| h.dig("commemoration", "sources") || [] }
+
+    expect(cited.uniq - ids).to be_empty
+  end
+
+  it "writes names in Unicode NFC" do
+    %w[years.csv holy-days.csv months.csv facts.json years/183.json].each do |file|
+      text = File.read(File.join(DataExport::OUT, file))
+      expect(text).to eq(text.unicode_normalize(:nfc)), file
+    end
   end
 end
