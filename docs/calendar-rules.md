@@ -321,7 +321,8 @@ All agree in every year.
 - Bahá’í World Centre, *Bahá’í Dates 172 to 221 B.E.*, December 2014
   ([public copy](https://bahai-library.com/6581)).
 - *The Bahá’í World*, vol. XVII, pp. 386–389, “Bahá’í Calendar, Festivals and Dates
-  of Historical Significance” (the article also appears in volumes IV–XX).
+  of Historical Significance” (the article appears in volumes 4 to 20: Moojan Momen,
+  [“The Badí‘ (Bahá’í) Calendar: An Introduction”](https://bahai-library.com/5257), 2014).
 - bahai.org, [the Bahá’í calendar](https://www.bahai.org/action/devotional-life/calendar).
 - Jean Meeus, *Astronomical Algorithms*, 2nd ed., Willmann-Bell.
 - NASA, [ΔT uncertainty](https://eclipse.gsfc.nasa.gov/SEhelp/uncertainty2004.html)

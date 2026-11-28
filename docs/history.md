@@ -19,7 +19,8 @@ The arrangements for the West were “put in place at the direction of Shoghi
 Effendi, as described in the volumes of *The Bahá’í World*” (the Universal House of
 Justice, [10 July 2014](https://universalhouseofjustice.bahai.org/activities-bahai-community/20140710_001/)).
 The article “Bahá’í Calendar, Festivals and Dates of Historical Significance” appears
-in *The Bahá’í World* from volume 4 (1930–32) to volume 20; public copies include
+in *The Bahá’í World* from volume 4 (1930–32) to volume 20 (Moojan Momen, [“The Badí‘
+(Bahá’í) Calendar: An Introduction”](https://bahai-library.com/5257), 2014); public copies include
 volume 7 on [bahai.works](https://bahai.works/The_Bah%C3%A1%E2%80%99%C3%AD_World) and
 [volume XVIII](https://bahai-library.com/bw18_calendar_festivals_dates). It fixed:
 
@@ -213,6 +214,7 @@ of each Holy Day.
   Shoghi Effendi, [*God Passes By*](https://www.bahai.org/library/authoritative-texts/shoghi-effendi/god-passes-by/).
 - Helen Hornby (comp.), [*Lights of Guidance*](https://bahai-library.com/hornby_lights_guidance).
 - Ishráq-Khávarí, *Ayyám-i-Tis‘ih* (Persian).
+- Moojan Momen, [“The Badí‘ (Bahá’í) Calendar: An Introduction”](https://bahai-library.com/5257), 2014.
 - John Walbridge, [*Sacred Acts, Sacred Space, Sacred Time*](https://bahai-library.com/docs/w/walbridge_sacred_acts.txt), 1996.
 - Moojan Momen, *The Bábí and Bahá’í Religions 1844–1944: Some Contemporary Western
   Accounts*, 1981.
