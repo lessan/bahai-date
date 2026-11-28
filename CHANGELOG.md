@@ -1,7 +1,12 @@
 # Changelog
 
-## Unreleased
+## 2.0.1
 
+- Documentation of the calendar's rules and how its dates are calculated
+  (`docs/calendar-rules.md`), and a dataset of every year from 1 to 1157 B.E.
+  (`docs/data/`), published at https://lessan.github.io/bahai-date/.
+- The specs check the gem against Table A of the official *Bahá’í Dates 172 to
+  221 B.E.*
 - `Sunset.utc` puts sunset on the right UTC day far from Greenwich. It used to
   return a time 24 hours early west of about 90°W (the Americas), where sunset
   falls after midnight UTC. Tehran, and so the calendar, was never affected.

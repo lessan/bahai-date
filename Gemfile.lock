@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bahai_date (2.0.0)
+    bahai_date (2.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -132,7 +132,7 @@ DEPENDENCIES
 
 CHECKSUMS
   ast (2.4.3) sha256=954615157c1d6a382bc27d690d973195e79db7f55e9765ac7c481c60bdb4d383
-  bahai_date (2.0.0)
+  bahai_date (2.0.1)
   bundler (4.1.0) sha256=d7b7a797b988e544a0677a9c6ed78146f2f63d05ae1af8bc7d9426cf88b46377
   csv (3.3.7) sha256=15a3f16f6628da8664d455eb634e7f22031bcf53044923caf56975109e71b9f8
   diff-lcs (1.6.2) sha256=9ae0d2cba7d4df3075fe8cd8602a8604993efc0dfa934cff568969efb1909962

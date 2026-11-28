@@ -1,6 +1,6 @@
 {
   "title": "Bahá’í (Badí‘) calendar dates, 1 to 1157 B.E.",
-  "generated_by": "bahai_date 2.0.0 (https://github.com/lessan/bahai-date)",
+  "generated_by": "bahai_date 2.0.1 (https://github.com/lessan/bahai-date)",
   "dates": "Each Gregorian date is the day on which the Bahá’í day ends. A Bahá’í day begins at sunset, so it begins on the evening before the date given.",
   "rules": "https://github.com/lessan/bahai-date/blob/master/docs/calendar-rules.md",
   "year": 122,
