@@ -3,13 +3,24 @@
   "generated_by": "bahai_date 2.0.1 (https://github.com/lessan/bahai-date)",
   "dates": "Each Gregorian date is the day on which the Bahá’í day ends. A Bahá’í day begins at sunset, so it begins on the evening before the date given.",
   "rules": "https://github.com/lessan/bahai-date/blob/master/docs/calendar-rules.md",
+  "holy_day_status": {
+    "observed": "An anniversary or festival kept in this year.",
+    "event": "The year of the event itself: the date is the day of the event, not an anniversary.",
+    "proleptic": "After the event but before the first known observance: the Day of the Covenant before 1901."
+  },
+  "eastern_reconstruction": {
+    "nawruz": "1860-03-20",
+    "ayyam_i_ha_days": 5,
+    "uncertain": false,
+    "minutes_from_sunset": 341.5
+  },
   "year": 17,
   "year_name": "Bahí",
   "year_translation": "Luminous",
   "year_in_vahid": 17,
   "vahid": 1,
   "kull_i_shay": 1,
-  "confidence": "convention",
+  "confidence": "convention-proleptic",
   "nawruz": "1860-03-21",
   "days_in_year": 365,
   "ayyam_i_ha": {
@@ -144,31 +155,8 @@
       "month": 1,
       "day": 1,
       "date": "1860-03-21",
-      "work_suspended": true
-    },
-    {
-      "id": "ridvan_1",
-      "name": "1st day of Riḍván",
-      "month": 2,
-      "day": 13,
-      "date": "1860-04-21",
-      "work_suspended": true
-    },
-    {
-      "id": "ridvan_9",
-      "name": "9th day of Riḍván",
-      "month": 3,
-      "day": 2,
-      "date": "1860-04-29",
-      "work_suspended": true
-    },
-    {
-      "id": "ridvan_12",
-      "name": "12th day of Riḍván",
-      "month": 3,
-      "day": 5,
-      "date": "1860-05-02",
-      "work_suspended": true
+      "work_suspended": true,
+      "status": "observed"
     },
     {
       "id": "declaration_bab",
@@ -176,15 +164,8 @@
       "month": 4,
       "day": 7,
       "date": "1860-05-23",
-      "work_suspended": true
-    },
-    {
-      "id": "ascension_bahaullah",
-      "name": "Ascension of Bahá’u’lláh",
-      "month": 4,
-      "day": 13,
-      "date": "1860-05-29",
-      "work_suspended": true
+      "work_suspended": true,
+      "status": "observed"
     },
     {
       "id": "martyrdom_bab",
@@ -192,7 +173,8 @@
       "month": 6,
       "day": 16,
       "date": "1860-07-09",
-      "work_suspended": true
+      "work_suspended": true,
+      "status": "observed"
     },
     {
       "id": "birth_bab",
@@ -200,7 +182,8 @@
       "month": 12,
       "day": 5,
       "date": "1860-10-20",
-      "work_suspended": true
+      "work_suspended": true,
+      "status": "observed"
     },
     {
       "id": "birth_bahaullah",
@@ -208,23 +191,8 @@
       "month": 13,
       "day": 9,
       "date": "1860-11-12",
-      "work_suspended": true
-    },
-    {
-      "id": "covenant",
-      "name": "Day of the Covenant",
-      "month": 14,
-      "day": 4,
-      "date": "1860-11-26",
-      "work_suspended": false
-    },
-    {
-      "id": "ascension_abdulbaha",
-      "name": "Ascension of ‘Abdu’l-Bahá",
-      "month": 14,
-      "day": 6,
-      "date": "1860-11-28",
-      "work_suspended": false
+      "work_suspended": true,
+      "status": "observed"
     }
   ]
 }

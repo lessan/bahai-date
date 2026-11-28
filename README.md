@@ -11,9 +11,11 @@ In the Baha'i (or Badi) calendar there are 19 months each having 19 days, with 4
 
 Each year also has a name, as part of a 19 year cycle called a Vahid (meaning "unity"). Every 19 Vahids (i.e. 361 years) constitute a Kull-i-Shay (meaning "all things"). 
 
-The calendar begins on the vernal equinox, normally on the 20th or 21st of March. The first year is 1844.
+The year begins at Naw-Ruz, the day of the vernal equinox, on 20 or 21 March in this period. Year 1 began at Naw-Ruz 1844.
 
-More information about this calendar is on the [Wikipedia entry](http://en.wikipedia.org/wiki/Bah%C3%A1'%C3%AD_calendar).
+How the calendar works, how its dates are calculated, and how it was kept before 2015 are documented at
+**https://lessan.github.io/bahai-date/**, with every year's dates from 1 to 1157 B.E. as JSON and CSV
+(sources in `docs/`).
 
 
 Calculations
@@ -21,9 +23,21 @@ Calculations
 From 172 B.E. (2015), Naw-Ruz is the day on which the vernal equinox falls in
 Tehran, counting days from sunset to sunset, and the Twin Holy Days are the
 first and second days after the eighth new moon after Naw-Ruz, as the Universal
-House of Justice set out in its message of 10 July 2014. Before 172 B.E. the
-gem uses the earlier fixed dates (Naw-Ruz on 21 March, and the Twin Holy Days
-on 5 'Ilm and 9 Qudrat).
+House of Justice set out in its message of 10 July 2014.
+
+For 1-171 B.E. (21 March 1844 to 20 March 2015) the gem uses the fixed Western
+arrangement printed at Shoghi Effendi's direction in *The Baha'i World*:
+Naw-Ruz on 21 March, Ayyam-i-Ha from 26 February to 1 March (four or five days by
+the Gregorian leap year), the Birth of the Bab on 20 October (5 'Ilm) and the
+Birth of Baha'u'llah on 12 November (9 Qudrat). This is how Baha'is in the West
+kept the calendar. Baha'is in Iran kept it differently: they took Naw-Ruz from
+the moment of the equinox and kept the Twin Holy Days, the Declaration of the Bab
+and the Martyrdom of the Bab on Islamic lunar dates. Before Western Baha'i
+communities existed (before about 1910) the Western arrangement is applied
+backwards. Dates before 172 B.E. are therefore a convention, not a record of what
+was observed. Under it the Declaration and the Martyrdom of the Bab fall on
+7 'Azamat and 16 Rahmat; from 172 B.E. they are 8 'Azamat and 17 Rahmat, the
+dates 'Abdu'l-Baha gave. See https://lessan.github.io/bahai-date/history.html.
 
 - The vernal equinox and new moons come from the algorithms in Jean Meeus,
   [*Astronomical Algorithms*](http://www.willbell.com/math/mc1.htm), in
@@ -34,8 +48,8 @@ on 5 'Ilm and 9 Qudrat).
 
 The gem has no runtime dependencies.
 
-The specs check the gem against the calendar bahai.org publishes (172-221
-B.E.) and against the independent [badiDate](https://github.com/janrg/badiDate)
+The specs check the gem against Table A of the official *Baha'i Dates 172 to 221
+B.E.*, against the calendar bahai.org publishes (172-221 B.E.), and against the independent [badiDate](https://github.com/janrg/badiDate)
 JavaScript library for every year it covers (172-507 B.E., to 2351). Why dates
 stop at the Gregorian year 3000 is explained in `lib/bahai_date/logic.rb`.
 

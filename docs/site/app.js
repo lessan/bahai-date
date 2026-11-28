@@ -115,18 +115,34 @@ async function showToday(el) {
 async function showYear(el, year) {
   const data = await loadYear(year);
   if (!data) { el.innerHTML = `<p>Years 1 to ${MAX_YEAR} B.E. are covered.</p>`; return; }
-  const conf = { convention: "convention", published: "published", "cross-checked": "cross-checked", estimate: "estimate" }[data.confidence];
-  const rows = (items, cells) => items.map((x) => `<tr>${cells(x).map((c) => `<td>${c}</td>`).join("")}</tr>`).join("");
+  const conf = data.confidence;
+  const CONF_NOTE = {
+    "convention-proleptic": "Before 172 B.E. there was no single calendar. These are the Western convention’s dates, applied to a year before any Western Bahá’í community kept the calendar.",
+    convention: "Before 172 B.E. there was no single calendar. These are the dates of the Western convention (Naw-Rúz on 21 March).",
+    published: "Matches the dates published by the Bahá’í World Centre.",
+    "cross-checked": "Computed, and agrees with an independent implementation.",
+    estimate: "Computed; some dates may be a day out (the Earth’s rotation cannot be predicted precisely).",
+  };
   const day = (s) => escape(pretty(parse(s)));
+  const STATUS_NOTE = { event: " (the event itself)", proleptic: " (before its first known observance)" };
+  const east = data.eastern_reconstruction;
+  const eastText = east ? `<p><strong>In Iran</strong>, Naw-Rúz followed the moment of the equinox. Reckoned by the rule used since 2015, it fell on
+    ${day(east.nawruz)}${east.uncertain ? " (uncertain: the equinox was within minutes of sunset)" : ""}, with ${east.ayyam_i_ha_days} days of Ayyám-i-Há.
+    The Twin Holy Days, the Declaration and the Martyrdom of the Báb were kept on Islamic lunar dates.
+    See <a href="${root}history.html">history</a>.</p>` : "";
+  const rows = (items, cells) => items.map((x) => `<tr>${cells(x).map((c) => `<td>${c}</td>`).join("")}</tr>`).join("");
   el.innerHTML = `
     <h2>${data.year} B.E. <span class="label">${escape(conf)}</span></h2>
+    <p class="muted">${escape(CONF_NOTE[conf] || "")}</p>
     <p>Year ${data.year_in_vahid} of Váḥid ${data.vahid}, Kull-i-Shay’ ${data.kull_i_shay}: <strong>${escape(data.year_name)}</strong> (${escape(data.year_translation)}).
     ${data.days_in_year} days, from Naw-Rúz on ${day(data.nawruz)}.</p>
     <p>Ayyám-i-Há: ${day(data.ayyam_i_ha.first)} to ${day(data.ayyam_i_ha.last)} (${data.ayyam_i_ha.days} days).
     The Fast: ${day(data.fast.first)} to ${day(data.fast.last)}.</p>
+    ${eastText}
     <h3>Holy Days</h3>
     <table><thead><tr><th>Holy Day</th><th>Bahá’í date</th><th>Gregorian date</th><th>Work suspended</th></tr></thead>
-    <tbody>${rows(data.holy_days, (h) => [escape(h.name), `${h.day} ${escape(data.months[h.month - 1].name)}`, day(h.date), h.work_suspended ? "yes" : "no"])}</tbody></table>
+    <tbody>${rows(data.holy_days, (h) => [escape(h.name) + `<span class="muted">${STATUS_NOTE[h.status] || ""}</span>`, `${h.day} ${escape(data.months[h.month - 1].name)}`, day(h.date), h.work_suspended ? "yes" : "no"])}</tbody></table>
+    ${data.holy_days.length < 11 ? `<p class="muted">Holy Days whose events had not yet happened are not listed.</p>` : ""}
     <h3>Months (Nineteen Day Feasts)</h3>
     <table><thead><tr><th></th><th>Month</th><th>First day</th></tr></thead>
     <tbody>${rows(data.months, (m) => [m.number, `${escape(m.name)} <span class="muted">(${escape(m.translation)})</span>`, day(m.first_day)])}</tbody></table>

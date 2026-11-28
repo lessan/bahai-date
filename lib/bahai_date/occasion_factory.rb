@@ -137,6 +137,34 @@ module BahaiDate
       "6.17" => [:martyrdom_bab]
     }
 
+    # The Bahá'í year of the event each Holy Day commemorates, or in which it
+    # was appointed. Years before it have no anniversary to keep, though
+    # #occasions still lists the day there, as it always has. Holy Days not
+    # listed here (Naw-Rúz and the Twin Holy Birthdays) apply from year 1.
+    #
+    # Declaration of the Báb: 23 May 1844 (1 B.E.). Martyrdom of the Báb:
+    # 9 July 1850 (7 B.E.). Riḍván: 22 April to 3 May 1863 (20 B.E.).
+    # Ascension of Bahá'u'lláh: 29 May 1892 (49 B.E.). The Day of the Covenant
+    # was appointed by 'Abdu'l-Bahá in place of His own birthday, so not before
+    # 1892; the year is not known. Ascension of 'Abdu'l-Bahá: 28 November 1921
+    # (78 B.E.). See docs/history.md.
+    FIRST_YEARS = {
+      declaration_bab: 1,
+      martyrdom_bab: 7,
+      ridvan_1: 20,
+      ridvan_9: 20,
+      ridvan_12: 20,
+      ascension_bahaullah: 49,
+      covenant: 49,
+      ascension_abdulbaha: 78
+    }.freeze
+
+    # The first Bahá'í year in which the given occasion can be kept (see
+    # FIRST_YEARS); 1 for everything else.
+    def self.first_year(occasion)
+      FIRST_YEARS.fetch(occasion, 1)
+    end
+
     def initialize(year, month, day)
       @year = year
       @month = month

@@ -14,7 +14,7 @@ begins at sunset, so it begins on the evening before the date given.
 |---|---|
 | [`years/<year>.json`](years/183.json) | One year in full: name, Váḥid and Kull-i-Shay’, Naw-Rúz, length, Ayyám-i-Há, the Fast, the first day of each month, the Holy Days. One file per year, `years/1.json` to `years/1157.json`. |
 | [`years.json`](years.json) | All years in one file (3.4 MB), with the notes below. |
-| [`years.csv`](years.csv) | One row per year: Naw-Rúz, length, Ayyám-i-Há, the Fast, the Twin Holy Days. |
+| [`years.csv`](years.csv) | One row per year: Naw-Rúz, length, Ayyám-i-Há, the Fast, the Twin Holy Days, and for 1–171 the Eastern reconstruction. |
 | [`holy-days.csv`](holy-days.csv) | One row per Holy Day per year. |
 | [`months.csv`](months.csv) | One row per month per year, with its first day (the day of the Nineteen Day Feast). |
 
@@ -24,7 +24,8 @@ Each year has a `confidence` label:
 
 | Years | Label | Meaning |
 |---|---|---|
-| 1–171 (1844–2015) | `convention` | Before 172 B.E. there was no single calendar. These dates follow the Western convention set out under Shoghi Effendi: Naw-Rúz on 21 March, the Twin Holy Days on 20 October and 12 November. Practice in the East differed; see [the rules](../calendar-rules.md#4-the-rules-before-172-be). |
+| 1–66 (1844–1910) | `convention-proleptic` | The Western convention (below), applied to years before any Western Bahá’í community kept the calendar. Its first attested use in the West is 1910. |
+| 67–171 (1910–2015) | `convention` | Before 172 B.E. there was no single calendar. These dates follow the Western convention set out under Shoghi Effendi: Naw-Rúz on 21 March, the Twin Holy Days on 20 October and 12 November. Practice in Iran differed; see `eastern_reconstruction` and [history](../history.md). |
 | 172–221 (2015–2065) | `published` | The same as the dates the Bahá’í World Centre published. |
 | 222–507 (2065–2351) | `cross-checked` | Computed. Agrees with the independent [badiDate](https://github.com/janrg/badiDate) library, which uses the JPL ephemeris. |
 | 508–1157 (2351–3001) | `estimate` | Computed. The Earth’s rotation cannot be predicted precisely, so some years may be a day out where the equinox falls close to sunset in Ṭihrán. |
@@ -42,7 +43,13 @@ Each year has a `confidence` label:
 | `ayyam_i_ha` | `first`, `last` and number of `days` (4 or 5) |
 | `fast` | `first` and `last` day of the month of ‘Alá’ |
 | `months` | For months 1–19: `number`, `name`, `translation`, `first_day` |
-| `holy_days` | `id`, `name`, Bahá’í `month` and `day`, Gregorian `date`, `work_suspended` |
+| `holy_days` | `id`, `name`, Bahá’í `month` and `day`, Gregorian `date`, `work_suspended`, `status` (below). A Holy Day is not listed before the year of its event. |
+| `eastern_reconstruction` | Years 1–171 only: `nawruz` by the rule used since 2015 (the equinox before sunset in Ṭihrán) applied backwards, the `ayyam_i_ha_days` that follow from it, `uncertain` where the equinox fell within 15 minutes of sunset, and `minutes_from_sunset`. A modern reconstruction of practice in Iran, not a record of what was observed. |
+
+Holy Day `status`: `observed` (an anniversary or festival kept that year); `event`
+(the year of the event itself, so the date is the day of the event, not an
+anniversary); `proleptic` (after the event but before the first known observance:
+the Day of the Covenant before 1901).
 
 Holy Day ids: `nawruz`, `ridvan_1`, `ridvan_9`, `ridvan_12`, `declaration_bab`,
 `ascension_bahaullah`, `martyrdom_bab`, `birth_bab`, `birth_bahaullah`, `covenant`,

@@ -125,5 +125,30 @@ module BahaiDate
         expect(month_and_day).to eq "12.18"
       end
     end
+
+    context "first years" do
+      it "gives the year of each Holy Day's event, and 1 for the rest" do
+        expect(OccasionFactory.first_year(:declaration_bab)).to eq 1
+        expect(OccasionFactory.first_year(:martyrdom_bab)).to eq 7
+        expect(OccasionFactory.first_year(:ridvan_1)).to eq 20
+        expect(OccasionFactory.first_year(:ascension_bahaullah)).to eq 49
+        expect(OccasionFactory.first_year(:ascension_abdulbaha)).to eq 78
+        expect(OccasionFactory.first_year(:nawruz)).to eq 1
+        expect(OccasionFactory.first_year(:birth_bab)).to eq 1
+        expect(OccasionFactory.first_year(:feast_3)).to eq 1
+      end
+
+      it "puts each event in its first year" do
+        {
+          declaration_bab: Date.new(1844, 5, 23),
+          martyrdom_bab: Date.new(1850, 7, 9),
+          ascension_bahaullah: Date.new(1892, 5, 29),
+          ascension_abdulbaha: Date.new(1921, 11, 28)
+        }.each do |occasion, date|
+          expect(BahaiDate.new(date: date).year.bahai_era).to eq OccasionFactory.first_year(occasion)
+        end
+        expect(BahaiDate.new(date: Date.new(1863, 4, 22)).year.bahai_era).to eq OccasionFactory.first_year(:ridvan_1)
+      end
+    end
   end
 end

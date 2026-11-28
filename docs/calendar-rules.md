@@ -99,10 +99,24 @@ and Dates of Historical Significance”; the Universal House of Justice, [messag
 | Ascension of ‘Abdu’l-Bahá | 6 Qawl | no |
 
 The Festival of Riḍván runs from 13 Jalál to 5 Jamál. The Nineteen Day Feast falls on
-the first day of each month.
+the first day of each month. The Birth of the Báb and the Birth of Bahá’u’lláh are
+together called the Twin Holy Birthdays.
+
+Some Holy Days are commemorated at a particular hour, and the House of Justice said in
+2014 that these hours remain in force:
+
+- the First Day of Riḍván in the afternoon (“late in the afternoon”, Kitáb-i-Aqdas,
+  Questions and Answers 1);
+- the Declaration of the Báb “2 hours and 11 minutes after sunset” on the evening the
+  day begins (*Lights of Guidance* no. 1541);
+- the Martyrdom of the Báb at about noon (*The Dawn-Breakers*);
+- the Ascension of Bahá’u’lláh “about 8 hours after sunset”, and the Ascension of
+  ‘Abdu’l-Bahá at about one hour after midnight, both reckoned “according to the sun
+  and regardless of daylight saving time” (*Lights of Guidance* no. 1024).
 
 Sources: the [10 July 2014 message](https://universalhouseofjustice.bahai.org/activities-bahai-community/20140710_001/)
-for the dates; *The Bahá’í World* for the nine days on which work is suspended.
+for the dates; *The Bahá’í World* and the Kitáb-i-Aqdas (Questions and Answers 1,
+note 140) for the nine days on which work is suspended.
 
 ## 3. The rules from 172 B.E. (21 March 2015)
 
@@ -119,7 +133,13 @@ and so the day of Naw-Rúz for the whole Bahá’í world.
 
 So **Naw-Rúz is the Bahá’í day, reckoned from sunset to sunset in Ṭihrán, in which
 the March equinox occurs.** If the equinox comes after sunset in Ṭihrán, Naw-Rúz is
-the next Gregorian date.
+the next Gregorian date. A letter on behalf of the House of Justice of 3 May 2018
+explains: “The moment of the vernal equinox is independent of any geographical
+location on the earth. However … to determine the Bahá’í day on which the vernal
+equinox occurs, this moment must be compared with sunset.” In 2018 the equinox came
+at 19:45 Iran time on 20 March, after sunset, so Naw-Rúz was 21 March. The equinox
+marks the day of Naw-Rúz; it is not the moment the celebration begins (*Messages
+from the Universal House of Justice 2001–2022*, no. 307).
 
 ### 3.2 The Twin Holy Days
 
@@ -128,6 +148,13 @@ second day following the occurrence of the eighth new moon after Naw-Rúz, as
 determined in advance by astronomical tables using Ṭihrán as the point of reference.”
 They move between the months of Ma<u>sh</u>íyyat, ‘Ilm and Qudrat (mid-October to
 mid-November).
+
+The new moon is the astronomical conjunction of the Moon with the Sun, not the first
+sighting of the crescent: “This refers to the day of the moon’s conjunction with the
+sun, that is, the moon’s dark phase” (Department of the Secretariat, [24 November
+2014](https://bahai-library.com/pdf/uhj/uhj_twin_birthdays_update.pdf)). Its example:
+in 172 B.E. the eighth new moon fell after sunset on 11 November 2015, in the Bahá’í
+day 9 Qudrat, so the Birthdays were 10 and 11 Qudrat (13 and 14 November).
 
 ### 3.3 Everything else follows
 
@@ -147,15 +174,29 @@ dates have been published after 221 B.E. (2064–2065).
 
 ## 4. The rules before 172 B.E.
 
-*To be completed from research in progress.* In brief: before 2015 there was no
-single calendar for the whole Bahá’í world. In the West, under arrangements made at
-Shoghi Effendi’s direction, Naw-Rúz was observed on 21 March, Ayyám-i-Há from
-26 February to 1 March (four days, or five in a Gregorian leap year), and the Twin
-Holy Days on 20 October and 12 November. In the East, the Twin Holy Days followed the
-Islamic lunar calendar (1 and 2 Muḥarram).
+Before 2015 there was no single calendar for the whole Bahá’í world.
 
-The dataset follows the Western convention for 1 to 171 B.E. and labels those years
-`convention`.
+- **In the West**, under arrangements made at Shoghi Effendi’s direction and printed in
+  *The Bahá’í World*, Naw-Rúz was kept on 21 March, Ayyám-i-Há from 26 February to
+  1 March (four days, or five in a Gregorian leap year), the Fast from 2 to 20 March,
+  and every Holy Day on a fixed Gregorian date: the Declaration of the Báb on 23 May,
+  the Martyrdom on 9 July, the Birth of the Báb on 20 October and the Birth of
+  Bahá’u’lláh on 12 November.
+- **In Iran and the East**, Naw-Rúz was the day on which the equinox fell, by times
+  taken from Iranian almanacs, and four Holy Days were kept on Islamic lunar dates:
+  the Birth of the Báb (1 Muḥarram), the Birth of Bahá’u’lláh (2 Muḥarram), the
+  Declaration of the Báb (5 Jamádí I) and the Martyrdom of the Báb (28 Sha‘bán).
+
+The bahai_date gem and the dataset follow the Western convention for 1 to 171 B.E.
+Under it, the Declaration and the Martyrdom fall on 7 ‘Aẓamat and 16 Raḥmat; from
+172 B.E. they are 8 ‘Aẓamat and 17 Raḥmat, the dates ‘Abdu’l-Bahá gave. For years
+before about 1910 the Western convention is applied backwards, to years before the
+calendar was kept in the West. The dataset also gives, for each of these years, the
+Naw-Rúz that the 2014 rule would give (a modern reconstruction of Eastern practice).
+
+[History and historical dates](history.md) sets this out with sources, along with
+event dates that differ between sources, when each Holy Day began, and how to
+convert dates found in historical documents.
 
 ## 5. How to calculate the dates
 
@@ -203,11 +244,19 @@ ends at sunset on *x*.
 
 **Today’s date** depends on where you are. After local sunset, the Bahá’í date is
 the one for the next Gregorian date. A server’s “today” is in the server’s time
-zone, not the reader’s. Where the sun does not set or rise for part of the year,
-and in some other places far north, Bahá’í communities use fixed clock times
-instead of sunset (the badiDate library implements such rules for northern
-Canada, Alaska, Finland, Iceland, Norway and Sweden); check with the local
-Bahá’í community.
+zone, not the reader’s.
+
+**High latitudes.** Bahá’u’lláh permitted clocks in place of the sun “in regions where
+the days and nights grow long” (Kitáb-i-Aqdas ¶10; Questions and Answers 64). The
+House of Justice has extended this to fasting and to “fixing the ending of each day in
+the Bahá’í calendar in determining the time for the starting of each Holy Day and the
+holding of the Nineteen Day Feasts”, leaving its application to the National
+Spiritual Assembly of each country in the high latitudes (letter on its behalf of
+13 June 1978, [*Lights of Guidance*](https://bahai-library.com/hornby_lights_guidance)
+no. 1532). Dublin, for example, was told to use the actual sunset (no. 781). So in the
+far north or south, the day may end at a clock time set by the National Assembly;
+check with the Bahá’í community of the country. (The badiDate library uses 18:00 for
+northern Canada, Alaska, Finland, Iceland, Norway and Sweden, but cites no source.)
 
 ## 6. Edge cases
 
@@ -245,7 +294,8 @@ The dataset labels each year:
 
 | Years | Label | Meaning |
 |---|---|---|
-| 1–171 (1844–2015) | `convention` | The Western convention described in section 4 |
+| 1–66 (1844–1910) | `convention-proleptic` | The Western convention (section 4), applied before it was kept in the West |
+| 67–171 (1910–2015) | `convention` | The Western convention described in section 4 |
 | 172–221 (2015–2065) | `published` | Matches the official dates |
 | 222–507 (2065–2351) | `cross-checked` | Computed; agrees with an independent implementation |
 | 508–1157 (2351–3001) | `estimate` | Computed; some years may be a day out |

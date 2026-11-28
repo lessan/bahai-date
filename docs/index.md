@@ -11,6 +11,9 @@ Bahá’í date, convert one, or check how a date was arrived at.
   rules the Universal House of Justice set from 172 B.E. (2015), the earlier
   conventions, a step-by-step method, the edge cases, and how accurate it is.
 - **[Years](years.html)**: any year’s Naw-Rúz, months, Ayyám-i-Há, Fast and Holy Days.
+- **[History and historical dates](history.md)**: how the calendar was kept in the
+  West and in Iran before 2015, event dates that differ between sources, and how to
+  convert dates found in historical documents.
 - **[Data](data/README.md)**: the same dates as JSON and CSV, with a confidence label
   for each year.
 - **[llms.txt](llms.txt)**: a short guide for AI systems.

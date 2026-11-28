@@ -11,6 +11,10 @@
   return a time 24 hours early west of about 90°W (the Americas), where sunset
   falls after midnight UTC. Tehran, and so the calendar, was never affected.
 - The gem package contains only `lib/` and the documents, not the specs.
+- `OccasionFactory.first_year(occasion)` gives the first Bahá’í year in which a
+  Holy Day can be kept: the year of its event (the Martyrdom of the Báb 7, Riḍván
+  20, the Ascension of Bahá’u’lláh and the Day of the Covenant 49, the Ascension
+  of ‘Abdu’l-Bahá 78), and 1 for the others. `#occasions` is unchanged.
 
 ## 2.0.0
 

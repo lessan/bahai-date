@@ -3,6 +3,17 @@
   "generated_by": "bahai_date 2.0.1 (https://github.com/lessan/bahai-date)",
   "dates": "Each Gregorian date is the day on which the Bahá’í day ends. A Bahá’í day begins at sunset, so it begins on the evening before the date given.",
   "rules": "https://github.com/lessan/bahai-date/blob/master/docs/calendar-rules.md",
+  "holy_day_status": {
+    "observed": "An anniversary or festival kept in this year.",
+    "event": "The year of the event itself: the date is the day of the event, not an anniversary.",
+    "proleptic": "After the event but before the first known observance: the Day of the Covenant before 1901."
+  },
+  "eastern_reconstruction": {
+    "nawruz": "1929-03-21",
+    "ayyam_i_ha_days": 4,
+    "uncertain": false,
+    "minutes_from_sunset": 710.0
+  },
   "year": 86,
   "year_name": "Ḥubb",
   "year_translation": "Love",
@@ -144,7 +155,8 @@
       "month": 1,
       "day": 1,
       "date": "1929-03-21",
-      "work_suspended": true
+      "work_suspended": true,
+      "status": "observed"
     },
     {
       "id": "ridvan_1",
@@ -152,7 +164,8 @@
       "month": 2,
       "day": 13,
       "date": "1929-04-21",
-      "work_suspended": true
+      "work_suspended": true,
+      "status": "observed"
     },
     {
       "id": "ridvan_9",
@@ -160,7 +173,8 @@
       "month": 3,
       "day": 2,
       "date": "1929-04-29",
-      "work_suspended": true
+      "work_suspended": true,
+      "status": "observed"
     },
     {
       "id": "ridvan_12",
@@ -168,7 +182,8 @@
       "month": 3,
       "day": 5,
       "date": "1929-05-02",
-      "work_suspended": true
+      "work_suspended": true,
+      "status": "observed"
     },
     {
       "id": "declaration_bab",
@@ -176,7 +191,8 @@
       "month": 4,
       "day": 7,
       "date": "1929-05-23",
-      "work_suspended": true
+      "work_suspended": true,
+      "status": "observed"
     },
     {
       "id": "ascension_bahaullah",
@@ -184,7 +200,8 @@
       "month": 4,
       "day": 13,
       "date": "1929-05-29",
-      "work_suspended": true
+      "work_suspended": true,
+      "status": "observed"
     },
     {
       "id": "martyrdom_bab",
@@ -192,7 +209,8 @@
       "month": 6,
       "day": 16,
       "date": "1929-07-09",
-      "work_suspended": true
+      "work_suspended": true,
+      "status": "observed"
     },
     {
       "id": "birth_bab",
@@ -200,7 +218,8 @@
       "month": 12,
       "day": 5,
       "date": "1929-10-20",
-      "work_suspended": true
+      "work_suspended": true,
+      "status": "observed"
     },
     {
       "id": "birth_bahaullah",
@@ -208,7 +227,8 @@
       "month": 13,
       "day": 9,
       "date": "1929-11-12",
-      "work_suspended": true
+      "work_suspended": true,
+      "status": "observed"
     },
     {
       "id": "covenant",
@@ -216,7 +236,8 @@
       "month": 14,
       "day": 4,
       "date": "1929-11-26",
-      "work_suspended": false
+      "work_suspended": false,
+      "status": "observed"
     },
     {
       "id": "ascension_abdulbaha",
@@ -224,7 +245,8 @@
       "month": 14,
       "day": 6,
       "date": "1929-11-28",
-      "work_suspended": false
+      "work_suspended": false,
+      "status": "observed"
     }
   ]
 }
